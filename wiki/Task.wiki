@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary just create a starting project
 #labels Phase-Design
 
 = Introduction =
