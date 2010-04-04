@@ -1,0 +1,17 @@
+#summary One-sentence summary of this page.
+#labels Phase-Design
+
+= Introduction =
+
+just create a starting project
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+Create basic project solution and upto svn
+nothing but good start
