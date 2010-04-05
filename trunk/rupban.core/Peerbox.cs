@@ -4,7 +4,7 @@ using System.Text;
 
 namespace rupban.core
 {
-    public class Peerbox : TemplateCel
+    public class Peerbox : TemplateCell
     {
         public Resource Resources
         {

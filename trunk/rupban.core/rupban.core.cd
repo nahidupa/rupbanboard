@@ -54,11 +54,11 @@
       <Property Name="Resources" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="rupban.core.TemplateCel">
+  <Class Name="rupban.core.TemplateCell">
     <Position X="0.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>TemplateCel.cs</FileName>
+      <FileName>TemplateCell.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="rupban.core.Resource">
