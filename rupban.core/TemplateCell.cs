@@ -4,7 +4,7 @@ using System.Text;
 
 namespace rupban.core
 {
-    public class TemplateCel
+    public class TemplateCell
     {
     }
 }
