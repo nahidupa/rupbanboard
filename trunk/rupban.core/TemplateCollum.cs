@@ -6,7 +6,8 @@ namespace rupban.core
 {
     public class TemplateCollum
     {
-        public int Title
+        public int ID { set; get; }
+        public string Title
         {
             get
             {

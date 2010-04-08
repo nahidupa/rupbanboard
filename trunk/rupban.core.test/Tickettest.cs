@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
-namespace rupban.core
+namespace rupban.core.test
 {
-    public class TemplateRow
+    class Tickettest
     {
-        public int ID { set; get; }
     }
 }
