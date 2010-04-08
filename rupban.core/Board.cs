@@ -6,28 +6,8 @@ namespace rupban.core
 {
     public class Board
     {
-        public int Backlogs
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public int Step
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
+        private List<Ticket> _backlogs;
+        
         public TemplateTable TemplateTable
         {
             get
@@ -37,6 +17,11 @@ namespace rupban.core
             set
             {
             }
+        }
+
+        public void Setbacklogs(List<Ticket> tickets)
+        {
+            _backlogs = tickets;
         }
     }
 }
