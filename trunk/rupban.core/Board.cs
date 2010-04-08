@@ -7,21 +7,21 @@ namespace rupban.core
     public class Board
     {
         private List<Ticket> _backlogs;
+
+        private TemplateTable _templateTable;
         
-        public TemplateTable TemplateTable
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
 
         public void Setbacklogs(List<Ticket> tickets)
         {
             _backlogs = tickets;
+        }
+
+        public void LoadTemplateTable(string filename)
+        {
+            _templateTable = new TemplateTable();
+            //_templateTable.LoadTemplateTable();
+            
+            
         }
     }
 }

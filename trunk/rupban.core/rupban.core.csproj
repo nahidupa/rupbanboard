@@ -54,6 +54,7 @@
     <Compile Include="TemplateRow.cs" />
     <Compile Include="TemplateTable.cs" />
     <Compile Include="Ticket.cs" />
+    <Compile Include="TicketPriority.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="rupban.core.cd" />

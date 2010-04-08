@@ -27,5 +27,7 @@ namespace rupban.core
             {
             }
         }
+
+        public TicketPriority Priority { get; set; }
     }
 }
