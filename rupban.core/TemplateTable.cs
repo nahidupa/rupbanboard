@@ -7,15 +7,7 @@ namespace rupban.core
     public class TemplateTable
     {
 
-        public TemplateCollum TemplateCollums
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public TemplateCollum TemplateCollums { set; get; }
+        
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Moq;
 using NUnit.Framework;
 
 namespace rupban.core.test
@@ -17,7 +18,11 @@ namespace rupban.core.test
         public void Initboard()
         {
             string filename="";
+            var mockTemplateTable = new Mock<TemplateTable>();
+            //mockTemplateTable.Setup(u=>u.)
             board.LoadTemplateTable(filename);
+            var ticket=board.GetTicketById(1);
+            board.MoveTicket(ticket,2, 1);
         }
 
         private void InitBoard()

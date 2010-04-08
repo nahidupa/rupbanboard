@@ -29,5 +29,16 @@ namespace rupban.core
         }
 
         public TicketPriority Priority { get; set; }
+
+        public TicketStatus Status
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

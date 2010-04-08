@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace rupban.core
 {
@@ -21,6 +22,16 @@ namespace rupban.core
             _templateTable = new TemplateTable();
             //_templateTable.LoadTemplateTable();
             
+            
+        }
+
+        public Ticket GetTicketById(int id)
+        {
+           return _backlogs.SingleOrDefault(t=>t.Number.Equals(id));
+        }
+
+        public void MoveTicket(Ticket ticket, int collumId, int rowId)
+        {
             
         }
     }
