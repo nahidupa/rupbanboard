@@ -12,6 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{296E4A4D-E53
 		lib\nunit.framework.dll = lib\nunit.framework.dll
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "datafile", "datafile", "{C8C5E4E7-AD62-48E5-AAB8-DAB3E447529D}"
+	ProjectSection(SolutionItems) = preProject
+		datafile\BoardTemplate.xml = datafile\BoardTemplate.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
