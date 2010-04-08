@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rupban.core.test", "rupban.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{296E4A4D-E537-40D4-BA48-3DB009E9F8C8}"
 	ProjectSection(SolutionItems) = preProject
+		lib\Moq.dll = lib\Moq.dll
 		lib\nunit.framework.dll = lib\nunit.framework.dll
 	EndProjectSection
 EndProject
