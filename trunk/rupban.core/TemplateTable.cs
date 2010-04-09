@@ -19,6 +19,7 @@ namespace rupban.core
         public TemplateTable()
         {
             _templateCollums = new Dictionary<string, TemplateCollum>();
+            
         }
 
         public TemplateCollum GetCollumByName(string collumName)
@@ -42,27 +43,42 @@ namespace rupban.core
                                                                                       {
                                                                                           ID =
                                                                                               int.Parse(
-                                                                                              collum.Element("ID").Value),
+                                                                                              collum.Element("Id").Value),
                                                                                           Title =
                                                                                               collum.Element("Title").
                                                                                               Value,
-                                                                                          TemplateRows = (collum.
-                                                                                              Descendants("Rows").
+                                                                                          //TemplateRows = (collum.
+                                                                                          //    Descendants("Rows").
+                                                                                          //    Select(
+                                                                                          //    row => new TemplateRow()
+                                                                                          //               {
+                                                                                          //                   Id =
+                                                                                          //                       int.
+                                                                                          //                       Parse
+                                                                                          //                       (row.
+                                                                                          //                            Element
+                                                                                          //                            ("Id")
+                                                                                          //                            .
+                                                                                          //                            Value)
+                                                                                          //               }).ToList())
+
+
+                                                                                      }.SetRows
+                                                                                      (
+                                                                                      (collum.Descendants("Rows").
                                                                                               Select(
                                                                                               row => new TemplateRow()
                                                                                                          {
-                                                                                                             ID =
+                                                                                                             Id =
                                                                                                                  int.
                                                                                                                  Parse
                                                                                                                  (row.
                                                                                                                       Element
-                                                                                                                      ("ID")
+                                                                                                                      ("Id")
                                                                                                                       .
                                                                                                                       Value)
                                                                                                          }).ToList())
-
-
-                                                                                      });
+                                                                                      ));
 
             }
             throw new FileNotFoundException("File not found");
@@ -70,12 +86,18 @@ namespace rupban.core
 
         public void AddTicket(Ticket ticket, int collumId, int rowId)
         {
-            
+            GetCollumById(collumId).GetRowByIndex(rowId).AddItem(ticket);
         }
 
         public TemplateCollum GetCollumById(int collumId)
         {
             return _templateCollums.SingleOrDefault(c => c.Value.ID.Equals(collumId)).Value;
+        }
+
+        public void AddCollum(string collumName)
+        {
+            if (!_templateCollums.ContainsKey(collumName))
+            _templateCollums.Add(collumName, new TemplateCollum());
         }
     }
 }

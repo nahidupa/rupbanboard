@@ -7,7 +7,7 @@
       <FileName>Ticket.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="rupban.core.Board" Collapsed="true">
+  <Class Name="rupban.core.Board">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAAAAAAAAAAAAAAAEAAAABAIAAAAAAAAAADAACA=</HashCode>
@@ -29,7 +29,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="rupban.core.TemplateRow" Collapsed="true">
-    <Position X="5.25" Y="1.5" Width="1.5" />
+    <Position X="8" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TemplateRow.cs</FileName>
