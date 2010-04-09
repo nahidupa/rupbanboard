@@ -20,11 +20,11 @@ namespace rupban.core
         public void LoadTemplateTable(string filename)
         {
             _templateTable = new TemplateTable();
-            //_templateTable.LoadTemplateTable();
+            _templateTable.LoadTemplateTable(filename);
             
             
         }
-
+        
         public Ticket GetTicketById(int id)
         {
            return _backlogs.SingleOrDefault(t=>t.Number.Equals(id));

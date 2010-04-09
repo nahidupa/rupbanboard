@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace rupban.core
 {
@@ -20,13 +24,31 @@ namespace rupban.core
         public TemplateCollum GetCollumByName(string collumName)
         {
             if (_templateCollums.ContainsKey(collumName))
-           return _templateCollums[collumName];
+            return _templateCollums[collumName];
             return null;
         }
 
         public int GetCollumCount()
         {
             return _templateCollums.Count;
+        }
+
+        public void LoadTemplateTable(string filename)
+        {
+           if(File.Exists(filename))
+           {
+               XDocument  document=XDocument.Load(filename);
+               var collumList = document.Descendants("Collums").Select(collum => new TemplateCollum
+                                                                                     {
+                                                                                         ID =
+                                                                                            int.Parse(collum.Element("ID").Value),
+                                                                                         //TemplateRows = collum.Descendants("Rows").Select(row=>new List<>),
+                                                                                         Title = collum.Element("Title").Value
+                                                                                                                   
+                                                                                     });
+               
+           }
+            throw new FileNotFoundException("File not found");
         }
     }
 }
