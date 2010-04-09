@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="BoardTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemplateTableTest.cs" />
     <Compile Include="Tickettest.cs" />
   </ItemGroup>
   <ItemGroup>
