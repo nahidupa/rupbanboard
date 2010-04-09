@@ -11,22 +11,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using rupban.agent;
 
 namespace rubban.gridview
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for CreateProject.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class CreateProject : Page
     {
-        public Page1()
+        public CreateProject()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, RoutedEventArgs e)
+        private void button1_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("CreateProject.xaml", UriKind.Relative));
+            TrackAgent trackAgent = new TrackAgent();
+            trackAgent.ImportTicket();
+
+            NavigationService.Navigate(new Uri("BackLogs.xaml", UriKind.Relative));
         }
     }
 }

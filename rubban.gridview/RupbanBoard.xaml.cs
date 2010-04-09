@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace rubban.gridview
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for RupbanBoard.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class RupbanBoard : Page
     {
-        public Page1()
+        public RupbanBoard()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("CreateProject.xaml", UriKind.Relative));
         }
     }
 }
