@@ -34,5 +34,10 @@ namespace rupban.core
         {
             
         }
+
+        public TemplateTable GetTemplateTable()
+        {
+            return _templateTable;
+        }
     }
 }

@@ -23,6 +23,8 @@ namespace rupban.core.test
             board.LoadTemplateTable(filename);
             var ticket=board.GetTicketById(1);
             board.MoveTicket(ticket,2, 1);
+            var templateTable = board.GetTemplateTable();
+            templateTable.GetCollumByName("HotBox");
         }
 
         private void InitBoard()
