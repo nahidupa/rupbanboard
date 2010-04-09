@@ -76,6 +76,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Control\ActionPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\BoardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\TicketView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="dashboard.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -92,6 +104,15 @@
   <ItemGroup>
     <Compile Include="BoardDesigner.xaml.cs">
       <DependentUpon>BoardDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ActionPanelView.xaml.cs">
+      <DependentUpon>ActionPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\BoardView.xaml.cs">
+      <DependentUpon>BoardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\TicketView.xaml.cs">
+      <DependentUpon>TicketView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
