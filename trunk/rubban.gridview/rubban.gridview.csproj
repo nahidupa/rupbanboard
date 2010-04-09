@@ -72,6 +72,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="BackLogs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BoardDesigner.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -92,9 +96,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CreateProject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="dashboard.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RupbanBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -106,6 +118,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackLogs.xaml.cs">
+      <DependentUpon>BackLogs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BoardDesigner.xaml.cs">
       <DependentUpon>BoardDesigner.xaml</DependentUpon>
     </Compile>
@@ -121,6 +136,9 @@
     <Compile Include="Control\TicketViewContainer.xaml.cs">
       <DependentUpon>TicketViewContainer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreateProject.xaml.cs">
+      <DependentUpon>CreateProject.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -134,6 +152,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="RupbanBoard.xaml.cs">
+      <DependentUpon>RupbanBoard.xaml</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -146,6 +167,16 @@
     <None Include="Properties\app.manifest" />
     <None Include="rubban.gridview_TemporaryKey.pfx" />
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\rupban.agent\rupban.agent.csproj">
+      <Project>{40399C1B-D575-43D6-89E0-C673ECA94E07}</Project>
+      <Name>rupban.agent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\rupban.core\rupban.core.csproj">
+      <Project>{AA0EFC21-AA28-4C62-AE93-CB786A910CA4}</Project>
+      <Name>rupban.core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

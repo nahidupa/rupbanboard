@@ -3,6 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Title="Page1" Height="235" Width="479">
     <Grid>
-        
+        <Button Height="29" Margin="15,26,0,0" Name="button1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="139">Create Board template</Button>
+        <Button Margin="170,28.5,170,0" Name="button2" Height="24" VerticalAlignment="Top" Click="button2_Click">Create new project</Button>
     </Grid>
 </Page>

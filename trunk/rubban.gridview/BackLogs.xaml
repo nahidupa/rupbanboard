@@ -1,0 +1,8 @@
+﻿<Page x:Class="rubban.gridview.BackLogs"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="BackLogs" Height="313" Width="696">
+    <Grid>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,8,45,0" Name="button1" VerticalAlignment="Top" Width="122" Click="button1_Click">Jump Rupban Board</Button>
+    </Grid>
+</Page>
