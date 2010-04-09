@@ -6,39 +6,18 @@ namespace rupban.core
 {
     public class Ticket
     {
+        private string _title="";
         public string Title
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get { return _title; }
+            set { _title = value; }
         }
 
-        public int Number
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public int Number{ get; set; }
 
         public TicketPriority Priority { get; set; }
 
-        public TicketStatus Status
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public TicketStatus Status { get; set; }
+
     }
 }
