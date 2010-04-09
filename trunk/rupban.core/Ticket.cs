@@ -4,7 +4,7 @@ using System.Text;
 
 namespace rupban.core
 {
-    public class Ticket
+    public class Ticket : TemplateCell
     {
         private string _title="";
         public string Title

@@ -17,11 +17,20 @@ namespace rupban.core.test
             
         }
         [Test]
-        public void GetCollumByName()
+        public void GetCollumByNameTest()
         {
             var templateTable = new TemplateTable();
             var collum = templateTable.GetCollumByName("");
             Assert.IsNull(collum);
         }
+
+       [Test]
+        public void  AddTicketTest()
+       {
+           var templateTable = new TemplateTable();
+           templateTable.AddTicket(new Ticket(), 0,0);
+           var templateCollum = templateTable.GetCollumById(0);
+           //templateCollum.TemplateRows[0].TemplateCells[0];
+       }
     }
 }
