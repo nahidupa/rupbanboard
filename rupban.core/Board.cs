@@ -32,7 +32,7 @@ namespace rupban.core
 
         public void MoveTicket(Ticket ticket, int collumId, int rowId)
         {
-            
+            _templateTable.AddTicket(ticket,collumId, rowId);
         }
 
         public TemplateTable GetTemplateTable()

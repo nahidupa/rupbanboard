@@ -67,5 +67,15 @@ namespace rupban.core
             }
             throw new FileNotFoundException("File not found");
         }
+
+        public void AddTicket(Ticket ticket, int collumId, int rowId)
+        {
+            
+        }
+
+        public TemplateCollum GetCollumById(int collumId)
+        {
+            return _templateCollums.SingleOrDefault(c => c.Value.ID.Equals(collumId)).Value;
+        }
     }
 }
