@@ -35,19 +35,36 @@ namespace rupban.core
 
         public void LoadTemplateTable(string filename)
         {
-           if(File.Exists(filename))
-           {
-               XDocument  document=XDocument.Load(filename);
-               var collumList = document.Descendants("Collums").Select(collum => new TemplateCollum
-                                                                                     {
-                                                                                         ID =
-                                                                                            int.Parse(collum.Element("ID").Value),
-                                                                                         //TemplateRows = collum.Descendants("Rows").Select(row=>new List<>),
-                                                                                         Title = collum.Element("Title").Value
-                                                                                                                   
-                                                                                     });
-               
-           }
+            if (File.Exists(filename))
+            {
+                XDocument document = XDocument.Load(filename);
+                var collumList = document.Descendants("Collums").Select(collum => new TemplateCollum
+                                                                                      {
+                                                                                          ID =
+                                                                                              int.Parse(
+                                                                                              collum.Element("ID").Value),
+                                                                                          Title =
+                                                                                              collum.Element("Title").
+                                                                                              Value,
+                                                                                          TemplateRows = (collum.
+                                                                                              Descendants("Rows").
+                                                                                              Select(
+                                                                                              row => new TemplateRow()
+                                                                                                         {
+                                                                                                             ID =
+                                                                                                                 int.
+                                                                                                                 Parse
+                                                                                                                 (row.
+                                                                                                                      Element
+                                                                                                                      ("ID")
+                                                                                                                      .
+                                                                                                                      Value)
+                                                                                                         }).ToList())
+
+
+                                                                                      });
+
+            }
             throw new FileNotFoundException("File not found");
         }
     }
