@@ -1,14 +1,14 @@
 <Board>
   <Collums>
     <Collum>
-      <ID>
-        
-      </ID>
-      <Title>
-        
-      </Title>
+      <Id></Id>
+      <Title></Title>
       <Rows>
-        <Row></Row>
+        <Row>
+          <cells>
+            <cell></cell>
+          </cells>
+        </Row>
       </Rows>
     </Collum>
   </Collums>

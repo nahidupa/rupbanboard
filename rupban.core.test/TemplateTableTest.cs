@@ -28,9 +28,14 @@ namespace rupban.core.test
         public void  AddTicketTest()
        {
            var templateTable = new TemplateTable();
-           templateTable.AddTicket(new Ticket(), 0,0);
+           templateTable.AddCollum("Hotbox");
            var templateCollum = templateTable.GetCollumById(0);
-           //templateCollum.TemplateRows[0].TemplateCells[0];
+           templateCollum.AddRow();
+           templateTable.AddTicket(new Ticket(), 0, 0);
+           var templateRow = templateCollum.GetRowByIndex(0);
+           Assert.AreEqual(1,templateRow.GetAllTickets().Count);
+           Assert.AreEqual(0, templateRow.GetAllPeerBox().Count);
+           
        }
     }
 }
