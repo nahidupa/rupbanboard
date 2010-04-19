@@ -1,14 +1,10 @@
 #labels Phase-Design
-Project brainstorming
+= Project brainstorming =
 
-= Introduction =
-
-Project brainstorming is going on feel free to mail nahidupa@gmail.com for any valuable inputs
-  
+Project brainstorming is going on feel free to mail nahidupa@gmail.com for any valuable inputs  
 
 
 = Details =
-
 
 Current mock up will be found here 
 
