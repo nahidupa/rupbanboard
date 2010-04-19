@@ -91,8 +91,8 @@
     <Node Id="@168" Category="CodeSchema_Method" CodeSchemaProperty_IsPublic="True" Label="InitializeComponent" />
     <Node Id="@169" Category="CodeSchema_Method" CodeSchemaProperty_IsPublic="True" Label="Main" />
     <Node Id="@170" Category="CodeSchema_Method" CodeSchemaProperty_IsProtected="True" Label="SetUp" />
-    <Node Id="@18" Category="CodeSchema_Namespace" Group="Collapsed" Label="rupban.agent" />
-    <Node Id="@2" Category="FileSystem.Category.FileOfType.exe" CodeSchemaProperty_StrongName="rubban.gridview, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" FilePath="$(2d3c7430-8142-4b36-8cb6-4b16e645ab6e.OutputPath)" Group="Collapsed" Label="rubban.gridview.exe">
+    <Node Id="@18" Category="CodeSchema_Namespace" Group="Expanded" Label="rupban.agent" />
+    <Node Id="@2" Category="FileSystem.Category.FileOfType.exe" CodeSchemaProperty_StrongName="rubban.gridview, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" FilePath="$(2d3c7430-8142-4b36-8cb6-4b16e645ab6e.OutputPath)" Group="Expanded" Label="rubban.gridview.exe">
       <Category Ref="CodeSchema_Assembly" />
     </Node>
     <Node Id="@20" Category="CodeSchema_Namespace" Group="Collapsed" Label="rupban.core" />
@@ -136,7 +136,7 @@
     <Node Id="@76" Category="CodeSchema_Method" CodeSchemaProperty_IsPublic="True" Label="SetRows" />
     <Node Id="@77" Category="CodeSchema_Method" CodeSchemaProperty_IsPublic="True" Label="Setbacklogs" />
     <Node Id="@78" Category="CodeSchema_Method" CodeSchemaProperty_IsPublic="True" Label="&lt;GetCollumById&gt;b__6" />
-    <Node Id="@8" Category="FileSystem.Category.FileOfType.dll" CodeSchemaProperty_StrongName="rupban.agent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" FilePath="$(40399c1b-d575-43d6-89e0-c673eca94e07.OutputPath)" Group="Collapsed" Label="rupban.agent.dll">
+    <Node Id="@8" Category="FileSystem.Category.FileOfType.dll" CodeSchemaProperty_StrongName="rupban.agent, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" FilePath="$(40399c1b-d575-43d6-89e0-c673eca94e07.OutputPath)" Group="Expanded" Label="rupban.agent.dll">
       <Category Ref="CodeSchema_Assembly" />
     </Node>
     <Node Id="@81" Category="CodeSchema_Method" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Method" Label="GetCollumById" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" />
