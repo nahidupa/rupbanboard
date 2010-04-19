@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="rupbanboardUseCase">
+  <useCaseModelRootMoniker Id="78d5d7e0-be17-46f2-8858-513970ce5b50" />
+  <nestedChildShapes>
+    <actorShape Id="fb4a89c2-f3f9-403b-ac7b-47801d7e33bf" absoluteBounds="1.625, 2, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="94a1939e-c2d9-4042-b1b1-506d08181d93" LastKnownName="ProjectOwner" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="fc15cd0e-c97f-4ef6-97da-d710445f66e6" absoluteBounds="3.5, 2, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="5b5b8e06-7757-496e-8cd3-daa67c7299c0" LastKnownName="Can set priority on ticket" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(2.125 : 2.26470588235294); (3.50153081109372 : 2.34567828300551)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="8c9db4ae-6d88-492c-8d91-72f9d9d92566" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="fb4a89c2-f3f9-403b-ac7b-47801d7e33bf" />
+        <useCaseShapeMoniker Id="fc15cd0e-c97f-4ef6-97da-d710445f66e6" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>
