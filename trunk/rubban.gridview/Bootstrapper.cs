@@ -1,5 +1,7 @@
 ﻿using System.Windows;
+using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.UnityExtensions;
+using rupban.loginmodule;
 
 namespace rubban.gridview
 {
@@ -14,11 +16,10 @@ namespace rubban.gridview
 
         protected override void InitializeModules()
         {
-            //IModule employeeModule = this.Container.Resolve<EmployeeModule>();
-            //employeeModule.Initialize();
+            IModule loginModule = this.Container.Resolve<LoginModule>();
+            loginModule.Initialize();
 
-            //IModule projectModule = this.Container.Resolve<ProjectModule>();
-            //projectModule.Initialize();
+           
         }
     }
 }
