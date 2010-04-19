@@ -70,6 +70,10 @@
     <Reference Include="Microsoft.Practices.Composite.UnityExtensions">
       <HintPath>..\lib\Microsoft.Practices.Composite.UnityExtensions.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
@@ -246,6 +250,10 @@
     <ProjectReference Include="..\rupban.core\rupban.core.csproj">
       <Project>{AA0EFC21-AA28-4C62-AE93-CB786A910CA4}</Project>
       <Name>rupban.core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\rupban.loginmodule\rupban.loginmodule.csproj">
+      <Project>{7B8FB4C0-4F2D-422F-AFFB-F2E6F8AB0F01}</Project>
+      <Name>rupban.loginmodule</Name>
     </ProjectReference>
     <ProjectReference Include="..\rupban.ui.infrastructure\rupban.ui.infrastructure.csproj">
       <Project>{09542C73-C9ED-4231-B330-B9BFDCE194CB}</Project>
