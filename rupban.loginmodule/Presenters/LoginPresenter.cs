@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Windows.Input;
+using Microsoft.Practices.Composite.Presentation.Commands;
 using Rupban.LoginModule.Controller;
 using Rupban.LoginModule.Views;
 
@@ -11,10 +9,14 @@ namespace Rupban.LoginModule.Presenters
     {
         private ILoginController _loginController;
 
+        public DelegateCommand<object> Command { get; set; }
+
+
         public LoginPresenter(ILoginView view,ILoginController loginController)
         {
             _loginController = loginController;
             View = view;
+            
         }
 
         public ILoginView View
