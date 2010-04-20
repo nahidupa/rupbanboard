@@ -54,12 +54,6 @@
     <Compile Include="BackLogImporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Rupban.Core\Rupban.Core.csproj">
-      <Project>{AA0EFC21-AA28-4C62-AE93-CB786A910CA4}</Project>
-      <Name>Rupban.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
