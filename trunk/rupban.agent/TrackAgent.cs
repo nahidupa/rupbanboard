@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using rupban.core;
+using Rupban.Core;
 using rupban.project;
 
 namespace Rupban.Agent

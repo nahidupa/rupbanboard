@@ -6,7 +6,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace rupban.core
+namespace Rupban.Core
 {
     public class TemplateTable
     {

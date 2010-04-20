@@ -2,7 +2,7 @@
 using Moq;
 using NUnit.Framework;
 
-namespace rupban.core.test
+namespace Rupban.Core.test
 {
     [TestFixture]
     public class BoardTest

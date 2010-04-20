@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace rupban.core
+namespace Rupban.Core
 {
     public class Peerbox : TemplateCell
     {

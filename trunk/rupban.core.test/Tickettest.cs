@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using NUnit.Framework;
 
-namespace rupban.core.test
+namespace Rupban.Core.test
 {
     [TestFixture]
     public class Tickettest
