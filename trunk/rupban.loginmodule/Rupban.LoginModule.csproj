@@ -66,6 +66,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Controller\IAdminPanelController.cs" />
     <Compile Include="Controller\IProjectsController.cs" />
     <Compile Include="Controller\LoginController.cs" />

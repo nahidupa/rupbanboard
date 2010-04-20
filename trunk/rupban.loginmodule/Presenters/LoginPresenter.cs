@@ -1,5 +1,4 @@
-﻿using System.Windows.Input;
-using Microsoft.Practices.Composite.Presentation.Commands;
+﻿using Microsoft.Practices.Composite.Presentation.Commands;
 using Rupban.LoginModule.Controller;
 using Rupban.LoginModule.Views;
 
