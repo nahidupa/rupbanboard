@@ -1,4 +1,4 @@
-namespace rupban.core
+namespace Rupban.Core
 {
     public enum TicketStatus
     {

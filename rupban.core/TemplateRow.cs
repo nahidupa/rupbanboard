@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-namespace rupban.core
+namespace Rupban.Core
 {
     public class TemplateRow
     {
