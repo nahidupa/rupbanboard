@@ -112,9 +112,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Control\Login.xaml.cs">
-      <DependentUpon>Login.xaml</DependentUpon>
-    </Compile>
     <Compile Include="RegionNames.cs" />
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
@@ -138,16 +135,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Control\BoardView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Control\Login.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Control\TicketView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <Generator>MSBuild:Compile</Generator>
@@ -203,9 +190,6 @@
     </Compile>
     <Compile Include="Control\BoardView.xaml.cs">
       <DependentUpon>BoardView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Control\TicketView.xaml.cs">
-      <DependentUpon>TicketView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Control\TicketViewContainer.xaml.cs">
       <DependentUpon>TicketViewContainer.xaml</DependentUpon>

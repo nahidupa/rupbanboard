@@ -12,14 +12,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Rubban.Gridview.Control
+namespace rupban.loginmodule.Views
 {
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Interaction logic for TicketView.xaml
     /// </summary>
-    public partial class Login : UserControl
+    public partial class TicketView : UserControl, ITicketView
     {
-        public Login()
+        public TicketView()
         {
             InitializeComponent();
         }
