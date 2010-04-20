@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rupban.core", "rupban.core\rupban.core.csproj", "{AA0EFC21-AA28-4C62-AE93-CB786A910CA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rupban.agent", "rupban.agent\rupban.agent.csproj", "{40399C1B-D575-43D6-89E0-C673ECA94E07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rubban.gridview", "rubban.gridview\rubban.gridview.csproj", "{2D3C7430-8142-4B36-8CB6-4B16E645AB6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rupban.core.test", "rupban.core.test\rupban.core.test.csproj", "{DB5C165F-4525-495E-80CC-D5EF0799F778}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rupban.project", "rupban.project\rupban.project.csproj", "{1D1FF591-F5F0-4E4A-AA1B-04EEC4E26DD2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{66976087-6BC9-4EB3-A567-F18A3D07AB97}"
+	ProjectSection(SolutionItems) = preProject
+		lib\Microsoft.Practices.Composite.dll = lib\Microsoft.Practices.Composite.dll
+		lib\Microsoft.Practices.Composite.Presentation.dll = lib\Microsoft.Practices.Composite.Presentation.dll
+		lib\Microsoft.Practices.Composite.UnityExtensions.dll = lib\Microsoft.Practices.Composite.UnityExtensions.dll
+		lib\Microsoft.Practices.ObjectBuilder2.dll = lib\Microsoft.Practices.ObjectBuilder2.dll
+		lib\Microsoft.Practices.ServiceLocation.dll = lib\Microsoft.Practices.ServiceLocation.dll
+		lib\Microsoft.Practices.Unity.dll = lib\Microsoft.Practices.Unity.dll
+		lib\Moq.dll = lib\Moq.dll
+		lib\nunit.framework.dll = lib\nunit.framework.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "datafile", "datafile", "{A13B2012-E7EF-42A4-8475-C90C556D0638}"
+	ProjectSection(SolutionItems) = preProject
+		datafile\BoardTemplate.xml = datafile\BoardTemplate.xml
+	EndProjectSection
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "rupbanboardUMLDesign", "rupbanboardUMLDesign\rupbanboardUMLDesign.modelproj", "{7A40CEA7-CF1C-4C26-AAFE-7F9713699BD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rupban.ui.infrastructure", "rupban.ui.infrastructure\rupban.ui.infrastructure.csproj", "{09542C73-C9ED-4231-B330-B9BFDCE194CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rupban.loginmodule", "rupban.loginmodule\rupban.loginmodule.csproj", "{7B8FB4C0-4F2D-422F-AFFB-F2E6F8AB0F01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA0EFC21-AA28-4C62-AE93-CB786A910CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA0EFC21-AA28-4C62-AE93-CB786A910CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA0EFC21-AA28-4C62-AE93-CB786A910CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA0EFC21-AA28-4C62-AE93-CB786A910CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40399C1B-D575-43D6-89E0-C673ECA94E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40399C1B-D575-43D6-89E0-C673ECA94E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40399C1B-D575-43D6-89E0-C673ECA94E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40399C1B-D575-43D6-89E0-C673ECA94E07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D3C7430-8142-4B36-8CB6-4B16E645AB6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D3C7430-8142-4B36-8CB6-4B16E645AB6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D3C7430-8142-4B36-8CB6-4B16E645AB6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D3C7430-8142-4B36-8CB6-4B16E645AB6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB5C165F-4525-495E-80CC-D5EF0799F778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB5C165F-4525-495E-80CC-D5EF0799F778}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB5C165F-4525-495E-80CC-D5EF0799F778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB5C165F-4525-495E-80CC-D5EF0799F778}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D1FF591-F5F0-4E4A-AA1B-04EEC4E26DD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D1FF591-F5F0-4E4A-AA1B-04EEC4E26DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D1FF591-F5F0-4E4A-AA1B-04EEC4E26DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D1FF591-F5F0-4E4A-AA1B-04EEC4E26DD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A40CEA7-CF1C-4C26-AAFE-7F9713699BD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A40CEA7-CF1C-4C26-AAFE-7F9713699BD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A40CEA7-CF1C-4C26-AAFE-7F9713699BD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A40CEA7-CF1C-4C26-AAFE-7F9713699BD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09542C73-C9ED-4231-B330-B9BFDCE194CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09542C73-C9ED-4231-B330-B9BFDCE194CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09542C73-C9ED-4231-B330-B9BFDCE194CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09542C73-C9ED-4231-B330-B9BFDCE194CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B8FB4C0-4F2D-422F-AFFB-F2E6F8AB0F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B8FB4C0-4F2D-422F-AFFB-F2E6F8AB0F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B8FB4C0-4F2D-422F-AFFB-F2E6F8AB0F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B8FB4C0-4F2D-422F-AFFB-F2E6F8AB0F01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
