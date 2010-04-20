@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using rupban.loginmodule.Controller;
-using rupban.loginmodule.Views;
+using Rupban.LoginModule.Controller;
+using Rupban.LoginModule.Views;
 
-namespace rupban.loginmodule.Presenters
+namespace Rupban.LoginModule.Presenters
 {
     public class LoginPresenter : ILoginPresenter
     {

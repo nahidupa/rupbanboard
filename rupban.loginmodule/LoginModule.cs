@@ -5,12 +5,12 @@ using System.Text;
 using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
-using rupban.loginmodule.Controller;
-using rupban.loginmodule.Presenters;
-using rupban.loginmodule.Views;
-using rupban.ui.infrastructure;
+using Rupban.LoginModule.Controller;
+using Rupban.LoginModule.Presenters;
+using Rupban.LoginModule.Views;
+using Rupban.UI.Infrastructure;
 
-namespace rupban.loginmodule
+namespace Rupban.LoginModule
 {
     public class LoginModule:IModule
     {

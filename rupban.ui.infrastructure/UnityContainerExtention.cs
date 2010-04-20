@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Practices.Unity;
 
-namespace rupban.ui.infrastructure
+namespace Rupban.UI.Infrastructure
 {
     public static class UnityContainerExtention
     {

@@ -1,4 +1,4 @@
-namespace rupban.loginmodule.Controller
+namespace Rupban.LoginModule.Controller
 {
     public interface ILoginController
     {

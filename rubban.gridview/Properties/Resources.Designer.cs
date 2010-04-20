@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace rubban.gridview.Properties {
+namespace Rubban.Gridview.Properties {
     using System;
     
     

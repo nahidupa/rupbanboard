@@ -1,11 +1,11 @@
-﻿<Window x:Class="rubban.gridview.Shell"
+﻿<Window x:Class="Rubban.Gridview.Shell"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              xmlns:cal="http://www.codeplex.com/CompositeWPF"
-             xmlns:infrastructure="clr-namespace:rupban.ui.infrastructure;assembly=rupban.ui.infrastructure"
+             xmlns:infrastructure="clr-namespace:Rupban.UI.Infrastructure;assembly=rupban.ui.infrastructure"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <ContentControl cal:RegionManager.RegionName="{x:Static infrastructure:RegionNames.MainRegion }" ></ContentControl>

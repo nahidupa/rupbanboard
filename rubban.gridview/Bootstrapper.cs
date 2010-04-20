@@ -1,9 +1,9 @@
 ﻿using System.Windows;
 using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.UnityExtensions;
-using rupban.loginmodule;
+using Rupban.LoginModule;
 
-namespace rubban.gridview
+namespace Rubban.Gridview
 {
     class Bootstrapper : UnityBootstrapper
     {

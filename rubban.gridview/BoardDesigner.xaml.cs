@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace rubban.gridview
+namespace Rubban.Gridview
 {
     /// <summary>
     /// Interaction logic for BoardDesigner.xaml
