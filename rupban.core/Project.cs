@@ -7,5 +7,16 @@ namespace Rupban.Core
     public class Project
     {
         public string Name { get; set; }
+
+        public Board Board
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }
