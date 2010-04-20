@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Rupban.Core;
 
-namespace rupban.project
+namespace Rupban.Project
 {
     public class BackLogImporter
     {

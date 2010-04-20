@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace rupban.loginmodule.Views
+namespace Rupban.LoginModule.Views
 {
     /// <summary>
     /// Interaction logic for LoginView.xaml

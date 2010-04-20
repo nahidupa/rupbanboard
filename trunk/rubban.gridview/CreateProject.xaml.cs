@@ -13,7 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Rupban.Agent;
 
-namespace rubban.gridview
+namespace Rubban.Gridview
 {
     /// <summary>
     /// Interaction logic for CreateProject.xaml

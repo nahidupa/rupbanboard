@@ -6,7 +6,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Navigation;
 
-namespace rubban.gridview
+namespace Rubban.Gridview
 {
     /// <summary>
     /// Interaction logic for App.xaml

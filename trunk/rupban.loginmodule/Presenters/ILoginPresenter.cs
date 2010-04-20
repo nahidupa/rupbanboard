@@ -1,6 +1,6 @@
-using rupban.loginmodule.Views;
+using Rupban.LoginModule.Views;
 
-namespace rupban.loginmodule.Presenters
+namespace Rupban.LoginModule.Presenters
 {
     public interface ILoginPresenter
     {

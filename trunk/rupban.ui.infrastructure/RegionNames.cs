@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace rupban.ui.infrastructure
+namespace Rupban.UI.Infrastructure
 {
     public class RegionNames
     {

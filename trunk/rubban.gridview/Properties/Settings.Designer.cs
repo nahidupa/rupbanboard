@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace rubban.gridview.Properties {
+namespace Rubban.Gridview.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

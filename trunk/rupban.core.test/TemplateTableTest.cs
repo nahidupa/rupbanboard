@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using NUnit.Framework;
 
-namespace Rupban.Core.test
+namespace Rupban.Core.Test
 {
     [TestFixture]
     public class TemplateTableTest

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace rupban.loginmodule.Views
+namespace Rupban.LoginModule.Views
 {
     public interface ILoginView
     {
