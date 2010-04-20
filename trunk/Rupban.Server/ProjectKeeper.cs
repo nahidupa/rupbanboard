@@ -1,12 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using rupban.core;
+using Rupban.Core;
 
 namespace Rupban.Server
 {
     public class ProjectKeeper
     {
-        public List<Project> Projects { get; set; }
+        private List<Project> _projects;
+        public List<Project> GetCurrentProjectList()
+        {
+            return _projects = new List<Project>()
+                       {
+                           new Project()
+                               {
+                                   Name = "demoProject"
+                               }
+                       };
+        }
     }
 }
