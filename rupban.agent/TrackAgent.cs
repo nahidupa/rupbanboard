@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using rupban.core;
 using rupban.project;
 
-namespace rupban.agent
+namespace Rupban.Agent
 {
     public class TrackAgent
     {
