@@ -20,15 +20,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "datafile", "datafile", "{C8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rupban.Core", "rupban.core\Rupban.Core.csproj", "{AA0EFC21-AA28-4C62-AE93-CB786A910CA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_rupban.core.test", "rupban.core.test\_rupban.core.test.csproj", "{DB5C165F-4525-495E-80CC-D5EF0799F778}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rupban.Core.Test", "rupban.core.test\Rupban.Core.Test.csproj", "{DB5C165F-4525-495E-80CC-D5EF0799F778}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_rupban.loginmodule", "rupban.loginmodule\_rupban.loginmodule.csproj", "{7B8FB4C0-4F2D-422F-AFFB-F2E6F8AB0F01}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rupban.LoginModule", "rupban.loginmodule\Rupban.LoginModule.csproj", "{7B8FB4C0-4F2D-422F-AFFB-F2E6F8AB0F01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_rupban.project", "rupban.project\_rupban.project.csproj", "{1D1FF591-F5F0-4E4A-AA1B-04EEC4E26DD2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rupban.Project", "rupban.project\Rupban.Project.csproj", "{1D1FF591-F5F0-4E4A-AA1B-04EEC4E26DD2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rupban.UI.Infrastructure", "rupban.ui.infrastructure\Rupban.UI.Infrastructure.csproj", "{09542C73-C9ED-4231-B330-B9BFDCE194CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_rupban.agent", "rupban.agent\_rupban.agent.csproj", "{40399C1B-D575-43D6-89E0-C673ECA94E07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rupban.Agent", "rupban.agent\Rupban.Agent.csproj", "{40399C1B-D575-43D6-89E0-C673ECA94E07}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rubban.Gridview", "rubban.gridview\Rubban.Gridview.csproj", "{2D3C7430-8142-4B36-8CB6-4B16E645AB6E}"
 EndProject
