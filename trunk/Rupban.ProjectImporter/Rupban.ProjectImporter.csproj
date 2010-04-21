@@ -8,8 +8,8 @@
     <ProjectGuid>{1D1FF591-F5F0-4E4A-AA1B-04EEC4E26DD2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>rupban.project</RootNamespace>
-    <AssemblyName>rupban.project</AssemblyName>
+    <RootNamespace>Rupban.ProjectImporter</RootNamespace>
+    <AssemblyName>Rupban.ProjectImporter</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>

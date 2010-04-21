@@ -8,8 +8,8 @@
     <ProjectGuid>{AA0EFC21-AA28-4C62-AE93-CB786A910CA4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>rupban.core</RootNamespace>
-    <AssemblyName>rupban.core</AssemblyName>
+    <RootNamespace>Rupban.Core</RootNamespace>
+    <AssemblyName>Rupban.Core</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>

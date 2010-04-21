@@ -8,8 +8,8 @@
     <ProjectGuid>{40399C1B-D575-43D6-89E0-C673ECA94E07}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>rupban.agent</RootNamespace>
-    <AssemblyName>rupban.agent</AssemblyName>
+    <RootNamespace>Rupban.Agent</RootNamespace>
+    <AssemblyName>Rupban.Agent</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
