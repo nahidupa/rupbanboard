@@ -3,9 +3,8 @@ using Rupban.Core;
 
 namespace Rupban.LoginModule.Services
 {
-    public interface ILoginModuleService
+    public interface IProjectService
     {
         List<Project> GetCurrentProjectList();
-        bool LogOn(string username);
     }
 }

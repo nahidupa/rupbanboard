@@ -9,15 +9,15 @@ namespace Rupban.LoginModule.Presenters
 {
     public class LoginPresenter : ILoginPresenter
     {
-        private ILoginController _loginController;
-        private ILoginModuleService _loginModuleService;
+        private readonly ILoginController _loginController;
+        private readonly ILoginService _loginService;
 
         public ICommand LoginCommand { get; set; }
 
 
-        public LoginPresenter(ILoginView view,ILoginController loginController,ILoginModuleService loginModuleService)
+        public LoginPresenter(ILoginView view,ILoginController loginController,ILoginService loginService)
         {
-            _loginModuleService = loginModuleService;
+            _loginService = loginService;
             _loginController = loginController;
             View = view;
             View.SetModel(this);
@@ -27,7 +27,7 @@ namespace Rupban.LoginModule.Presenters
         private  void Login(object obj)
         {
             string username="";
-            var logedIn = _loginModuleService.LogOn(username);
+            var logedIn = _loginService.LogOn(username);
             if (logedIn)
             {
                 _loginController.LogedIn();

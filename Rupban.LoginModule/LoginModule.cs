@@ -27,6 +27,7 @@ namespace Rupban.LoginModule
         public void Initialize()
         {
             RegisterViewsAndServices();
+            
             LoginPresenter presenter = _container.Resolve<LoginPresenter>();
 
             IRegion mainRegion = _regionManager.Regions[RegionNames.MainRegion];
@@ -43,8 +44,13 @@ namespace Rupban.LoginModule
             _container.RegisterType(typeof(IAdminPanelView), typeof(AdminPanelView), true);
             _container.RegisterType(typeof(IAdminPanelPresenter), typeof(AdminPanelPresenter), true);
 
+            _container.RegisterType(typeof(IProjectsController), typeof(ProjectsController), true);
+            _container.RegisterType(typeof(IProjectsView), typeof(ProjectsView), true);
+            _container.RegisterType(typeof(IProjectsPresenter), typeof(ProjectsPresenter), true);
 
-            _container.RegisterType(typeof(ILoginModuleService), typeof(LoginModuleService), true);
+
+            _container.RegisterType(typeof(ILoginService), typeof(LoginService), true);
+            _container.RegisterType(typeof(IProjectService), typeof(ProjectService), true);
 
             
         }
