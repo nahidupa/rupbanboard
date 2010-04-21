@@ -59,7 +59,7 @@
       <Project>{AA0EFC21-AA28-4C62-AE93-CB786A910CA4}</Project>
       <Name>Rupban.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\rupban.project\Rupban.ProjectImporter.csproj">
+    <ProjectReference Include="..\Rupban.ProjectImporter\Rupban.ProjectImporter.csproj">
       <Project>{1D1FF591-F5F0-4E4A-AA1B-04EEC4E26DD2}</Project>
       <Name>Rupban.ProjectImporter</Name>
     </ProjectReference>
