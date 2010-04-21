@@ -79,6 +79,8 @@
     <Compile Include="Presenters\ILoginPresenter.cs" />
     <Compile Include="Controller\ITicketController.cs" />
     <Compile Include="Presenters\IProjectsPresenter.cs" />
+    <Compile Include="Controller\IRupbanBoardController.cs" />
+    <Compile Include="Services\IRupbanBoardService.cs" />
     <Compile Include="Presenters\ITicketPresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\ProjectsPresenter.cs" />
@@ -94,6 +96,8 @@
     <Compile Include="Views\IAdminPanelView.cs" />
     <Compile Include="Views\ILoginView.cs" />
     <Compile Include="Views\IProjectsView.cs" />
+    <Compile Include="Presenters\IRupbanBoardPresenter.cs" />
+    <Compile Include="Views\IRupbanBoardView.cs" />
     <Compile Include="Views\ITicketView.cs" />
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
@@ -101,6 +105,10 @@
     <Compile Include="Views\ProjectsView.xaml.cs">
       <DependentUpon>ProjectsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\RupbanBoardView.xaml.cs">
+      <DependentUpon>RupbanBoardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presenters\RupbanBoardViewPresenter.cs" />
     <Compile Include="Views\TicketView.xaml.cs">
       <DependentUpon>TicketView.xaml</DependentUpon>
     </Compile>
@@ -116,6 +124,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ProjectsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RupbanBoardView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

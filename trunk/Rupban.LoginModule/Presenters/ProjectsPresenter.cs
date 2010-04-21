@@ -1,4 +1,7 @@
+using System;
 using System.Collections.Generic;
+using System.Windows.Input;
+using Microsoft.Practices.Composite.Presentation.Commands;
 using Rupban.Core;
 using Rupban.LoginModule.Controller;
 using Rupban.LoginModule.Services;
@@ -13,6 +16,8 @@ namespace Rupban.LoginModule.Presenters
 
         public List<Project> ProjectList { set; get; }
 
+        public ICommand ViewRupbanBoardCommand { set; get; }
+
         public ProjectsPresenter(IProjectsView view,IProjectsController projectsController,IProjectService projectService)
         {
             _projectsController = projectsController;
@@ -21,6 +26,12 @@ namespace Rupban.LoginModule.Presenters
             View.SetModel(this);
 
             ProjectList = _projectService.GetCurrentProjectList();
+            ViewRupbanBoardCommand = new DelegateCommand<object>(ViewRupbanBoard);
+        }
+
+        private void ViewRupbanBoard(object obj)
+        {
+            _projectsController.ViewRupbanBoard();
         }
 
         public IProjectsView View
