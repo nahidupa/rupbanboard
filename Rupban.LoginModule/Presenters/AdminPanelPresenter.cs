@@ -10,6 +10,9 @@ namespace Rupban.LoginModule.Presenters
     {
         private IAdminPanelController _adminPanelController;
         public ICommand ViewProjectListCommand { get; set; }
+        public ICommand ViewRupbanBoardCommand { get; set; }
+
+        
 
         public AdminPanelPresenter(IAdminPanelView view, IAdminPanelController adminPanelController)
         {
@@ -17,6 +20,13 @@ namespace Rupban.LoginModule.Presenters
             View = view;
             View.SetModel(this);
             ViewProjectListCommand = new DelegateCommand<object>(GetProjectList);
+
+            ViewRupbanBoardCommand = new DelegateCommand<object>(ViewRupbanBoard);
+        }
+
+        private void ViewRupbanBoard(object obj)
+        {
+            _adminPanelController.ViewRupbanBoard();
         }
 
         private void GetProjectList(object obj)
