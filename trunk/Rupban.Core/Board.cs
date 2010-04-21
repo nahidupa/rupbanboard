@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Rupban.Core
@@ -36,6 +37,14 @@ namespace Rupban.Core
         public TemplateTable GetTemplateTable()
         {
             return _templateTable;
+        }
+
+        public void LoadTestTemplateTable()
+        {
+            _templateTable = new TemplateTable();
+            _templateTable.AddCollum("DemoCollum");
+            _templateTable.AddCollum("DemoCollum1");
+            
         }
     }
 }

@@ -8,15 +8,6 @@ namespace Rupban.Core
     {
         public string Name { get; set; }
 
-        public Board Board
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Board Board { get; set; }
     }
 }

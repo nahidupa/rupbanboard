@@ -10,17 +10,36 @@ namespace Rupban.Server
         private List<Project> _projects;
         public List<Project> GetCurrentProjectList()
         {
-            return _projects = new List<Project>()
+            return  new List<Project>()
                        {
                            new Project()
                                {
-                                   Name = "demoProject"
-                               },
-                               new Project()
-                               {
-                                   Name = "demo2Project"
+                                   Name = "demoProject",
+                                   Board = new Board()
+                                               {
+                                                   
+                                               }
                                }
                        };
+        }
+
+        public List<TemplateCollum> GetTemplateCollumList()
+        {
+           _projects= new List<Project>()
+                       {
+                           new Project()
+                               {
+                                   Name = "demoProject",
+                                   Board = new Board()
+                                               {
+                                                   
+                                               }
+                               }
+                       };
+            
+            _projects[0].Board.LoadTestTemplateTable();
+
+           return _projects[0].Board.GetTemplateTable().GetColumnList();
         }
     }
 }
