@@ -1,4 +1,4 @@
-﻿<Page x:Class="Rubban.Gridview.BoardDesigner"
+﻿<Page x:Class="Rubban.WPFWebView.BoardDesigner"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Title="BoardDesigner" Height="277" Width="694">

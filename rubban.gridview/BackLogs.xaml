@@ -1,4 +1,4 @@
-﻿<Page x:Class="Rubban.Gridview.BackLogs"
+﻿<Page x:Class="Rubban.WPFWebView.BackLogs"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Title="BackLogs" Height="313" Width="696">

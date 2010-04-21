@@ -11,6 +11,7 @@ namespace Rupban.LoginModule.Presenters
         {
             _projectsController = projectsController;
             View = view;
+            View.SetModel(this);
         }
 
         public IProjectsView View

@@ -11,13 +11,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Rupban.LoginModule.Views;
 
 namespace rupban.loginmodule.Views
 {
     /// <summary>
     /// Interaction logic for AdminPanelView.xaml
     /// </summary>
-    public partial class AdminPanelView : UserControl
+    public partial class AdminPanelView : UserControl, IAdminPanelView
     {
         public AdminPanelView()
         {
