@@ -25,7 +25,7 @@ namespace Rupban.LoginModule.Views
             InitializeComponent();
         }
 
-        public void SetModel(RupbanBoardViewPresenter model)
+        public void SetModel(RupbanBoardPresenter model)
         {
             DataContext = model;
         }

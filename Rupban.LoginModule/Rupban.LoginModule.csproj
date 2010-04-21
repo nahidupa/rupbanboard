@@ -80,6 +80,8 @@
     <Compile Include="Controller\ITicketController.cs" />
     <Compile Include="Presenters\IProjectsPresenter.cs" />
     <Compile Include="Controller\IRupbanBoardController.cs" />
+    <Compile Include="Controller\RupbanBoardController.cs" />
+    <Compile Include="Services\RupbanBoardService.cs" />
     <Compile Include="Services\IRupbanBoardService.cs" />
     <Compile Include="Presenters\ITicketPresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
@@ -108,7 +110,7 @@
     <Compile Include="Views\RupbanBoardView.xaml.cs">
       <DependentUpon>RupbanBoardView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presenters\RupbanBoardViewPresenter.cs" />
+    <Compile Include="Presenters\RupbanBoardPresenter.cs" />
     <Compile Include="Views\TicketView.xaml.cs">
       <DependentUpon>TicketView.xaml</DependentUpon>
     </Compile>
