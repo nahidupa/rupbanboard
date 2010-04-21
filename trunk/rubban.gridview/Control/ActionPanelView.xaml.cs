@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Rubban.Gridview.Control
+namespace Rubban.WPFWebView.Control
 {
     /// <summary>
     /// Interaction logic for ActionPanelView.xaml

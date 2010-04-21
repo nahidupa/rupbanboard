@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Rubban.Gridview
+namespace Rubban.WPFWebView
 {
     /// <summary>
     /// Interaction logic for Shell.xaml

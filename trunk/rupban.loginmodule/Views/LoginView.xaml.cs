@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Rupban.LoginModule.Presenters;
 
 namespace Rupban.LoginModule.Views
 {
@@ -22,6 +23,11 @@ namespace Rupban.LoginModule.Views
         public LoginView()
         {
             InitializeComponent();
+        }
+
+        public void SetModel(LoginPresenter model)
+        {
+            this.DataContext = model;
         }
     }
 }

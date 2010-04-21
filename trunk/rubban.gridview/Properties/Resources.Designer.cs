@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Rubban.Gridview.Properties {
+namespace Rubban.WPFWebView.Properties {
     using System;
     
     

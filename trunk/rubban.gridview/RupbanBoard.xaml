@@ -1,4 +1,4 @@
-﻿<Page x:Class="Rubban.Gridview.RupbanBoard"
+﻿<Page x:Class="Rubban.WPFWebView.RupbanBoard"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Title="RupbanBoard">

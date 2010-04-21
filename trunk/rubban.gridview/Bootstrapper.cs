@@ -3,7 +3,7 @@ using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.UnityExtensions;
 using Rupban.LoginModule;
 
-namespace Rubban.Gridview
+namespace Rubban.WPFWebView
 {
     class Bootstrapper : UnityBootstrapper
     {
