@@ -8,8 +8,8 @@
     <ProjectGuid>{7B8FB4C0-4F2D-422F-AFFB-F2E6F8AB0F01}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>rupban.loginmodule</RootNamespace>
-    <AssemblyName>rupban.loginmodule</AssemblyName>
+    <RootNamespace>Rupban.LoginModule</RootNamespace>
+    <AssemblyName>Rupban.LoginModule</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
