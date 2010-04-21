@@ -99,5 +99,10 @@ namespace Rupban.Core
             if (!_templateCollums.ContainsKey(collumName))
             _templateCollums.Add(collumName, new TemplateCollum());
         }
+
+        public List<TemplateCollum> GetColumnList()
+        {
+            return _templateCollums.Select(p=>p.Value).ToList();
+        }
     }
 }

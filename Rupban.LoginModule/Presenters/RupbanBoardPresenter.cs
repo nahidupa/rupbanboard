@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using Rupban.Core;
 using Rupban.LoginModule.Controller;
 using Rupban.LoginModule.Services;
 using Rupban.LoginModule.Views;
@@ -7,16 +9,18 @@ namespace Rupban.LoginModule.Presenters
 {
     public class RupbanBoardPresenter: IRupbanBoardPresenter
     {
-        private readonly IRupbanBoardController _loginController;
-        private readonly IRupbanBoardService _loginService;
+        private readonly IRupbanBoardController _rupbanBoardController;
+        private readonly IRupbanBoardService _rupbanBoardService;
 
-        public RupbanBoardPresenter(IRupbanBoardView view, IRupbanBoardController loginController, IRupbanBoardService loginService)
+        public List<TemplateCollum> ColumnList { set; get; }
+
+        public RupbanBoardPresenter(IRupbanBoardView view, IRupbanBoardController rupbanBoardController, IRupbanBoardService rupbanBoardService)
         {
-            _loginController = loginController;
-            _loginService = loginService;
+            _rupbanBoardController = rupbanBoardController;
+            _rupbanBoardService = rupbanBoardService;
             View = view;
             View.SetModel(this);
-        
+            ColumnList=_rupbanBoardService.GetTemplateCollumList();
         }
 
         public IRupbanBoardView View
