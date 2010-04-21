@@ -15,6 +15,10 @@ namespace Rupban.Server
                            new Project()
                                {
                                    Name = "demoProject"
+                               },
+                               new Project()
+                               {
+                                   Name = "demo2Project"
                                }
                        };
         }

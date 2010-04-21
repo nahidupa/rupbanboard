@@ -27,5 +27,10 @@ namespace Rupban.LoginModule.Controller
             shellRegion.Add(_projectsPresenter.View);
             shellRegion.Activate(_projectsPresenter.View);
         }
+
+        public void ViewRupbanBoard()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
