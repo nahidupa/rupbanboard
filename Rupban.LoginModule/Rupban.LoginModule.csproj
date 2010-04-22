@@ -71,6 +71,7 @@
     <Compile Include="Controller\IAdminPanelController.cs" />
     <Compile Include="Controller\IProjectsController.cs" />
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\PanelColumnController.cs" />
     <Compile Include="Controller\ProjectsController.cs" />
     <Compile Include="LoginModule.cs" />
     <Compile Include="Controller\ILoginController.cs" />
@@ -78,6 +79,8 @@
     <Compile Include="Presenters\IAdminPanelPresenter.cs" />
     <Compile Include="Presenters\ILoginPresenter.cs" />
     <Compile Include="Controller\ITicketController.cs" />
+    <Compile Include="Controller\IPanelColumnController.cs" />
+    <Compile Include="Services\IPanelColumnService.cs" />
     <Compile Include="Presenters\IProjectsPresenter.cs" />
     <Compile Include="Controller\IRupbanBoardController.cs" />
     <Compile Include="Controller\RupbanBoardController.cs" />
@@ -97,6 +100,8 @@
     </Compile>
     <Compile Include="Views\IAdminPanelView.cs" />
     <Compile Include="Views\ILoginView.cs" />
+    <Compile Include="Presenters\IPanelColumnPresenter.cs" />
+    <Compile Include="Views\IPanelColumnView.cs" />
     <Compile Include="Views\IProjectsView.cs" />
     <Compile Include="Presenters\IRupbanBoardPresenter.cs" />
     <Compile Include="Views\IRupbanBoardView.cs" />
@@ -104,6 +109,7 @@
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presenters\PanelColumnPresenter.cs" />
     <Compile Include="Views\PanelColumnView.xaml.cs">
       <DependentUpon>PanelColumnView.xaml</DependentUpon>
     </Compile>

@@ -57,6 +57,13 @@ namespace Rupban.LoginModule
             _container.RegisterType(typeof(IProjectService), typeof(ProjectService), true);
             _container.RegisterType(typeof(IRupbanBoardService), typeof(RupbanBoardService), true);
 
+         
+            _container.RegisterType(typeof(IPanelColumnController), typeof(PanelColumnController), true);
+            _container.RegisterType(typeof(IPanelColumnView), typeof(PanelColumnView), false);
+            _container.RegisterType(typeof(IPanelColumnPresenter), typeof(PanelColumnPresenter), false);
+
+            
+
             
         }
     }

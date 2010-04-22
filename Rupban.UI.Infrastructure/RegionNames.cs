@@ -8,5 +8,7 @@ namespace Rupban.UI.Infrastructure
     public class RegionNames
     {
         public const string MainRegion = "MainRegion";
+        public const string ColumnRegion = "ColumnRegion";
+        
     }
 }

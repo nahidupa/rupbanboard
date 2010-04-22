@@ -1,18 +1,18 @@
 ﻿<UserControl x:Class="Rupban.LoginModule.Views.RupbanBoardView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cal="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
+    xmlns:Infrastructure="clr-namespace:Rupban.UI.Infrastructure;assembly=Rupban.UI.Infrastructure"
     Height="333" Width="515">
     <Grid>
-      <ListBox Margin="46,32,27,35" Name="mainBoardColumn" ItemsSource="{Binding Path=ColumnList}">
+       <!--<ListBox Margin="46,32,27,35" Name="mainBoardColumn" >
         <ListBox.ItemTemplate>
-          <DataTemplate>
-            <StackPanel Orientation="Horizontal">
-              <ContentControl  >
-                <TextBlock>Hello</TextBlock>
-              </ContentControl>       
+          <DataTemplate>-->
+            <StackPanel Orientation="Vertical">
+              <ItemsControl cal:RegionManager.RegionName="{x:Static Infrastructure:RegionNames.ColumnRegion}" Width="Auto" Height="Auto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"/>
             </StackPanel>
-          </DataTemplate>
+          <!--</DataTemplate>
         </ListBox.ItemTemplate>        
-      </ListBox>
+      </ListBox>-->
     </Grid>
 </UserControl>
