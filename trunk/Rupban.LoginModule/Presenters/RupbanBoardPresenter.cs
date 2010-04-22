@@ -12,7 +12,7 @@ namespace Rupban.LoginModule.Presenters
         private readonly IRupbanBoardController _rupbanBoardController;
         private readonly IRupbanBoardService _rupbanBoardService;
 
-        public List<TemplateCollum> ColumnList { set; get; }
+        private List<TemplateCollum> _columnList;
 
         public RupbanBoardPresenter(IRupbanBoardView view, IRupbanBoardController rupbanBoardController, IRupbanBoardService rupbanBoardService)
         {
@@ -20,7 +20,9 @@ namespace Rupban.LoginModule.Presenters
             _rupbanBoardService = rupbanBoardService;
             View = view;
             View.SetModel(this);
-            ColumnList=_rupbanBoardService.GetTemplateCollumList();
+            _columnList = _rupbanBoardService.GetTemplateCollumList();
+            //_rupbanBoardController.LoadBoardColumnView(_columnList);
+           
         }
 
         public IRupbanBoardView View

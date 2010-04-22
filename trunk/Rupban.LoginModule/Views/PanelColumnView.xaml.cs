@@ -11,17 +11,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Rupban.LoginModule.Presenters;
 
 namespace Rupban.LoginModule.Views
 {
     /// <summary>
     /// Interaction logic for PanelColumnView.xaml
     /// </summary>
-    public partial class PanelColumnView : UserControl
+    public partial class PanelColumnView : UserControl, IPanelColumnView
     {
         public PanelColumnView()
         {
             InitializeComponent();
+        }
+
+        public void SetModel(PanelColumnPresenter model)
+        {
+            this.DataContext = model;
         }
     }
 }
