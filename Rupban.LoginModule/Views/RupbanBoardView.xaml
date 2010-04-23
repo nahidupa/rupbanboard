@@ -3,13 +3,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:cal="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
     xmlns:infrastructure="clr-namespace:Rupban.UI.Infrastructure;assembly=Rupban.UI.Infrastructure"
-    Height="333" Width="515">
-    <Grid>
-       <!--<ListBox Margin="46,32,27,35" Name="mainBoardColumn" >
-        <ListBox.ItemTemplate>
-          <DataTemplate>-->
-            
-            <ItemsControl cal:RegionManager.RegionName="{x:Static infrastructure:RegionNames.ColumnRegion}" Width="Auto" Height="Auto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
+    Height="500" Width="500">
+    <Grid>     
+       
+         <ItemsControl cal:RegionManager.RegionName="{x:Static infrastructure:RegionNames.ColumnRegion}" Width="Auto" Height="Auto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel  Orientation="Horizontal"  />
@@ -17,8 +14,6 @@
             </ItemsControl.ItemsPanel>
         </ItemsControl>
         
-          <!--</DataTemplate>
-        </ListBox.ItemTemplate>        
-      </ListBox>-->
+        
     </Grid>
 </UserControl>

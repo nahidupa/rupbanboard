@@ -5,6 +5,6 @@ namespace Rupban.LoginModule.Services
 {
     public interface IRupbanBoardService
     {
-        List<TemplateCollum> GetTemplateCollumList();
+        List<TemplateColumn> GetTemplateCollumList();
     }
 }

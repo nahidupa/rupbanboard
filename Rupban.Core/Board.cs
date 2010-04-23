@@ -43,7 +43,7 @@ namespace Rupban.Core
         {
             _templateTable = new TemplateTable();
             _templateTable.AddCollum("DemoCollum");
-           // _templateTable.AddCollum("DemoCollum1");
+            _templateTable.AddCollum("DemoCollum1");
             _templateTable.GetCollumByName("DemoCollum").AddRow();
             _templateTable.GetCollumByName("DemoCollum").GetRowByIndex(0).AddItem(new Ticket(){Title = "tiket1"});
             

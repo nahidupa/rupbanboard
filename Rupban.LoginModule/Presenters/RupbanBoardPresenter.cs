@@ -12,7 +12,7 @@ namespace Rupban.LoginModule.Presenters
         private readonly IRupbanBoardController _rupbanBoardController;
         private readonly IRupbanBoardService _rupbanBoardService;
 
-        private List<TemplateCollum> _columnList;
+        private List<TemplateColumn> _columnList;
 
         public RupbanBoardPresenter(IRupbanBoardView view, IRupbanBoardController rupbanBoardController, IRupbanBoardService rupbanBoardService)
         {
@@ -28,9 +28,14 @@ namespace Rupban.LoginModule.Presenters
         public void LoadColumn()
         {
             _rupbanBoardController.LoadBoardColumnView(_columnList);
+            foreach (TemplateColumn column in _columnList)
+            {
+                _rupbanBoardController.LoadRowView(column);
+            }
+            
         }
 
-        public IRupbanBoardView View
+       public IRupbanBoardView View
         {
             get; set;
         }

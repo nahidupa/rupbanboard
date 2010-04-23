@@ -20,6 +20,8 @@ namespace Rupban.LoginModule.Views
     /// </summary>
     public partial class PanelColumnView : UserControl, IPanelColumnView
     {
+        private PanelColumnPresenter _model;
+
         public PanelColumnView()
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace Rupban.LoginModule.Views
 
         public void SetModel(PanelColumnPresenter model)
         {
+            _model = model;
             this.DataContext = model;
         }
     }

@@ -17,9 +17,10 @@ namespace Rupban.LoginModule.Controller
             _regionManager = regionManager;
             _container = container;
         }
-        public void LoadBoardTicketView(TemplateRow row)
+        public void LoadBoardTicketView(TemplateRow row,IRegionManager localRegionManager)
         {
-              var region = _regionManager.Regions[RegionNames.TicketRegion];
+
+            var region = localRegionManager.Regions[RegionNames.TicketRegion];
               foreach (var ticket in row.GetAllTickets())
               {
                   var ticketPresenter = _container.Resolve<ITicketPresenter>();

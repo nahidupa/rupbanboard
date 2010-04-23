@@ -23,7 +23,7 @@ namespace Rupban.Server
                        };
         }
 
-        public List<TemplateCollum> GetTemplateCollumList()
+        public List<TemplateColumn> GetTemplateCollumList()
         {
            _projects= new List<Project>()
                        {

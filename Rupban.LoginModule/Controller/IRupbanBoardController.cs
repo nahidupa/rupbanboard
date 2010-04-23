@@ -5,6 +5,8 @@ namespace Rupban.LoginModule.Controller
 {
     public interface IRupbanBoardController
     {
-        void LoadBoardColumnView(List<TemplateCollum> templateCollums);
+        void LoadBoardColumnView(List<TemplateColumn> templateCollums);
+        
+        void LoadRowView(TemplateColumn templateColumn);
     }
 }

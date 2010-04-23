@@ -25,6 +25,7 @@ namespace Rupban.LoginModule.Controller
             shellRegion.Add(_rupbanBoardPresenter.View);
             shellRegion.Activate(_rupbanBoardPresenter.View);
             _rupbanBoardPresenter.LoadColumn();
+
             
         }
     }

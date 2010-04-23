@@ -4,6 +4,7 @@ using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
 using Rupban.Core;
 using Rupban.LoginModule.Presenters;
+using Rupban.LoginModule.Views;
 using Rupban.UI.Infrastructure;
 
 namespace Rupban.LoginModule.Controller
@@ -12,28 +13,35 @@ namespace Rupban.LoginModule.Controller
     {
         private readonly IRegionManager _regionManager;
         private readonly IUnityContainer _container;
-
+        private Dictionary<string,IRegionManager> _regionManagers;
+        private Dictionary<string, IPanelColumnPresenter> _panelColumnPresenters;
         public RupbanBoardController(IRegionManager regionManager, IUnityContainer container)
         {
             _regionManager = regionManager;
             _container = container;
+            _regionManagers=new  Dictionary<string, IRegionManager>();
+            _panelColumnPresenters=new Dictionary<string, IPanelColumnPresenter>();
         }
 
-        public void LoadBoardColumnView(List<TemplateCollum> templateCollums)
+        public void LoadBoardColumnView(List<TemplateColumn> templateCollums)
         {
             var region = _regionManager.Regions[RegionNames.ColumnRegion];
             foreach (var templateCollum in templateCollums)
             {
                 var panelColumnPresenter = _container.Resolve<IPanelColumnPresenter>();
-                region.Add(panelColumnPresenter.View, templateCollum.Title.ToString());
-                var rows = templateCollum.GetRows();
-                foreach (var templateRow in rows)
-                {
-                    panelColumnPresenter.LoadBoardTicket(templateRow);
-                }
-
+                panelColumnPresenter.TemplateColumn = templateCollum;
+                var regionManager = region.Add(panelColumnPresenter.View, templateCollum.Title.ToString(),true);
+                _regionManagers.Add(templateCollum.Title, regionManager);
+                _panelColumnPresenters.Add(templateCollum.Title, panelColumnPresenter);
+                
             }
+        }
 
+       
+
+        public void LoadRowView(TemplateColumn templateColumn)
+        {
+            _panelColumnPresenters[templateColumn.Title].LoadTicketView(_regionManagers[templateColumn.Title]);
         }
     }
 }

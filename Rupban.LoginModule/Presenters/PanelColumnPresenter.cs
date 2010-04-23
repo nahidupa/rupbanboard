@@ -1,5 +1,6 @@
 using System;
 using System.Collections.ObjectModel;
+using Microsoft.Practices.Composite.Regions;
 using Rupban.Core;
 using Rupban.LoginModule.Controller;
 using Rupban.LoginModule.Services;
@@ -19,9 +20,21 @@ namespace Rupban.LoginModule.Presenters
             set;
         }
 
-        public void LoadBoardTicket(TemplateRow row)
+        public TemplateColumn TemplateColumn
         {
-            _panelColumnController.LoadBoardTicketView(row);
+            get ; 
+            set ;
+        }
+
+
+        public void LoadTicketView(IRegionManager regionManager)
+        {
+            var rows = TemplateColumn.GetRows();
+            foreach (var templateRow in rows)
+            {
+                _panelColumnController.LoadBoardTicketView(templateRow, regionManager);
+            }
+           
         }
 
         public PanelColumnPresenter(IPanelColumnView view, IPanelColumnController panelColumnController, IPanelColumnService panelColumnService)
@@ -30,6 +43,7 @@ namespace Rupban.LoginModule.Presenters
             _panelColumnService = panelColumnService;
             View = view;
             View.SetModel(this);
+           
         }
     }
 }
