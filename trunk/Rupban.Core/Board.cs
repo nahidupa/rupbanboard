@@ -9,7 +9,7 @@ namespace Rupban.Core
         private List<Ticket> _backlogs;
 
         private TemplateTable _templateTable;
-        
+
 
         public void Setbacklogs(List<Ticket> tickets)
         {
@@ -20,18 +20,18 @@ namespace Rupban.Core
         {
             _templateTable = new TemplateTable();
             _templateTable.LoadTemplateTable(filename);
-            
-            
+
+
         }
-        
+
         public Ticket GetTicketById(int id)
         {
-           return _backlogs.SingleOrDefault(t=>t.Number.Equals(id));
+            return _backlogs.SingleOrDefault(t => t.Number.Equals(id));
         }
 
         public void MoveTicket(Ticket ticket, int collumId, int rowId)
         {
-            _templateTable.AddTicket(ticket,collumId, rowId);
+            _templateTable.AddTicket(ticket, collumId, rowId);
         }
 
         public TemplateTable GetTemplateTable()
@@ -42,11 +42,19 @@ namespace Rupban.Core
         public void LoadTestTemplateTable()
         {
             _templateTable = new TemplateTable();
-            _templateTable.AddCollum("DemoCollum");
-            _templateTable.AddCollum("DemoCollum1");
-            _templateTable.GetCollumByName("DemoCollum").AddRow();
-            _templateTable.GetCollumByName("DemoCollum").GetRowByIndex(0).AddItem(new Ticket(){Title = "tiket1"});
-            
+            for (int i = 0; i < 8;i++ )
+            {
+                CreateColumn(string.Format("DemoColumn1{0}",i));
+            }
+
+        }
+
+        private void CreateColumn(string collumName)
+        {
+            _templateTable.AddCollum(collumName);
+            _templateTable.GetCollumByName(collumName).AddRow();
+            _templateTable.GetCollumByName(collumName).GetRowByIndex(0).AddItem(new Ticket() { Title = "tiket1" });
+            _templateTable.GetCollumByName(collumName).GetRowByIndex(0).AddItem(new Ticket() { Title = "tiket2" });
         }
     }
 }

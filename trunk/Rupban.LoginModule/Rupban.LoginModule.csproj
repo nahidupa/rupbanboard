@@ -175,6 +175,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Rupban.LoginModule.cd" />
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="Views\ProjectCreateWizard\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

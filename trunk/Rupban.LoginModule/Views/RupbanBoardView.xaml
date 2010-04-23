@@ -3,17 +3,19 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:cal="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
     xmlns:infrastructure="clr-namespace:Rupban.UI.Infrastructure;assembly=Rupban.UI.Infrastructure"
-    Height="500" Width="500">
-    <Grid>     
-       
-         <ItemsControl cal:RegionManager.RegionName="{x:Static infrastructure:RegionNames.ColumnRegion}" Width="Auto" Height="Auto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
+    Height="Auto" Width="Auto">
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+            <Border Margin="2" BorderThickness="2" BorderBrush="Black">
+                <ItemsControl cal:RegionManager.RegionName="{x:Static infrastructure:RegionNames.ColumnRegion}" Width="Auto" Height="Auto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel  Orientation="Horizontal"  />
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
         </ItemsControl>
-        
-        
+            </Border>
+
+        </ScrollViewer>
     </Grid>
 </UserControl>
