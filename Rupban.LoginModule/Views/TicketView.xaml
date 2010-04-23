@@ -3,6 +3,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Height="300" Width="300">
     <Grid>
-        <Label Margin="128,127,52,145" Name="label1">Ticket</Label>
+        <Label Margin="30,35,0,0" Name="label1" Height="28" VerticalAlignment="Top" HorizontalAlignment="Left" Width="54">Ticket</Label>
+        <StackPanel Margin="13,22,15,32" Name="stackPanel1">
+            <Button Height="23" Name="btnHistory" Width="95">View history</Button>
+            <Button Height="23" Name="btnPick" Width="95">Pick</Button>
+            <Button Height="23" Name="btnMove" Width="95" Command="{Binding MoveTicketCommand}">Move To</Button>
+            <Button Height="23" Name="btnOpen" Width="95">Open track page</Button>
+            <Button Height="23" Name="button5" Width="95">Button</Button>
+        </StackPanel>
     </Grid>
 </UserControl>

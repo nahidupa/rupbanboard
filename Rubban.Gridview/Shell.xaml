@@ -6,7 +6,7 @@
              mc:Ignorable="d" 
              xmlns:cal="http://www.codeplex.com/CompositeWPF"
              xmlns:infrastructure="clr-namespace:Rupban.UI.Infrastructure;assembly=Rupban.UI.Infrastructure"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300" Title="Board" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
         <ContentControl cal:RegionManager.RegionName="{x:Static infrastructure:RegionNames.MainRegion }" ></ContentControl>
     </Grid>
