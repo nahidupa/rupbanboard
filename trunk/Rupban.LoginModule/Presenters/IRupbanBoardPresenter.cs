@@ -6,5 +6,6 @@ namespace Rupban.LoginModule.Presenters
     {
         IRupbanBoardView View { get; set; }
         void LoadColumn();
+       
     }
 }

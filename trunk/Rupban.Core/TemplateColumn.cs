@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Rupban.Core
 {
-    public class TemplateCollum
+    public class TemplateColumn
     {
         public int ID { set; get; }
         public string Title { set; get; }
         private List<TemplateRow> _templateRows;
 
 
-        public TemplateCollum()
+        public TemplateColumn()
         {
             _templateRows = new List<TemplateRow>();
 

@@ -10,19 +10,19 @@ namespace Rupban.Core
 {
     public class TemplateTable
     {
-        private Dictionary<string,TemplateCollum> _templateCollums;
+        private Dictionary<string,TemplateColumn> _templateCollums;
 
-        public TemplateTable(Dictionary<string, TemplateCollum> templateCollums)
+        public TemplateTable(Dictionary<string, TemplateColumn> templateCollums)
         {
             _templateCollums = templateCollums;
         }
         public TemplateTable()
         {
-            _templateCollums = new Dictionary<string, TemplateCollum>();
+            _templateCollums = new Dictionary<string, TemplateColumn>();
             
         }
 
-        public TemplateCollum GetCollumByName(string collumName)
+        public TemplateColumn GetCollumByName(string collumName)
         {
             if (_templateCollums.ContainsKey(collumName))
             return _templateCollums[collumName];
@@ -39,7 +39,7 @@ namespace Rupban.Core
             if (File.Exists(filename))
             {
                 XDocument document = XDocument.Load(filename);
-                var collumList = document.Descendants("Collums").Select(collum => new TemplateCollum
+                var collumList = document.Descendants("Collums").Select(collum => new TemplateColumn
                                                                                       {
                                                                                           ID =
                                                                                               int.Parse(
@@ -89,7 +89,7 @@ namespace Rupban.Core
             GetCollumById(collumId).GetRowByIndex(rowId).AddItem(ticket);
         }
 
-        public TemplateCollum GetCollumById(int collumId)
+        public TemplateColumn GetCollumById(int collumId)
         {
             return _templateCollums.SingleOrDefault(c => c.Value.ID.Equals(collumId)).Value;
         }
@@ -97,10 +97,10 @@ namespace Rupban.Core
         public void AddCollum(string collumName)
         {
             if (!_templateCollums.ContainsKey(collumName))
-            _templateCollums.Add(collumName, new TemplateCollum(){Title = collumName});
+            _templateCollums.Add(collumName, new TemplateColumn(){Title = collumName});
         }
 
-        public List<TemplateCollum> GetColumnList()
+        public List<TemplateColumn> GetColumnList()
         {
             return _templateCollums.Select(p=>p.Value).ToList();
         }

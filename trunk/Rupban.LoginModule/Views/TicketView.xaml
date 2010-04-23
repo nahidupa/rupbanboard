@@ -3,6 +3,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Height="300" Width="300">
     <Grid>
-            
+        <Label Margin="128,127,52,145" Name="label1">Ticket</Label>
     </Grid>
 </UserControl>
