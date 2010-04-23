@@ -25,7 +25,7 @@ namespace Rupban.LoginModule.Controller
             foreach (var templateCollum in templateCollums)
             {
                  var panelColumnPresenter = _container.Resolve<IPanelColumnPresenter>();
-                 region.Add(panelColumnPresenter.View, templateCollum.ID.ToString());
+                 region.Add(panelColumnPresenter.View, templateCollum.Title.ToString());
             }
            
         }

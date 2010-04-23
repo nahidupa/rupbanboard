@@ -7,13 +7,15 @@ namespace Rupban.Core
     public class TemplateCollum
     {
         public int ID { set; get; }
-        public string Title{ set; get; }
+        public string Title { set; get; }
         private List<TemplateRow> _templateRows;
-        
+
 
         public TemplateCollum()
         {
             _templateRows = new List<TemplateRow>();
+
+
         }
         public List<TemplateRow> SetRows(List<TemplateRow> templateRows)
         {

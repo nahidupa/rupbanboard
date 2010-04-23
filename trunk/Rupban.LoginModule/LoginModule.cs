@@ -28,7 +28,7 @@ namespace Rupban.LoginModule
         {
             RegisterViewsAndServices();
             
-            LoginPresenter presenter = _container.Resolve<LoginPresenter>();
+            ILoginPresenter presenter = _container.Resolve<ILoginPresenter>();
 
             IRegion mainRegion = _regionManager.Regions[RegionNames.MainRegion];
             mainRegion.Add(presenter.View);
@@ -36,10 +36,7 @@ namespace Rupban.LoginModule
 
         private void RegisterViewsAndServices()
         {
-            _container.RegisterType(typeof(ILoginController), typeof(LoginController),true);
-            _container.RegisterType(typeof(ILoginView), typeof(LoginView),true);
-            _container.RegisterType(typeof(ILoginPresenter), typeof(LoginPresenter), true);
-
+          
             _container.RegisterType(typeof(IAdminPanelController), typeof(AdminPanelController), true);
             _container.RegisterType(typeof(IAdminPanelView), typeof(AdminPanelView), true);
             _container.RegisterType(typeof(IAdminPanelPresenter), typeof(AdminPanelPresenter), true);
@@ -61,8 +58,13 @@ namespace Rupban.LoginModule
             _container.RegisterType(typeof(IPanelColumnController), typeof(PanelColumnController), true);
             _container.RegisterType(typeof(IPanelColumnView), typeof(PanelColumnView), false);
             _container.RegisterType(typeof(IPanelColumnPresenter), typeof(PanelColumnPresenter), false);
-
+            _container.RegisterType(typeof(IPanelColumnService), typeof(PanelColumnService), true);
             
+
+
+            _container.RegisterType(typeof(ILoginController), typeof(LoginController), true);
+            _container.RegisterType(typeof(ILoginView), typeof(LoginView), true);
+            _container.RegisterType(typeof(ILoginPresenter), typeof(LoginPresenter), true);
 
             
         }

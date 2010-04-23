@@ -84,6 +84,7 @@
     <Compile Include="Presenters\IProjectsPresenter.cs" />
     <Compile Include="Controller\IRupbanBoardController.cs" />
     <Compile Include="Controller\RupbanBoardController.cs" />
+    <Compile Include="Services\PanelColumnService.cs" />
     <Compile Include="Services\RupbanBoardService.cs" />
     <Compile Include="Services\IRupbanBoardService.cs" />
     <Compile Include="Presenters\ITicketPresenter.cs" />
