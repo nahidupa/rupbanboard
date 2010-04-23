@@ -73,6 +73,7 @@
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\PanelColumnController.cs" />
     <Compile Include="Controller\ProjectsController.cs" />
+    <Compile Include="Controller\TicketController.cs" />
     <Compile Include="LoginModule.cs" />
     <Compile Include="Controller\ILoginController.cs" />
     <Compile Include="Presenters\AdminPanelPresenter.cs" />

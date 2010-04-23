@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using rupban.loginmodule.Presenters;
 
 namespace rupban.loginmodule.Views
 {
@@ -22,6 +23,11 @@ namespace rupban.loginmodule.Views
         public TicketView()
         {
             InitializeComponent();
+        }
+
+        public void SetModel(ITicketPresenter model)
+        {
+            DataContext = model;
         }
     }
 }
