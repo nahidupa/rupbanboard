@@ -21,8 +21,13 @@ namespace Rupban.LoginModule.Presenters
             View = view;
             View.SetModel(this);
             _columnList = _rupbanBoardService.GetTemplateCollumList();
-            //_rupbanBoardController.LoadBoardColumnView(_columnList);
+          
            
+        }
+
+        public void LoadColumn()
+        {
+            _rupbanBoardController.LoadBoardColumnView(_columnList);
         }
 
         public IRupbanBoardView View

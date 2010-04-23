@@ -97,7 +97,7 @@ namespace Rupban.Core
         public void AddCollum(string collumName)
         {
             if (!_templateCollums.ContainsKey(collumName))
-            _templateCollums.Add(collumName, new TemplateCollum());
+            _templateCollums.Add(collumName, new TemplateCollum(){Title = collumName});
         }
 
         public List<TemplateCollum> GetColumnList()

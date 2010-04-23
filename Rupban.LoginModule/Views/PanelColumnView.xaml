@@ -3,6 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Height="300" Width="300">
     <Grid>
-        <Button Height="23" HorizontalAlignment="Right" Margin="0,111,38,0" Name="button1" VerticalAlignment="Top" Width="75">Button</Button>
+        <ListBox Margin="24,24,26,32" Name="listBox1" />
+        <Label Height="28" Margin="52,10,128,0" Name="label1" VerticalAlignment="Top">test</Label>
     </Grid>
 </UserControl>

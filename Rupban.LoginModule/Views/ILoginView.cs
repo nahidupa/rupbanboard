@@ -8,6 +8,6 @@ namespace Rupban.LoginModule.Views
 {
     public interface ILoginView
     {
-        void SetModel(LoginPresenter model);
+        void SetModel(ILoginPresenter model);
     }
 }
