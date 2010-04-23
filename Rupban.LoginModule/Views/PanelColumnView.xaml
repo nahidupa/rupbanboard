@@ -3,16 +3,20 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:Infrastructure="clr-namespace:Rupban.UI.Infrastructure;assembly=Rupban.UI.Infrastructure"
     xmlns:cal="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
-    Height="450" Width="250">
+    Height="Auto" Width="250">
     <Grid>
-        <ItemsControl cal:RegionManager.RegionName="{x:Static Infrastructure:RegionNames.TicketRegion}" Width="Auto" Height="Auto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel  Orientation="Vertical"  />
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-        </ItemsControl>
-        
-        <Label Height="28" Margin="52,10,128,0" Name="label1" VerticalAlignment="Top">Column test</Label>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <Border Margin="2" BorderThickness="2" BorderBrush="Black">
+
+                <ItemsControl cal:RegionManager.RegionName="{x:Static Infrastructure:RegionNames.TicketRegion}" Width="Auto" Height="Auto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel  Orientation="Vertical"  />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </Border>
+        </ScrollViewer>
+
     </Grid>
 </UserControl>
