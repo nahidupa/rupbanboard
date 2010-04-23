@@ -52,9 +52,23 @@ namespace Rupban.Core
         private void CreateColumn(string collumName)
         {
             _templateTable.AddCollum(collumName);
+            AddRow(collumName);
+        }
+
+        private void AddRow(string collumName)
+        {
             _templateTable.GetCollumByName(collumName).AddRow();
-            _templateTable.GetCollumByName(collumName).GetRowByIndex(0).AddItem(new Ticket() { Title = "tiket1" });
-            _templateTable.GetCollumByName(collumName).GetRowByIndex(0).AddItem(new Ticket() { Title = "tiket2" });
+            var title = "tiket1";
+            for (int i = 0; i < 18; i++)
+            {
+                AddTicket(collumName, string.Format("title{0}",i));
+            }
+
+        }
+
+        private void AddTicket(string collumName, string title)
+        {
+            _templateTable.GetCollumByName(collumName).GetRowByIndex(0).AddItem(new Ticket() { Title = title });
         }
     }
 }

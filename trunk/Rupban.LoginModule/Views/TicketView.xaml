@@ -1,15 +1,16 @@
 ﻿<UserControl x:Class="rupban.loginmodule.Views.TicketView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Height="300" Width="300">
-    <Grid>
-        <Label Margin="30,35,0,0" Name="label1" Height="28" VerticalAlignment="Top" HorizontalAlignment="Left" Width="54">Ticket</Label>
-        <StackPanel Margin="13,22,15,32" Name="stackPanel1">
-            <Button Height="23" Name="btnHistory" Width="95">View history</Button>
-            <Button Height="23" Name="btnPick" Width="95">Pick</Button>
-            <Button Height="23" Name="btnMove" Width="95" Command="{Binding MoveTicketCommand}">Move To</Button>
-            <Button Height="23" Name="btnOpen" Width="95">Open track page</Button>
-            <Button Height="23" Name="button5" Width="95">Button</Button>
-        </StackPanel>
+    Height="180" Width="193">
+    <Grid Height="171" Width="187">
+        <Border  Margin="2,2,0,-13" BorderThickness="2" BorderBrush="Black">
+            <StackPanel Margin="13,22,15,32" Name="stackPanel1">
+                <Button Height="23" Name="btnHistory" Width="95">View history</Button>
+                <Button Height="23" Name="btnPick" Width="95">Pick</Button>
+                <Button Height="23" Name="btnMove" Width="95" Command="{Binding MoveTicketCommand}">Move To</Button>
+                <Button Height="23" Name="btnOpen" Width="95">Open track page</Button>
+                <Button Height="23" Name="button5" Width="95">Button</Button>
+            </StackPanel>
+        </Border>
     </Grid>
 </UserControl>
