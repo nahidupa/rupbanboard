@@ -15,6 +15,7 @@ namespace rupban.loginmodule.Presenters
         public TicketPresenter(ITicketView view, ITicketController ticketController)
         {
             View = view;
+            View.SetModel(this);
             _ticketController = ticketController;
         }
 

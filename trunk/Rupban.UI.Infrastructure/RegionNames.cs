@@ -9,6 +9,7 @@ namespace Rupban.UI.Infrastructure
     {
         public const string MainRegion = "MainRegion";
         public const string ColumnRegion = "ColumnRegion";
+        public const string TicketRegion = "TicketRegion";
         
     }
 }

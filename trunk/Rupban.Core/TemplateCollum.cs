@@ -27,7 +27,10 @@ namespace Rupban.Core
         {
             _templateRows.Add(new TemplateRow());
         }
-
+        public List<TemplateRow> GetRows()
+        {
+           return _templateRows;
+        }
         public TemplateRow GetRowByIndex(int index)
         {
             return _templateRows[index];

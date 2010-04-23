@@ -24,10 +24,16 @@ namespace Rupban.LoginModule.Controller
             var region = _regionManager.Regions[RegionNames.ColumnRegion];
             foreach (var templateCollum in templateCollums)
             {
-                 var panelColumnPresenter = _container.Resolve<IPanelColumnPresenter>();
-                 region.Add(panelColumnPresenter.View, templateCollum.Title.ToString());
+                var panelColumnPresenter = _container.Resolve<IPanelColumnPresenter>();
+                region.Add(panelColumnPresenter.View, templateCollum.Title.ToString());
+                var rows = templateCollum.GetRows();
+                foreach (var templateRow in rows)
+                {
+                    panelColumnPresenter.LoadBoardTicket(templateRow);
+                }
+
             }
-           
+
         }
     }
 }
