@@ -1,9 +1,9 @@
 ﻿<UserControl x:Class="rupban.loginmodule.Views.TicketView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Height="180" Width="193">
-    <Grid Height="171" Width="187">
-        <Border  Margin="2,2,0,-13" BorderThickness="2" BorderBrush="Black">
+    Height="Auto" Width="Auto">
+    <Grid>
+        <Border  Margin="2" BorderThickness="2" BorderBrush="Black">
             <StackPanel Margin="13,22,15,32" Name="stackPanel1">
                 <Button Height="23" Name="btnHistory" Width="95">View history</Button>
                 <Button Height="23" Name="btnPick" Width="95">Pick</Button>
