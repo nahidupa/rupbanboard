@@ -25,7 +25,7 @@ namespace Rupban.LoginModule.Presenters
            
         }
 
-        public void LoadColumn()
+        public void LoadBorad()
         {
             _rupbanBoardController.LoadBoardColumnView(_columnList);
             foreach (TemplateColumn column in _columnList)
