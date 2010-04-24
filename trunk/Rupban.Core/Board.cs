@@ -59,7 +59,7 @@ namespace Rupban.Core
         {
             _templateTable.GetCollumByName(collumName).AddRow();
             var title = "tiket1";
-            for (int i = 0; i < 18; i++)
+            for (int i = 0; i < 4; i++)
             {
                 AddTicket(collumName, string.Format("title{0}",i));
             }

@@ -129,7 +129,9 @@
       <DependentUpon>TicketView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\ProjectCreateWizard\" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Views\AdminPanelView.xaml">
       <SubType>Designer</SubType>
@@ -177,9 +179,7 @@
   <ItemGroup>
     <None Include="Rupban.LoginModule.cd" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\ProjectCreateWizard\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
