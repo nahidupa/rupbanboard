@@ -16,5 +16,15 @@ namespace Rupban.LoginModule.Services
         {
             _serviceAgent.MoveTicket();
         }
+
+        public void ViewTicketHistory()
+        {
+            _serviceAgent.ViewTicketHistory();
+        }
+
+        public void PickTicket()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
