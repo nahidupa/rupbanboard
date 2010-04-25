@@ -60,12 +60,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\RupbanBoardService\RupbanBoardService.wsdl" />
-    <None Include="Service References\RupbanBoardService\RupbanBoardService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\RupbanBoardService\RupbanBoardService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\RupbanBoardService\RupbanBoardService2.xsd">
       <SubType>Designer</SubType>
     </None>

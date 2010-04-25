@@ -18,5 +18,10 @@ namespace Rupban.ServiceAgent
             boardServiceClient.MoveTicket();
             
         }
+
+        public void ViewTicketHistory()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

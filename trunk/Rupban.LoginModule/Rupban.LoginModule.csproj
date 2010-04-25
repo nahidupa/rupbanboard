@@ -85,7 +85,13 @@
   <ItemGroup>
     <Compile Include="Commands\ILoginCommand.cs" />
     <Compile Include="Commands\IMoveTicketCommand.cs" />
+    <Compile Include="Commands\IPickTicketCommand.cs" />
+    <Compile Include="Commands\ISetTicketPriorityCommand.cs" />
+    <Compile Include="Commands\IViewTicketHistoryCommand.cs" />
     <Compile Include="Commands\MoveTicketCommand.cs" />
+    <Compile Include="Commands\PickTicketCommand.cs" />
+    <Compile Include="Commands\SetTicketPriorityCommand.cs" />
+    <Compile Include="Commands\ViewTicketHistoryCommand.cs" />
     <Compile Include="Services\ITicketService.cs" />
     <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Controller\AdminPanelController.cs" />

@@ -4,5 +4,7 @@
 
     {
         void MoveTicket();
+        void ViewTicketHistory();
+        void PickTicket();
     }
 }
