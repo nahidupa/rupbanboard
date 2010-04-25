@@ -84,6 +84,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\ILoginCommand.cs" />
+    <Compile Include="Commands\IMoveTicketCommand.cs" />
+    <Compile Include="Commands\MoveTicketCommand.cs" />
+    <Compile Include="Services\ITicketService.cs" />
     <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Controller\AdminPanelController.cs" />
     <Compile Include="Controller\IAdminPanelController.cs" />
@@ -115,6 +118,7 @@
     <Compile Include="Services\IProjectService.cs" />
     <Compile Include="Services\LoginService.cs" />
     <Compile Include="Services\ProjectService.cs" />
+    <Compile Include="Services\TicketService.cs" />
     <Compile Include="Views\AdminPanelView.xaml.cs">
       <DependentUpon>AdminPanelView.xaml</DependentUpon>
     </Compile>
@@ -185,6 +189,10 @@
     <ProjectReference Include="..\Rupban.Server\Rupban.Server.csproj">
       <Project>{59C3EE94-2E8C-4A6A-98B3-ADEE01E6F178}</Project>
       <Name>Rupban.Server</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rupban.ServiceAgent\Rupban.ServiceAgent.csproj">
+      <Project>{751EC0DE-54B4-4649-B4E1-AAD7573E4321}</Project>
+      <Name>Rupban.ServiceAgent</Name>
     </ProjectReference>
     <ProjectReference Include="..\rupban.ui.infrastructure\Rupban.UI.Infrastructure.csproj">
       <Project>{09542C73-C9ED-4231-B330-B9BFDCE194CB}</Project>
