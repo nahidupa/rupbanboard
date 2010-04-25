@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Practices.Composite.Modularity;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
+using rupban.loginmodule.Commands;
 using rupban.loginmodule.Controller;
 using Rupban.LoginModule.Controller;
 using rupban.loginmodule.Presenters;
@@ -72,8 +73,9 @@ namespace Rupban.LoginModule
             _container.RegisterType(typeof(ITicketView), typeof(TicketView), false);
             _container.RegisterType(typeof(ITicketController), typeof(TicketController), true);
 
-            
-   
+
+            _container.RegisterType(typeof(ILoginCommand), typeof(LoginCommand), true);
+
 
             
 
