@@ -4,7 +4,7 @@ namespace Rupban.Service
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IRupbanBoardService" in both code and config file together.
 
-    [ServiceContract(Namespace = "http://Code.google.com/p/rupbanboard", SessionMode = SessionMode.Required,
+    [ServiceContract(Namespace = "http://Code.google.com/p/rupbanboard", 
                  CallbackContract = typeof(IRupbanBoardServiceDuplexCallback))]
 
     public interface IRupbanBoardService
@@ -13,6 +13,11 @@ namespace Rupban.Service
         [OperationContract]
         void MoveTicket();
 
+        [OperationContract]
+        bool Subscribe();
+
+        [OperationContract]
+        bool Unsubscribe();
 
     }
 }

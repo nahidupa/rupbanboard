@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Practices.Unity;
 using Rupban.ServiceAgent;
 
 namespace Rupban.LoginModule.Services
@@ -7,11 +8,11 @@ namespace Rupban.LoginModule.Services
     {
         private readonly IServiceAgent _serviceAgent;
 
-        public TicketService()
+        public TicketService(IUnityContainer container)
         {
             try
             {
-                _serviceAgent = new ServiceAgent.ServiceAgent();
+                _serviceAgent = container.Resolve<IServiceAgent>(); 
             }
             catch
             {

@@ -13,7 +13,7 @@ using Rupban.LoginModule.Presenters;
 using Rupban.LoginModule.Services;
 using rupban.loginmodule.Views;
 using Rupban.LoginModule.Views;
-
+using Rupban.ServiceAgent;
 using Rupban.UI.Infrastructure;
 
 namespace Rupban.LoginModule
@@ -77,6 +77,10 @@ namespace Rupban.LoginModule
 
             _container.RegisterType(typeof(ILoginCommand), typeof(LoginCommand), true);
             _container.RegisterType(typeof(IMoveTicketCommand), typeof(MoveTicketCommand), false);
+
+            _container.RegisterType(typeof(IServiceAgent), typeof(ServiceCallerAgent), true);
+            _container.RegisterType(typeof(IServiceLisnerAgent), typeof(ServiceListenerAgent), true);
+            
             
 
             

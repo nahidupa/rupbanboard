@@ -15,7 +15,7 @@ namespace Rupban.LoginModule.Controller
     {
         private readonly IRegionManager _regionManager;
         private readonly IUnityContainer _container;
-        private readonly IServiceAgent _serviceAgent;
+        private readonly IServiceLisnerAgent _serviceListenerAgent;
         private Dictionary<string,IRegionManager> _regionManagers;
         private Dictionary<string, IPanelColumnPresenter> _panelColumnPresenters;
         public RupbanBoardController(IRegionManager regionManager, IUnityContainer container)
@@ -24,21 +24,27 @@ namespace Rupban.LoginModule.Controller
             _container = container;
             try
             {
-                _serviceAgent = new ServiceAgent.ServiceAgent();
+                _serviceListenerAgent = container.Resolve<IServiceLisnerAgent>();
+                _serviceListenerAgent.TicketMovedCalBack += ServiceListenerAgentTicketMovedCalBack;
             }catch
             {
             }
         
             _regionManagers=new  Dictionary<string, IRegionManager>();
             _panelColumnPresenters=new Dictionary<string, IPanelColumnPresenter>();
-            _serviceAgent.GetCallbackHandler().TicketMovedCalBack += new CallbackHandler.CallbackTicketMoved(RupbanBoardController_TicketMovedCalBack);
+     
         }
 
-        void RupbanBoardController_TicketMovedCalBack()
+        static void ServiceListenerAgentTicketMovedCalBack()
         {
-            MessageBox.Show("callback");
+            MessageBox.Show("CallBack");
         }
 
+        
+
+       
+
+        
         public void LoadBoardColumnView(List<TemplateColumn> templateCollums)
         {
             var region = _regionManager.Regions[RegionNames.ColumnRegion];

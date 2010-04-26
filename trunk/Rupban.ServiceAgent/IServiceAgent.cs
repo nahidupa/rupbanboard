@@ -4,6 +4,5 @@ namespace Rupban.ServiceAgent
     {
         void MoveTicket();
         void ViewTicketHistory();
-        CallbackHandler GetCallbackHandler();
     }
 }
