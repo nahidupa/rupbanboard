@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{751EC0DE-54B4-4649-B4E1-AAD7573E4321}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CallbackHandler.cs" />
     <Compile Include="IServiceAgent.cs" />
     <Compile Include="Service References\RupbanBoardService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -56,13 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Service References\RupbanBoardService\Rupban.ServiceAgent.RupbanBoardService.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\RupbanBoardService\RupbanBoardService.wsdl" />
-    <None Include="Service References\RupbanBoardService\RupbanBoardService2.xsd">
+    <None Include="Service References\RupbanBoardService\RupbanBoardService.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\RupbanBoardService\RupbanBoardService1.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\RupbanBoardService\" />

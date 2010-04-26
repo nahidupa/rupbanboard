@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="15f6eeeb-293d-4b67-9f88-6e61ee8c7a84" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Rupban.Service.Host/RupbanBoardService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RupbanBoardService.wsdl" MetadataType="Wsdl" ID="bb32b6a5-704f-4399-ab97-690d236b9e8e" SourceId="1" SourceUrl="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="RupbanBoardService.disco" MetadataType="Disco" ID="fbac9777-b453-4947-b902-df8fd1ce350f" SourceId="1" SourceUrl="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?disco" />
+    <MetadataFile FileName="RupbanBoardService1.wsdl" MetadataType="Wsdl" ID="417b25ad-9adf-4792-8791-2ca368194333" SourceId="1" SourceUrl="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?wsdl" />
+    <MetadataFile FileName="RupbanBoardService.xsd" MetadataType="Schema" ID="1eb1d6fe-63e4-47a4-bf8a-4532fae2bf89" SourceId="1" SourceUrl="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
