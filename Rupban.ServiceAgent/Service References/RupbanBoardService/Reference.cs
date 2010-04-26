@@ -12,11 +12,17 @@ namespace Rupban.ServiceAgent.RupbanBoardService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Code.google.com/p/rupbanboard", ConfigurationName="RupbanBoardService.IRupbanBoardService", CallbackContract=typeof(Rupban.ServiceAgent.RupbanBoardService.IRupbanBoardServiceCallback), SessionMode=System.ServiceModel.SessionMode.Required)]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Code.google.com/p/rupbanboard", ConfigurationName="RupbanBoardService.IRupbanBoardService", CallbackContract=typeof(Rupban.ServiceAgent.RupbanBoardService.IRupbanBoardServiceCallback))]
     public interface IRupbanBoardService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/MoveTicket", ReplyAction="http://Code.google.com/p/rupbanboard/IRupbanBoardService/MoveTicketResponse")]
         void MoveTicket();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/Subscribe", ReplyAction="http://Code.google.com/p/rupbanboard/IRupbanBoardService/SubscribeResponse")]
+        bool Subscribe();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/Unsubscribe", ReplyAction="http://Code.google.com/p/rupbanboard/IRupbanBoardService/UnsubscribeResponse")]
+        bool Unsubscribe();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -56,6 +62,14 @@ namespace Rupban.ServiceAgent.RupbanBoardService {
         
         public void MoveTicket() {
             base.Channel.MoveTicket();
+        }
+        
+        public bool Subscribe() {
+            return base.Channel.Subscribe();
+        }
+        
+        public bool Unsubscribe() {
+            return base.Channel.Unsubscribe();
         }
     }
 }
