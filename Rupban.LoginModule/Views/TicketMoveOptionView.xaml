@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="Rupban.LoginModule.Views.TicketMoveOptionView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="300" Width="300">
+    <Popup IsOpen="True">
+             <Grid>
+            <TextBlock>PopUp Test</TextBlock>
+            </Grid>
+   </Popup>
+</UserControl>

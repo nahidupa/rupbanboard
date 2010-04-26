@@ -5,7 +5,9 @@ using Microsoft.Practices.Unity;
 using Rupban.Core;
 using Rupban.LoginModule.Presenters;
 using Rupban.LoginModule.Views;
+using Rupban.ServiceAgent;
 using Rupban.UI.Infrastructure;
+using System.Windows;
 
 namespace Rupban.LoginModule.Controller
 {
@@ -13,14 +15,28 @@ namespace Rupban.LoginModule.Controller
     {
         private readonly IRegionManager _regionManager;
         private readonly IUnityContainer _container;
+        private readonly IServiceAgent _serviceAgent;
         private Dictionary<string,IRegionManager> _regionManagers;
         private Dictionary<string, IPanelColumnPresenter> _panelColumnPresenters;
         public RupbanBoardController(IRegionManager regionManager, IUnityContainer container)
         {
             _regionManager = regionManager;
             _container = container;
+            try
+            {
+                _serviceAgent = new ServiceAgent.ServiceAgent();
+            }catch
+            {
+            }
+        
             _regionManagers=new  Dictionary<string, IRegionManager>();
             _panelColumnPresenters=new Dictionary<string, IPanelColumnPresenter>();
+            _serviceAgent.GetCallbackHandler().TicketMovedCalBack += new CallbackHandler.CallbackTicketMoved(RupbanBoardController_TicketMovedCalBack);
+        }
+
+        void RupbanBoardController_TicketMovedCalBack()
+        {
+            MessageBox.Show("callback");
         }
 
         public void LoadBoardColumnView(List<TemplateColumn> templateCollums)
