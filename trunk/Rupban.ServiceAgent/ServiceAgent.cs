@@ -9,10 +9,13 @@ namespace Rupban.ServiceAgent
 {
     public class ServiceAgent : IServiceAgent
     {
-        RupbanBoardServiceClient boardServiceClient ;
+        readonly RupbanBoardServiceClient boardServiceClient ;
+        private readonly CallbackHandler _serverCallBack;
+
         public ServiceAgent()
         {
-            var instanceContext = new InstanceContext(new CallbackHandler());
+            _serverCallBack = new CallbackHandler();
+            var instanceContext = new InstanceContext(_serverCallBack);
             boardServiceClient = new RupbanBoardServiceClient(instanceContext);
            
         }
@@ -25,6 +28,11 @@ namespace Rupban.ServiceAgent
         public void ViewTicketHistory()
         {
             throw new NotImplementedException();
+        }
+
+        public CallbackHandler GetCallbackHandler()
+        {
+            return _serverCallBack;
         }
     }
 }

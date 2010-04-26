@@ -7,9 +7,16 @@ namespace Rupban.LoginModule.Services
     {
         private readonly IServiceAgent _serviceAgent;
 
-        public TicketService(IServiceAgent serviceAgent)
+        public TicketService()
         {
-            _serviceAgent = serviceAgent;
+            try
+            {
+                _serviceAgent = new ServiceAgent.ServiceAgent();
+            }
+            catch
+            {
+            }
+            
         }
 
         public void MoveTicket()

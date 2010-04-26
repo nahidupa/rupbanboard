@@ -7,13 +7,13 @@ namespace rupban.loginmodule.Commands
     public class MoveTicketCommand : IMoveTicketCommand
     {
         private readonly ITicketService _ticketService;
-        private readonly ITicketController _ticketController;
+     
 
 
-        public MoveTicketCommand(ITicketService ticketService, ITicketController ticketController)
+        public MoveTicketCommand(ITicketService ticketService)
         {
             _ticketService = ticketService;
-            _ticketController = ticketController;
+           
         }
 
         public void Execute(object parameter)

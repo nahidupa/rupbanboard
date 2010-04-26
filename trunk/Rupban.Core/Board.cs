@@ -44,7 +44,7 @@ namespace Rupban.Core
             _templateTable = new TemplateTable();
             for (int i = 0; i < 8;i++ )
             {
-                CreateColumn(string.Format("DemoColumn1{0}",i));
+                CreateColumn(string.Format("DemoColumn{0}",i));
             }
 
         }
@@ -59,9 +59,12 @@ namespace Rupban.Core
         {
             _templateTable.GetCollumByName(collumName).AddRow();
             var title = "tiket1";
-            for (int i = 0; i < 4; i++)
+            if (collumName.Equals("DemoColumn1"))
             {
-                AddTicket(collumName, string.Format("title{0}",i));
+                for (int i = 0; i < 4; i++)
+                {
+                    AddTicket(collumName, string.Format("title{0}", i));
+                }
             }
 
         }

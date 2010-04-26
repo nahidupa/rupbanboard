@@ -128,6 +128,9 @@
     <Compile Include="Views\AdminPanelView.xaml.cs">
       <DependentUpon>AdminPanelView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Dialog\DialogView.xaml.cs">
+      <DependentUpon>DialogView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\IAdminPanelView.cs" />
     <Compile Include="Views\ILoginView.cs" />
     <Compile Include="Presenters\IPanelColumnPresenter.cs" />
@@ -153,12 +156,19 @@
       <DependentUpon>RupbanBoardView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Presenters\RupbanBoardPresenter.cs" />
+    <Compile Include="Views\TicketMoveOptionView.xaml.cs">
+      <DependentUpon>TicketMoveOptionView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TicketView.xaml.cs">
       <DependentUpon>TicketView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Include="Views\AdminPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialog\DialogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -179,6 +189,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\RupbanBoardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TicketMoveOptionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

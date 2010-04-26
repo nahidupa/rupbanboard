@@ -1,6 +1,7 @@
-﻿namespace rupban.loginmodule.Commands
+﻿using System.Windows.Input;
+namespace rupban.loginmodule.Commands
 {
-    public interface IMoveTicketCommand
+    public interface IMoveTicketCommand:ICommand
 
     {
     }

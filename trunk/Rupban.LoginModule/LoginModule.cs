@@ -13,6 +13,7 @@ using Rupban.LoginModule.Presenters;
 using Rupban.LoginModule.Services;
 using rupban.loginmodule.Views;
 using Rupban.LoginModule.Views;
+
 using Rupban.UI.Infrastructure;
 
 namespace Rupban.LoginModule
@@ -71,12 +72,16 @@ namespace Rupban.LoginModule
 
             _container.RegisterType(typeof(ITicketPresenter), typeof(TicketPresenter), false);
             _container.RegisterType(typeof(ITicketView), typeof(TicketView), false);
-            _container.RegisterType(typeof(ITicketController), typeof(TicketController), true);
-
+            _container.RegisterType(typeof(ITicketController), typeof(TicketController), false);
+            _container.RegisterType(typeof(ITicketService), typeof(TicketService), false);
 
             _container.RegisterType(typeof(ILoginCommand), typeof(LoginCommand), true);
+            _container.RegisterType(typeof(IMoveTicketCommand), typeof(MoveTicketCommand), false);
+            
 
+            
 
+            
             
 
             
