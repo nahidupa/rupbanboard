@@ -41,5 +41,15 @@ namespace Rupban.Server
 
            return _projects[0].Board.GetTemplateTable().GetColumnList();
         }
+
+        public void MoveTicket()
+        {
+           
+        }
+
+        public void ViewTicketHistory()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
