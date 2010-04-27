@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Practices.Unity;
+using Rupban.Core;
 using Rupban.ServiceAgent;
 
 namespace Rupban.LoginModule.Services
@@ -20,10 +21,11 @@ namespace Rupban.LoginModule.Services
             
         }
 
-        public void MoveTicket()
+        public void MoveTicket(Ticket ticket, string currentColumnName, string destinationColumnName)
         {
-            _serviceCallerAgent.MoveTicket();
+            _serviceCallerAgent.MoveTicket(ticket,currentColumnName,destinationColumnName);
         }
+       
 
         public void ViewTicketHistory()
         {

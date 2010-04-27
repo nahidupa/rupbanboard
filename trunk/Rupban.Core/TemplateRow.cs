@@ -33,5 +33,10 @@ namespace Rupban.Core
         {
             _templateCells.Add(cell);
         }
+
+        public void RemoveItem(Ticket ticket)
+        {
+            _templateCells.Remove(ticket);
+        }
     }
 }
