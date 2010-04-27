@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IServiceAgent.cs" />
+    <Compile Include="IServiceCallerAgent.cs" />
     <Compile Include="IServiceLisnerAgent.cs" />
     <Compile Include="Service References\RupbanBoardService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Properties\DataSources\Rupban.Core.Project.datasource" />
+    <None Include="Properties\DataSources\Rupban.Core.TemplateColumn.datasource" />
     <None Include="Service References\RupbanBoardService\RupbanBoardService.wsdl" />
     <None Include="Service References\RupbanBoardService\RupbanBoardService.xsd">
       <SubType>Designer</SubType>
@@ -66,6 +68,15 @@
     <None Include="Service References\RupbanBoardService\RupbanBoardService1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\RupbanBoardService\RupbanBoardService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\rupban.core\Rupban.Core.csproj">
+      <Project>{AA0EFC21-AA28-4C62-AE93-CB786A910CA4}</Project>
+      <Name>Rupban.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\RupbanBoardService\" />
