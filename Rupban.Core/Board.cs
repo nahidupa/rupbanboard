@@ -24,7 +24,7 @@ namespace Rupban.Core
 
         }
 
-        public Ticket GetTicketById(int id)
+        public Ticket GetTicketByNumber(int id)
         {
             return _backlogs.SingleOrDefault(t => t.Number.Equals(id));
         }
@@ -63,15 +63,15 @@ namespace Rupban.Core
             {
                 for (int i = 0; i < 4; i++)
                 {
-                    AddTicket(collumName, string.Format("title{0}", i));
+                    AddTicket(collumName, string.Format("title{0}", i),i);
                 }
             }
 
         }
 
-        private void AddTicket(string collumName, string title)
+        private void AddTicket(string collumName, string title,int number)
         {
-            _templateTable.GetCollumByName(collumName).GetRowByIndex(0).AddItem(new Ticket() { Title = title });
+            _templateTable.GetCollumByName(collumName).GetRowByIndex(0).AddItem(new Ticket() { Title = title, Number = number});
         }
     }
 }

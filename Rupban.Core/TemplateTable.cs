@@ -106,5 +106,7 @@ namespace Rupban.Core
         {
             return _templateCollums.Select(p=>p.Value).ToList();
         }
+
+     
     }
 }

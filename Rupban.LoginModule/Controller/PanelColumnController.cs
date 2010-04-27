@@ -24,7 +24,8 @@ namespace Rupban.LoginModule.Controller
               foreach (var ticket in row.GetAllTickets())
               {
                   var ticketPresenter = _container.Resolve<ITicketPresenter>();
-                  region.Add(ticketPresenter.View, ticket.Title.ToString());
+                  ticketPresenter.Ticket = ticket;
+                  region.Add(ticketPresenter.View, ticket.Title);
               }
         }
     }

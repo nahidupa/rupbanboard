@@ -18,7 +18,7 @@ namespace rupban.loginmodule.Commands
 
         public void Execute(object parameter)
         {
-            _ticketService.MoveTicket();
+            //_ticketService.MoveTicket();
             
         }
 

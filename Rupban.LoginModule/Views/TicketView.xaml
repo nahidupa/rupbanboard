@@ -4,17 +4,20 @@
     Height="Auto" Width="Auto">
     <Grid>
         <StackPanel Margin="5">
-        <Border   BorderThickness="2" Height="15" Background="BlueViolet" BorderBrush="Black">
-        </Border>
-        
+            <Border   BorderThickness="2" Height="Auto" Background="White" BorderBrush="Black">
+                <StackPanel>
+                    <Label Content="{Binding Path=Ticket.Number}"/>                    
+                </StackPanel>
+            </Border>
+
             <StackPanel  Margin="2" Name="stackPanel1">
                 <Button Height="23" Name="btnHistory" Width="95">View history</Button>
                 <Button Height="23" Name="btnPick" Width="95">Pick</Button>
-                <Button Height="23" Name="btnMove" Width="95" Command="{Binding MoveTicketCommand}">Move To</Button>
+                <Button Height="23" Name="btnMove" Width="95" Command="{Binding MoveTicketCommand}" CommandParameter="{Binding Path=Ticket.Id}">Move To</Button>
                 <Button Height="23" Name="btnOpen" Width="95">Open track page</Button>
                 <Button Height="23" Name="button5" Width="95">Button</Button>
             </StackPanel>
-       
-            </StackPanel>
+
+        </StackPanel>
     </Grid>
 </UserControl>
