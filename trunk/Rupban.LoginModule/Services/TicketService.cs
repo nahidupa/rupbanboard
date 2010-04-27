@@ -6,13 +6,13 @@ namespace Rupban.LoginModule.Services
 {
     public class TicketService : ITicketService
     {
-        private readonly IServiceAgent _serviceAgent;
+        private readonly IServiceCallerAgent _serviceCallerAgent;
 
         public TicketService(IUnityContainer container)
         {
             try
             {
-                _serviceAgent = container.Resolve<IServiceAgent>(); 
+                _serviceCallerAgent = container.Resolve<IServiceCallerAgent>(); 
             }
             catch
             {
@@ -22,12 +22,12 @@ namespace Rupban.LoginModule.Services
 
         public void MoveTicket()
         {
-            _serviceAgent.MoveTicket();
+            _serviceCallerAgent.MoveTicket();
         }
 
         public void ViewTicketHistory()
         {
-            _serviceAgent.ViewTicketHistory();
+            _serviceCallerAgent.ViewTicketHistory();
         }
 
         public void PickTicket()
