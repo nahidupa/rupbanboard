@@ -206,10 +206,6 @@
       <Project>{AA0EFC21-AA28-4C62-AE93-CB786A910CA4}</Project>
       <Name>Rupban.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Rupban.Server\Rupban.Server.csproj">
-      <Project>{59C3EE94-2E8C-4A6A-98B3-ADEE01E6F178}</Project>
-      <Name>Rupban.Server</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Rupban.ServiceAgent\Rupban.ServiceAgent.csproj">
       <Project>{751EC0DE-54B4-4649-B4E1-AAD7573E4321}</Project>
       <Name>Rupban.ServiceAgent</Name>

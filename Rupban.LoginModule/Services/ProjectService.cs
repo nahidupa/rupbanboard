@@ -1,16 +1,24 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.Practices.Unity;
 using Rupban.Core;
-using Rupban.Server;
+using Rupban.ServiceAgent;
+
 
 namespace Rupban.LoginModule.Services
 {
     public class ProjectService : IProjectService
     {
+        private readonly IServiceCallerAgent _serviceCallerAgent;
+        public ProjectService(IUnityContainer unityContainer)
+        {
+            _serviceCallerAgent = unityContainer.Resolve<IServiceCallerAgent>();
+            
+        }
         public List<Project> GetCurrentProjectList()
         {
-            var projectKeeper = new ProjectKeeper();
-            return projectKeeper.GetCurrentProjectList();
+
+            return _serviceCallerAgent.GetCurrentProjectList();
         }
     }
 }

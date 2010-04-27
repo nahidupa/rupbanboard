@@ -63,8 +63,11 @@ namespace Rupban.LoginModule
             _container.RegisterType(typeof(IPanelColumnView), typeof(PanelColumnView), false);
             _container.RegisterType(typeof(IPanelColumnPresenter), typeof(PanelColumnPresenter), false);
             _container.RegisterType(typeof(IPanelColumnService), typeof(PanelColumnService), false);
-            
 
+            _container.RegisterType(typeof(IServiceCallerAgent), typeof(ServiceCallerAgent), true);
+            _container.RegisterType(typeof(IServiceLisnerAgent), typeof(ServiceListenerAgent), true);
+            
+         
 
             _container.RegisterType(typeof(ILoginController), typeof(LoginController), true);
             _container.RegisterType(typeof(ILoginView), typeof(LoginView), true);
@@ -78,10 +81,7 @@ namespace Rupban.LoginModule
             _container.RegisterType(typeof(ILoginCommand), typeof(LoginCommand), true);
             _container.RegisterType(typeof(IMoveTicketCommand), typeof(MoveTicketCommand), false);
 
-            _container.RegisterType(typeof(IServiceAgent), typeof(ServiceCallerAgent), true);
-            _container.RegisterType(typeof(IServiceLisnerAgent), typeof(ServiceListenerAgent), true);
-            
-            
+             
 
             
 

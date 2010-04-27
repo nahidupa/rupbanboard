@@ -1,16 +1,23 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.Practices.Unity;
 using Rupban.Core;
-using Rupban.Server;
+using Rupban.ServiceAgent;
+
 
 namespace Rupban.LoginModule.Services
 {
     public class RupbanBoardService : IRupbanBoardService
     {
-        public List<TemplateColumn> GetTemplateCollumList()
+        private readonly IServiceCallerAgent _serviceCallerAgent;
+        public RupbanBoardService(IUnityContainer unityContainer)
         {
-            var projectKeeper = new ProjectKeeper();
-            return projectKeeper.GetTemplateCollumList();
+            _serviceCallerAgent = unityContainer.Resolve<IServiceCallerAgent>();
+
+        }
+        public List<TemplateColumn> GetTemplateCollumList(){
+           
+            return _serviceCallerAgent.GetTemplateCollumList();
         }
     }
 }
