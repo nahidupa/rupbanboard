@@ -5,18 +5,24 @@
     xmlns:cal="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
     Height="Auto" Width="250">
     <Grid>
-        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
-            <Border Margin="2" BorderThickness="2" BorderBrush="Black">
+        <Border Margin="2" BorderThickness="2" BorderBrush="Black">
+            <StackPanel>
+                <Border Background="Coral" Height="28">
+                    <Label VerticalAlignment="Center" HorizontalAlignment="Center" Content="{Binding Path=TemplateColumn.ColumnHeader}"/>
+                </Border>
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                    <ItemsControl cal:RegionManager.RegionName="{x:Static Infrastructure:RegionNames.TicketRegion}" Width="Auto" Height="Auto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel  Orientation="Vertical"  />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </ScrollViewer>
+            </StackPanel>
+        </Border>
 
-                <ItemsControl cal:RegionManager.RegionName="{x:Static Infrastructure:RegionNames.TicketRegion}" Width="Auto" Height="Auto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <StackPanel  Orientation="Vertical"  />
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                </ItemsControl>
-            </Border>
-        </ScrollViewer>
+
 
     </Grid>
 </UserControl>

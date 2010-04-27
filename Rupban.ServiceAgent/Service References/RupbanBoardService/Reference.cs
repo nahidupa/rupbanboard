@@ -16,7 +16,7 @@ namespace Rupban.ServiceAgent.RupbanBoardService {
     public interface IRupbanBoardService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/MoveTicket", ReplyAction="http://Code.google.com/p/rupbanboard/IRupbanBoardService/MoveTicketResponse")]
-        void MoveTicket(Rupban.Core.Ticket ticket, string currentColumnName, string destinationColumnName);
+        void MoveTicket(string ticketId, string currentColumnName, string destinationColumnName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/Subscribe", ReplyAction="http://Code.google.com/p/rupbanboard/IRupbanBoardService/SubscribeResponse")]
         bool Subscribe();
@@ -72,8 +72,8 @@ namespace Rupban.ServiceAgent.RupbanBoardService {
                 base(callbackInstance, binding, remoteAddress) {
         }
         
-        public void MoveTicket(Rupban.Core.Ticket ticket, string currentColumnName, string destinationColumnName) {
-            base.Channel.MoveTicket(ticket, currentColumnName, destinationColumnName);
+        public void MoveTicket(string ticketId, string currentColumnName, string destinationColumnName) {
+            base.Channel.MoveTicket(ticketId, currentColumnName, destinationColumnName);
         }
         
         public bool Subscribe() {

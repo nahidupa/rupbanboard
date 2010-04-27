@@ -42,14 +42,17 @@ namespace Rupban.Server
            return _projects[0].Board.GetTemplateTable().GetColumnList();
         }
 
-        public void MoveTicket(Ticket ticket,string currentColumnName, string destinationColumnName)
+        public void MoveTicket(string ticketId, string currentColumnName, string destinationColumnName)
         {
-
+            
             var currentColumn = _projects[0].Board.GetTemplateTable().GetCollumByName(currentColumnName);
-            var destinationColumn = _projects[0].Board.GetTemplateTable().GetCollumByName(destinationColumnName);
-            var ticketToMove = _projects[0].Board.GetTicketByNumber(ticket.Number);
-            destinationColumn.GetRowByIndex(0).AddItem(ticketToMove);
-            currentColumn.GetRowByIndex(0).RemoveItem(ticketToMove);
+            var ticketToMove = currentColumn.GetTicketById(ticketId);
+            if (ticketToMove != null)
+            {
+                var destinationColumn = _projects[0].Board.GetTemplateTable().GetCollumByName(destinationColumnName);
+                destinationColumn.GetRowByIndex(0).AddItem(ticketToMove);
+                currentColumn.GetRowByIndex(0).RemoveItem(ticketToMove);
+            }
 
         }
 

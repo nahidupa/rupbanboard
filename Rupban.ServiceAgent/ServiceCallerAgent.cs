@@ -22,9 +22,9 @@ namespace Rupban.ServiceAgent
            
         }
 
-        public void MoveTicket(Ticket ticket, string currentColumnName, string destinationColumnName)
+        public void MoveTicket(string ticketId, string currentColumnName, string destinationColumnName)
         {
-            _boardServiceClient.MoveTicket(ticket,currentColumnName,destinationColumnName);
+            _boardServiceClient.MoveTicket(ticketId, currentColumnName, destinationColumnName);
         }
 
         public void ViewTicketHistory()

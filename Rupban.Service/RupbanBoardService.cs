@@ -22,9 +22,9 @@ namespace Rupban.Service
         }
 
    
-        public void MoveTicket(Ticket ticket,string currentColumnName, string destinationColumnName)
+        public void MoveTicket(string ticketId, string currentColumnName, string destinationColumnName)
         {
-            _projectKeeper.MoveTicket(ticket, currentColumnName, destinationColumnName);
+            _projectKeeper.MoveTicket(ticketId, currentColumnName, destinationColumnName);
             NotifyAllClient();
         }
 

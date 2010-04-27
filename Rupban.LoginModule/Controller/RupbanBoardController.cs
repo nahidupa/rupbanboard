@@ -46,9 +46,9 @@ namespace Rupban.LoginModule.Controller
             {
                 var panelColumnPresenter = _container.Resolve<IPanelColumnPresenter>();
                 panelColumnPresenter.TemplateColumn = templateCollum;
-                var regionManager = region.Add(panelColumnPresenter.View, templateCollum.Title,true);
-                _regionManagers.Add(templateCollum.Title, regionManager);
-                _panelColumnPresenters.Add(templateCollum.Title, panelColumnPresenter);
+                var regionManager = region.Add(panelColumnPresenter.View, templateCollum.ColumnHeader,true);
+                _regionManagers.Add(templateCollum.ColumnHeader, regionManager);
+                _panelColumnPresenters.Add(templateCollum.ColumnHeader, panelColumnPresenter);
                 
             }
         }
@@ -57,7 +57,7 @@ namespace Rupban.LoginModule.Controller
 
         public void LoadRowView(TemplateColumn templateColumn)
         {
-            _panelColumnPresenters[templateColumn.Title].LoadTicketView(_regionManagers[templateColumn.Title]);
+            _panelColumnPresenters[templateColumn.ColumnHeader].LoadTicketView(_regionManagers[templateColumn.ColumnHeader]);
         }
     }
 }

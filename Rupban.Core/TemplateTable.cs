@@ -46,8 +46,8 @@ namespace Rupban.Core
                                                                                           ID =
                                                                                               int.Parse(
                                                                                               collum.Element("Id").Value),
-                                                                                          Title =
-                                                                                              collum.Element("Title").
+                                                                                          ColumnHeader =
+                                                                                              collum.Element("ColumnHeder").
                                                                                               Value,
                                                                                           //TemplateRows = (collum.
                                                                                           //    Descendants("Rows").
@@ -99,7 +99,7 @@ namespace Rupban.Core
         public void AddCollum(string collumName)
         {
             if (!_templateCollums.ContainsKey(collumName))
-            _templateCollums.Add(collumName, new TemplateColumn(){Title = collumName});
+            _templateCollums.Add(collumName, new TemplateColumn(){ColumnHeader = collumName});
         }
 
         public List<TemplateColumn> GetColumnList()
