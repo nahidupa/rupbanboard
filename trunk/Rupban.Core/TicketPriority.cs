@@ -1,8 +1,12 @@
+using System.Runtime.Serialization;
 namespace Rupban.Core
 {
+    [DataContract]
     public enum TicketPriority
     {
-        Low=0,
-        Hight=5
+        [EnumMember]
+        Low = 0,
+        [EnumMember]
+        Hight = 5
     }
 }
