@@ -23,6 +23,18 @@ namespace Rupban.ServiceAgent.RupbanBoardService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/Unsubscribe", ReplyAction="http://Code.google.com/p/rupbanboard/IRupbanBoardService/UnsubscribeResponse")]
         bool Unsubscribe();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/ViewTicketHistory", ReplyAction="http://Code.google.com/p/rupbanboard/IRupbanBoardService/ViewTicketHistoryRespons" +
+            "e")]
+        void ViewTicketHistory();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetCurrentProjectList", ReplyAction="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetCurrentProjectListRes" +
+            "ponse")]
+        Rupban.Core.Project[] GetCurrentProjectList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetTemplateCollumList", ReplyAction="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetTemplateCollumListRes" +
+            "ponse")]
+        Rupban.Core.TemplateColumn[] GetTemplateCollumList();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -70,6 +82,18 @@ namespace Rupban.ServiceAgent.RupbanBoardService {
         
         public bool Unsubscribe() {
             return base.Channel.Unsubscribe();
+        }
+        
+        public void ViewTicketHistory() {
+            base.Channel.ViewTicketHistory();
+        }
+        
+        public Rupban.Core.Project[] GetCurrentProjectList() {
+            return base.Channel.GetCurrentProjectList();
+        }
+        
+        public Rupban.Core.TemplateColumn[] GetTemplateCollumList() {
+            return base.Channel.GetTemplateCollumList();
         }
     }
 }
