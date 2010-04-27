@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
+using Rupban.Core;
+
 using Rupban.ServiceAgent.RupbanBoardService;
 
 namespace Rupban.ServiceAgent
 {
     [CallbackBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]
-    public class ServiceCallerAgent : IServiceAgent, IRupbanBoardServiceCallback
+    public class ServiceCallerAgent : IServiceCallerAgent,IRupbanBoardServiceCallback
     {
-        readonly RupbanBoardServiceClient _boardServiceClient ;
+        private readonly RupbanBoardServiceClient _boardServiceClient ;
+        
         public ServiceCallerAgent()
         {
             var instanceContext = new InstanceContext(this);
             _boardServiceClient = new RupbanBoardServiceClient(instanceContext);
+        
            
         }
         public void MoveTicket()
@@ -24,12 +28,28 @@ namespace Rupban.ServiceAgent
 
         public void ViewTicketHistory()
         {
-            throw new NotImplementedException();
+            _boardServiceClient.ViewTicketHistory();
         }
+
+        public List<Project> GetCurrentProjectList()
+        {
+            return _boardServiceClient.GetCurrentProjectList().ToList<Project>();
+        }
+
+        public List<TemplateColumn> GetTemplateCollumList()
+        {
+            return _boardServiceClient.GetTemplateCollumList().ToList<TemplateColumn>();
+        }
+
+
+
+        #region IRupbanBoardServiceCallback Members
 
         public void TicketMoved()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
+
+        #endregion
     }
 }
