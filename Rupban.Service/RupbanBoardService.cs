@@ -14,18 +14,17 @@ namespace Rupban.Service
     
     public class RupbanBoardService : IRupbanBoardService
     {
-        private static List<IRupbanBoardServiceDuplexCallback> _subscribers;
+        private static List<IRupbanBoardServiceDuplexCallback> _subscribers=new List<IRupbanBoardServiceDuplexCallback>();
         private static ProjectKeeper _projectKeeper;
         public RupbanBoardService()
         {
-            _subscribers = new List<IRupbanBoardServiceDuplexCallback>();
             _projectKeeper=new ProjectKeeper();
         }
 
    
         public void MoveTicket()
         {
-            //_projectKeeper.MoveTicket();
+            _projectKeeper.MoveTicket();
             NotifyAllClient();
         }
 

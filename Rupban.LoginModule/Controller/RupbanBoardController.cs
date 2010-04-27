@@ -23,8 +23,7 @@ namespace Rupban.LoginModule.Controller
             _regionManager = regionManager;
             _container = container;
             _regionManagers = new Dictionary<string, IRegionManager>();
-            _panelColumnPresenters = new Dictionary<string, IPanelColumnPresenter>();
-            
+            _panelColumnPresenters = new Dictionary<string, IPanelColumnPresenter>();            
             _serviceListenerAgent = container.Resolve<IServiceLisnerAgent>();
             _serviceListenerAgent.TicketMovedCalBack += ServiceListenerAgentTicketMovedCalBack;        
         

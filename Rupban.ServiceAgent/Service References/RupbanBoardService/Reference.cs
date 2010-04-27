@@ -12,7 +12,7 @@ namespace Rupban.ServiceAgent.RupbanBoardService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Code.google.com/p/rupbanboard", ConfigurationName="RupbanBoardService.IRupbanBoardService", CallbackContract=typeof(Rupban.ServiceAgent.RupbanBoardService.IRupbanBoardServiceCallback))]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Code.google.com/p/rupbanboard", ConfigurationName="RupbanBoardService.IRupbanBoardService", CallbackContract=typeof(Rupban.ServiceAgent.RupbanBoardService.IRupbanBoardServiceCallback), SessionMode=System.ServiceModel.SessionMode.Required)]
     public interface IRupbanBoardService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/MoveTicket", ReplyAction="http://Code.google.com/p/rupbanboard/IRupbanBoardService/MoveTicketResponse")]
