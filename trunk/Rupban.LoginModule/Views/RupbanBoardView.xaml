@@ -4,18 +4,38 @@
     xmlns:cal="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
     xmlns:infrastructure="clr-namespace:Rupban.UI.Infrastructure;assembly=Rupban.UI.Infrastructure"
     Height="Auto" Width="Auto">
-    <Grid>
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden">
-            <Border Height="600" Margin="2" BorderThickness="2" BorderBrush="Black">
-                <ItemsControl cal:RegionManager.RegionName="{x:Static infrastructure:RegionNames.ColumnRegion}" Width="Auto" Height="Auto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel  Orientation="Horizontal"  />
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-        </ItemsControl>
-            </Border>
 
-        </ScrollViewer>
-    </Grid>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="90*"></RowDefinition>
+                <RowDefinition Height="5*"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Column="0" Grid.Row="0">Rupban</Label>
+            <Border Grid.Column="0" Grid.Row="1"  Margin="2" BorderThickness="2" BorderBrush="Black">
+                    <ItemsControl cal:RegionManager.RegionName="{x:Static infrastructure:RegionNames.ColumnRegion}" Width="Auto" Height="Auto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel  Orientation="Horizontal"  />
+                            <!--<Grid><Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition Height="5" />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                </Grid>-->
+                        </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    <!--<GridSplitter Grid.Row="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />-->
+                </ItemsControl>
+                </Border>
+            <Label Grid.Column="0" Grid.Row="3">Rupban</Label>
+        </Grid>
+        
+    </ScrollViewer>
+
 </UserControl>
