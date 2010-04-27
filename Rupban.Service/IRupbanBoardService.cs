@@ -1,4 +1,6 @@
-﻿using System.ServiceModel;
+﻿using System.Collections.Generic;
+using System.ServiceModel;
+using Rupban.Core;
 
 namespace Rupban.Service
 {
@@ -18,6 +20,15 @@ namespace Rupban.Service
 
         [OperationContract]
         bool Unsubscribe();
+
+        [OperationContract]
+        void ViewTicketHistory();
+
+        [OperationContract]
+        List<Project> GetCurrentProjectList();
+        
+        [OperationContract]
+        List<TemplateColumn> GetTemplateCollumList();
 
     }
 }
