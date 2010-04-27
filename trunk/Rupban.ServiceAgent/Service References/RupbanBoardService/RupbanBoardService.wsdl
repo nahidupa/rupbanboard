@@ -4,6 +4,7 @@
     <xsd:schema targetNamespace="http://Code.google.com/p/rupbanboard/Imports">
       <xsd:import schemaLocation="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?xsd=xsd0" namespace="http://Code.google.com/p/rupbanboard" />
       <xsd:import schemaLocation="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Rupban.Core" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IRupbanBoardService_MoveTicket_InputMessage">
@@ -24,6 +25,24 @@
   <wsdl:message name="IRupbanBoardService_Unsubscribe_OutputMessage">
     <wsdl:part name="parameters" element="tns:UnsubscribeResponse" />
   </wsdl:message>
+  <wsdl:message name="IRupbanBoardService_ViewTicketHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewTicketHistory" />
+  </wsdl:message>
+  <wsdl:message name="IRupbanBoardService_ViewTicketHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewTicketHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRupbanBoardService_GetCurrentProjectList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentProjectList" />
+  </wsdl:message>
+  <wsdl:message name="IRupbanBoardService_GetCurrentProjectList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentProjectListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRupbanBoardService_GetTemplateCollumList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplateCollumList" />
+  </wsdl:message>
+  <wsdl:message name="IRupbanBoardService_GetTemplateCollumList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplateCollumListResponse" />
+  </wsdl:message>
   <wsdl:message name="IRupbanBoardService_TicketMoved_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:TicketMoved" />
   </wsdl:message>
@@ -39,6 +58,18 @@
     <wsdl:operation name="Unsubscribe">
       <wsdl:input wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/Unsubscribe" message="tns:IRupbanBoardService_Unsubscribe_InputMessage" />
       <wsdl:output wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/UnsubscribeResponse" message="tns:IRupbanBoardService_Unsubscribe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewTicketHistory">
+      <wsdl:input wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/ViewTicketHistory" message="tns:IRupbanBoardService_ViewTicketHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/ViewTicketHistoryResponse" message="tns:IRupbanBoardService_ViewTicketHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentProjectList">
+      <wsdl:input wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetCurrentProjectList" message="tns:IRupbanBoardService_GetCurrentProjectList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetCurrentProjectListResponse" message="tns:IRupbanBoardService_GetCurrentProjectList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateCollumList">
+      <wsdl:input wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetTemplateCollumList" message="tns:IRupbanBoardService_GetTemplateCollumList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetTemplateCollumListResponse" message="tns:IRupbanBoardService_GetTemplateCollumList_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="TicketMoved">
       <wsdl:output wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/TicketMoved" message="tns:IRupbanBoardService_TicketMoved_OutputCallbackMessage" />

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://Code.google.com/p/rupbanboard" elementFormDefault="qualified" targetNamespace="http://Code.google.com/p/rupbanboard" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Rupban.Core" />
   <xs:element name="MoveTicket">
     <xs:complexType>
       <xs:sequence />
@@ -31,6 +32,40 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="UnsubscribeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ViewTicketHistory">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ViewTicketHistoryResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentProjectList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentProjectListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Rupban.Core" minOccurs="0" name="GetCurrentProjectListResult" nillable="true" type="q1:ArrayOfProject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTemplateCollumList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTemplateCollumListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Rupban.Core" minOccurs="0" name="GetTemplateCollumListResult" nillable="true" type="q2:ArrayOfTemplateColumn" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

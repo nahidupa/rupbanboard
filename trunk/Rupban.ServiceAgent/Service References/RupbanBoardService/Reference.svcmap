@@ -21,11 +21,12 @@
     <MetadataSource Address="http://localhost/Rupban.Service.Host/RupbanBoardService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="RupbanBoardService.wsdl" MetadataType="Wsdl" ID="bb32b6a5-704f-4399-ab97-690d236b9e8e" SourceId="1" SourceUrl="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?wsdl=wsdl0" />
     <MetadataFile FileName="RupbanBoardService.disco" MetadataType="Disco" ID="fbac9777-b453-4947-b902-df8fd1ce350f" SourceId="1" SourceUrl="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?disco" />
-    <MetadataFile FileName="RupbanBoardService1.xsd" MetadataType="Schema" ID="e197856e-5eeb-4ed1-94bb-7bff0ed54aa3" SourceId="1" SourceUrl="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?xsd=xsd1" />
-    <MetadataFile FileName="RupbanBoardService1.wsdl" MetadataType="Wsdl" ID="417b25ad-9adf-4792-8791-2ca368194333" SourceId="1" SourceUrl="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?wsdl" />
     <MetadataFile FileName="RupbanBoardService.xsd" MetadataType="Schema" ID="1eb1d6fe-63e4-47a4-bf8a-4532fae2bf89" SourceId="1" SourceUrl="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RupbanBoardService1.wsdl" MetadataType="Wsdl" ID="417b25ad-9adf-4792-8791-2ca368194333" SourceId="1" SourceUrl="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?wsdl" />
+    <MetadataFile FileName="RupbanBoardService.wsdl" MetadataType="Wsdl" ID="bb32b6a5-704f-4399-ab97-690d236b9e8e" SourceId="1" SourceUrl="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="RupbanBoardService21.xsd" MetadataType="Schema" ID="110b1f44-adec-46ba-8101-154bc3b9a44d" SourceId="1" SourceUrl="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RupbanBoardService1.xsd" MetadataType="Schema" ID="e197856e-5eeb-4ed1-94bb-7bff0ed54aa3" SourceId="1" SourceUrl="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
