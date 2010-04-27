@@ -21,9 +21,9 @@ namespace Rupban.LoginModule.Services
             
         }
 
-        public void MoveTicket(Ticket ticket, string currentColumnName, string destinationColumnName)
+        public void MoveTicket(string ticketId, string currentColumnName, string destinationColumnName)
         {
-            _serviceCallerAgent.MoveTicket(ticket,currentColumnName,destinationColumnName);
+            _serviceCallerAgent.MoveTicket(ticketId, currentColumnName, destinationColumnName);
         }
        
 

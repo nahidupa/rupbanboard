@@ -21,7 +21,7 @@ namespace Rupban.Core.Test
             var mockTemplateTable = new Mock<TemplateTable>();
             //mockTemplateTable.Setup(u=>u.)
             board.LoadTemplateTable(filename);
-            var ticket=board.GetTicketByNumber(1);
+            var ticket=board.GetTicketById("1");
             board.MoveTicket(ticket,2, 1);
             var templateTable = board.GetTemplateTable();
             var templateCollum = templateTable.GetCollumByName("HotBox");

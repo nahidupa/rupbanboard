@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Runtime.Serialization;
+using System.Linq;
 namespace Rupban.Core
 {
     [DataContract]
@@ -13,7 +14,7 @@ namespace Rupban.Core
         [DataMember]
         public int ID { set; get; }
         [DataMember]
-        public string Title { set; get; }
+        public string ColumnHeader { set; get; }
         [DataMember]
         private List<TemplateRow> _templateRows;
 
@@ -41,6 +42,15 @@ namespace Rupban.Core
         public TemplateRow GetRowByIndex(int index)
         {
             return _templateRows[index];
+        }
+
+        public Ticket GetTicketById(string ticketId)
+        {
+            foreach (var templateRow in _templateRows)
+            {
+                return templateRow.GetAllTickets().SingleOrDefault(t => t.Id.Equals(ticketId));
+            }
+            return null;
         }
     }
 }

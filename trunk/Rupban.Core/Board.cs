@@ -24,9 +24,9 @@ namespace Rupban.Core
 
         }
 
-        public Ticket GetTicketByNumber(int id)
+        public Ticket GetTicketById(string id)
         {
-            return _backlogs.SingleOrDefault(t => t.Number.Equals(id));
+            return _backlogs.SingleOrDefault(t => t.Id.Equals(id));
         }
 
         public void MoveTicket(Ticket ticket, int collumId, int rowId)
