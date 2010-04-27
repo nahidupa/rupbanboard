@@ -1,13 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.Runtime.Serialization;
 namespace Rupban.Core
 {
+    [DataContract]
+    [KnownType(typeof(TemplateRow))]
+    [KnownType(typeof(TemplateCell))]
+    [KnownType(typeof(Ticket))]
     public class TemplateColumn
     {
+        [DataMember]
         public int ID { set; get; }
+        [DataMember]
         public string Title { set; get; }
+        [DataMember]
         private List<TemplateRow> _templateRows;
 
 
