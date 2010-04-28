@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="243" d:DesignWidth="415">
-    <Grid Height="192" Width="356">
-        <TextBox Height="35" HorizontalAlignment="Left" Margin="133,31,0,0" Name="textBox1" VerticalAlignment="Top" Width="165" />
-        <Button Content="Login" Height="23" HorizontalAlignment="Left" Margin="235,134,0,0" Name="button1" VerticalAlignment="Top" Width="75" Command="{Binding Path=LoginCommand}" CommandParameter="Test"/>
+             mc:Ignorable="d">
+    <Border Height="192" Width="356" BorderBrush="DarkKhaki" BorderThickness="2">
+    <Grid   >
+        <TextBox x:Name="txtResourceName" Height="26" HorizontalAlignment="Left" Margin="133,31,0,0"  VerticalAlignment="Top" Width="211" />
+        <Button Content="Login" Height="23" HorizontalAlignment="Left" Margin="244,126,0,0" Name="button1" VerticalAlignment="Top" Width="100" Command="{Binding Path=LoginCommand}" CommandParameter="{Binding ElementName=txtResourceName,Path=Text}"/>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="27,34,0,0" Name="textBlock1" Text="Resource Name" VerticalAlignment="Top" />
     </Grid>
+    </Border>
 </UserControl>
