@@ -36,6 +36,10 @@ namespace Rupban.LoginModule.Presenters
             }
            
         }
+        public void TicketDroped(Ticket ticket)
+        {
+            _panelColumnController.TicketDroped(ticket);
+        }
 
         public PanelColumnPresenter(IPanelColumnView view, IPanelColumnController panelColumnController, IPanelColumnService panelColumnService)
         {

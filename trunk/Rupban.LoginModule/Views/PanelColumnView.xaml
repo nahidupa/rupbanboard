@@ -4,7 +4,7 @@
     xmlns:Infrastructure="clr-namespace:Rupban.UI.Infrastructure;assembly=Rupban.UI.Infrastructure"
     xmlns:cal="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
     Height="Auto" Width="250">
-    <Grid>
+    <Grid AllowDrop="True" x:Name="panelColumnView">
         <Border Margin="2" BorderThickness="2" BorderBrush="Black">
             <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                 <StackPanel>

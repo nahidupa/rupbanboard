@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Rupban.LoginModule.Presenters;
+using rupban.loginmodule.Views;
 
 namespace Rupban.LoginModule.Views
 {
@@ -25,6 +26,14 @@ namespace Rupban.LoginModule.Views
         public PanelColumnView()
         {
             InitializeComponent();
+            panelColumnView.Drop += PanelColumnViewDrop;
+        }
+
+        void PanelColumnViewDrop(object sender, DragEventArgs e)
+        {
+
+            var ticketView = (TicketView)e.Data.GetData(typeof(TicketView));
+            _model.TicketDroped(ticketView.GetTicket());
         }
 
         public void SetModel(PanelColumnPresenter model)
