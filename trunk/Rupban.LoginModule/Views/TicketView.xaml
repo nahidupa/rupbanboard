@@ -3,6 +3,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     Height="Auto" Width="Auto">
     <Grid>
+        <Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="View history"/>
+
+                <MenuItem Header="Pick"/>
+
+                <MenuItem Header="Move To"  Command="{Binding MoveTicketCommand}" CommandParameter="{Binding Path=Ticket.Id}"/>
+
+                <MenuItem Header="Open track page"/>
+
+            </ContextMenu>
+        </Grid.ContextMenu>
         <StackPanel Margin="5">
             <Border   BorderThickness="1" Height="Auto" BorderBrush="CornflowerBlue" >
                 <StackPanel>
@@ -12,18 +24,7 @@
                         </StackPanel>
                     </Border>
                     <Label Content="{Binding Path=Ticket.Title}"/>
-                    <StackPanel  Margin="2" Name="stackPanel1">
-                        <Button Height="23" Name="btnHistory" Width="95">View history</Button>
-                        <Button Height="23" Name="btnPick" Width="95">Pick</Button>
-                        <Button Height="23" Name="btnMove" Width="95" Command="{Binding MoveTicketCommand}" CommandParameter="{Binding Path=Ticket.Id}">Move To</Button>
-                        <Button Height="23" Name="btnOpen" Width="95">Open track page</Button>
-                        <Button Height="23" Name="button5" Width="95">Button</Button>
-                        <!--<StackPanel.Triggers>
-                            <EventTrigger RoutedEvent="MouseEnter">
-                                
-                            </EventTrigger>
-                        </StackPanel.Triggers>-->
-                    </StackPanel>
+                 
                 </StackPanel>
             </Border>
         </StackPanel>
