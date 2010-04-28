@@ -21,7 +21,7 @@ namespace rupban.loginmodule.Commands
 
         public void Execute(object parameter)
         {
-            string username = "";
+            string username = parameter.ToString();
             var logedIn = _loginService.LogOn(username);
             if (logedIn)
             {
