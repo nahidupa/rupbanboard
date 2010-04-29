@@ -23,7 +23,7 @@ namespace Rupban.LoginModule.Controller
             _eventAggregator = eventAggregator;
             _regionManager = regionManager;
             _container = container;
-            _eventAggregator.GetEvent<TicketDropedEvent>().Subscribe(TicketDroped);
+            
         }
         public void LoadBoardTicketView(TemplateRow row, IRegionManager localRegionManager)
         {
@@ -34,7 +34,7 @@ namespace Rupban.LoginModule.Controller
             {
                 var ticketPresenter = _container.Resolve<ITicketPresenter>();
                 ticketPresenter.Ticket = ticket;
-                region.Add(ticketPresenter.View, ticket.Title);
+                region.Add(ticketPresenter.View, ticket.Id);
             }
 
         }
@@ -42,16 +42,6 @@ namespace Rupban.LoginModule.Controller
         
 
 
-        public void TicketDroped(TickedMoveEventArgs tickedMoveEventArgs)
-        {
-            if (tickedMoveEventArgs.Tiket != null)
-            {
-                Ticket ticket = tickedMoveEventArgs.Tiket;
-                var region = _localRegionManager.Regions[RegionNames.TicketRegion];
-                var ticketPresenter = _container.Resolve<ITicketPresenter>();
-                ticketPresenter.Ticket = ticket;
-                region.Add(ticketPresenter.View, ticket.Title);
-            }
-        }
+      
     }
 }

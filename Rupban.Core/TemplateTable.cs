@@ -43,8 +43,8 @@ namespace Rupban.Core
                 XDocument document = XDocument.Load(filename);
                 var collumList = document.Descendants("Collums").Select(collum => new TemplateColumn
                                                                                       {
-                                                                                          ID =
-                                                                                              int.Parse(
+                                                                                          Id =
+                                                                                              (
                                                                                               collum.Element("Id").Value),
                                                                                           ColumnHeader =
                                                                                               collum.Element("ColumnHeder").
@@ -71,14 +71,7 @@ namespace Rupban.Core
                                                                                               Select(
                                                                                               row => new TemplateRow()
                                                                                                          {
-                                                                                                             Id =
-                                                                                                                 int.
-                                                                                                                 Parse
-                                                                                                                 (row.
-                                                                                                                      Element
-                                                                                                                      ("Id")
-                                                                                                                      .
-                                                                                                                      Value)
+                                                                                                             Id =row.Element("Id").Value.ToString()
                                                                                                          }).ToList())
                                                                                       ));
 
@@ -93,7 +86,7 @@ namespace Rupban.Core
 
         public TemplateColumn GetCollumById(int collumId)
         {
-            return _templateCollums.SingleOrDefault(c => c.Value.ID.Equals(collumId)).Value;
+            return _templateCollums.SingleOrDefault(c => c.Value.Id.Equals(collumId)).Value;
         }
 
         public void AddCollum(string collumName)

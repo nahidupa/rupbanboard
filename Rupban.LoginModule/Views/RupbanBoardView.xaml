@@ -18,7 +18,7 @@
             
             <Label Grid.Column="0" Grid.Row="0">Rupban</Label>
             <Border Grid.Column="0" Grid.Row="1"  Margin="2" BorderThickness="2" BorderBrush="Black">
-                    <ItemsControl cal:RegionManager.RegionName="{x:Static infrastructure:RegionNames.ColumnRegion}" Width="Auto" Height="Auto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
+                <ItemsControl cal:RegionManager.RegionName="{x:Static infrastructure:RegionNames.ColumnRegion}"  Width="Auto" Height="Auto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel  Orientation="Horizontal"  />

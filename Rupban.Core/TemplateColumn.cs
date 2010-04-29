@@ -12,7 +12,7 @@ namespace Rupban.Core
     public class TemplateColumn
     {
         [DataMember]
-        public int ID { set; get; }
+        public string Id { set; get; }
         [DataMember]
         public string ColumnHeader { set; get; }
         [DataMember]
@@ -22,6 +22,7 @@ namespace Rupban.Core
         public TemplateColumn()
         {
             _templateRows = new List<TemplateRow>();
+            Id = Guid.NewGuid().ToString();
 
 
         }
@@ -31,10 +32,13 @@ namespace Rupban.Core
             return _templateRows;
         }
 
-        public void AddRow()
+        public TemplateRow AddRow()
         {
-            _templateRows.Add(new TemplateRow());
+            var templateRow = new TemplateRow();
+            _templateRows.Add(templateRow);
+            return templateRow;
         }
+
         public List<TemplateRow> GetRows()
         {
            return _templateRows;
@@ -51,6 +55,25 @@ namespace Rupban.Core
                 return templateRow.GetAllTickets().SingleOrDefault(t => t.Id.Equals(ticketId));
             }
             return null;
+        }
+
+        public bool HasTicket(string ticketId)
+        {
+            foreach (var templateRow in _templateRows)
+            {
+                var ticket=templateRow.GetAllTickets().SingleOrDefault(t => t.Id.Equals(ticketId));
+                if (ticket != null) return true;
+            }
+            return false;
+        }
+
+        public void RemoveRow(string ticketId)
+        {
+
+            //error
+           //var objectToRemove= _templateRows.SingleOrDefault(u => u.Id.Equals(ticketId));
+           // _templateRows.Remove(objectToRemove);
+            throw new NotImplementedException();
         }
     }
 }

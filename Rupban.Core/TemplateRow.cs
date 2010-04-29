@@ -10,13 +10,14 @@ namespace Rupban.Core
     public class TemplateRow
     {
         [DataMember]
-        public int Id { set; get; }
+        public string Id { set; get; }
         [DataMember]
         private List<TemplateCell> _templateCells;
 
         public TemplateRow()
         {
             _templateCells=new List<TemplateCell>();
+            Id = Guid.NewGuid().ToString();
         }
 
         public List<Ticket> GetAllTickets()
