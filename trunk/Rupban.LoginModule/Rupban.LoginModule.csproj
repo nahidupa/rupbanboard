@@ -92,6 +92,7 @@
     <Compile Include="Commands\PickTicketCommand.cs" />
     <Compile Include="Commands\SetTicketPriorityCommand.cs" />
     <Compile Include="Commands\ViewTicketHistoryCommand.cs" />
+    <Compile Include="Data\BoardData.cs" />
     <Compile Include="Services\ITicketService.cs" />
     <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Controller\AdminPanelController.cs" />

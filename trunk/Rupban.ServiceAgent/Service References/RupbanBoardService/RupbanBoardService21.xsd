@@ -27,7 +27,7 @@
   <xs:complexType name="TemplateColumn">
     <xs:sequence>
       <xs:element minOccurs="0" name="ColumnHeader" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="_templateRows" nillable="true" type="tns:ArrayOfTemplateRow" />
     </xs:sequence>
   </xs:complexType>
@@ -40,7 +40,7 @@
   <xs:element name="ArrayOfTemplateRow" nillable="true" type="tns:ArrayOfTemplateRow" />
   <xs:complexType name="TemplateRow">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="_templateCells" nillable="true" type="tns:ArrayOfTemplateCell" />
     </xs:sequence>
   </xs:complexType>

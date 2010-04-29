@@ -1,16 +1,18 @@
 using System;
 using System.Collections.ObjectModel;
+using System.Windows;
 using Microsoft.Practices.Composite.Events;
 using Microsoft.Practices.Composite.Regions;
 using Rupban.Core;
 using Rupban.LoginModule.Controller;
+using Rupban.LoginModule.Data;
 using Rupban.LoginModule.Services;
 using Rupban.LoginModule.Views;
 using Rupban.UI.Infrastructure.Event;
 
 namespace Rupban.LoginModule.Presenters
 {
-    public class PanelColumnPresenter : IPanelColumnPresenter
+    public class PanelColumnPresenter : DependencyObject,IPanelColumnPresenter
     {
         private readonly IPanelColumnController _panelColumnController;
         private readonly IPanelColumnService _panelColumnService;
@@ -23,11 +25,23 @@ namespace Rupban.LoginModule.Presenters
             set;
         }
 
+        public static readonly DependencyProperty TemplateColumnProperty = DependencyProperty.Register(
+        "TemplateColumn",
+        typeof(TemplateColumn),
+        typeof(PanelColumnPresenter), new FrameworkPropertyMetadata(new PropertyChangedCallback(OnPropertyChanged)));
+
+        private static void OnPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            
+        }
+
         public TemplateColumn TemplateColumn
         {
-            get ; 
-            set ;
+             get { return (TemplateColumn)GetValue(TemplateColumnProperty); }
+            set { SetValue(TemplateColumnProperty, value); }
+            
         }
+
 
 
         public void LoadTicketView(IRegionManager regionManager)
@@ -54,7 +68,10 @@ namespace Rupban.LoginModule.Presenters
 
         public void TicketDroped(Ticket ticket)
         {
-            _eventAggregator.GetEvent<TicketDropedEvent>().Publish(new TickedMoveEventArgs() { Tiket = ticket});
+            var tergetId= this.TemplateColumn.Id;
+            var templateColumn = BoardData.GetTemplateColumnByTicketId(ticket.Id);
+            if (templateColumn!=null)
+                _eventAggregator.GetEvent<TicketDropedEvent>().Publish(new TickedMoveEventArgs() { Ticket = ticket, SourceColumnId = templateColumn.Id, TargetColumnId = tergetId });
         }
     }
 }
