@@ -1,12 +1,19 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
+using Microsoft.Practices.Composite.Events;
 using Rupban.Core;
+using Rupban.LoginModule.Controller;
 using Rupban.LoginModule.Presenters;
 using rupban.loginmodule.Views;
+using Rupban.UI.Infrastructure.Event;
 
 namespace rupban.loginmodule.Presenters
 {
     public class PeerBoxPresenter : DependencyObject, IPeerBoxPresenter
     {
+        private readonly IRupbanBoardController _rupbanBoardController;
+        private readonly IEventAggregator _eventAggregator;
+
         public static readonly DependencyProperty PeerboxProperty = DependencyProperty.Register(
             "Peerbox",
             typeof(PeerBox),
@@ -17,8 +24,10 @@ namespace rupban.loginmodule.Presenters
 
         }
 
-        public PeerBoxPresenter(IPeerBoxView view)
+        public PeerBoxPresenter(IPeerBoxView view,IRupbanBoardController rupbanBoardController,IEventAggregator eventAggregator)
         {
+            _rupbanBoardController = rupbanBoardController;
+            _eventAggregator = eventAggregator;
             View = view;
             View.SetModel(this);
 
@@ -40,6 +49,20 @@ namespace rupban.loginmodule.Presenters
         {
             get;
             set;
+        }
+
+        public void TicketDroped(Ticket ticket)
+        {
+            var tergetId = this.PeerBox.Id;
+            var templateColumnId = _rupbanBoardController.GetTemplateColumnByTicketId(ticket.Id);
+            if (templateColumnId != null)
+                _eventAggregator.GetEvent<TicketDropedEvent>().Publish(new TickedMoveEventArgs() { Ticket = ticket, SourceId = templateColumnId, TargetId = tergetId, SourceType = ColumnType.TicketHolderColumn, TargetType = ColumnType.PeerBoxHolderColumn });
+  
+        }
+
+        public TemplateCell TemplateCell
+        {
+            get; set;
         }
     }
 }

@@ -20,6 +20,11 @@ namespace Rupban.Core
         [DataMember]
         private List<TemplateRow> _templateRows;
 
+       
+        [DataMember]
+        public ColumnType ColumnType
+        { set; get; }
+
 
         public TemplateColumn()
         {

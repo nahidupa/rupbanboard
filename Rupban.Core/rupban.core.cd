@@ -21,7 +21,7 @@
       <FileName>TemplateTable.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Rupban.Core.Peerbox" Collapsed="true">
+  <Class Name="Rupban.Core.PeerBox" Collapsed="true">
     <Position X="9.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -62,7 +62,7 @@
   <Class Name="Rupban.Core.TemplateColumn">
     <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEACAEQAgAAEAAAAAAAAUAAAAAAAAAAAEAAAAAAAAAI=</HashCode>
+      <HashCode>AEACAEQAgAAEAAAAAAEAUAAAAAAAAAAAEAAAAAAAAAI=</HashCode>
       <FileName>TemplateColumn.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -81,6 +81,13 @@
     <TypeIdentifier>
       <HashCode>AABAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
       <FileName>TicketStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Rupban.Core.ColumnType">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>ColumnType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Tahoma" Size="8.25" />

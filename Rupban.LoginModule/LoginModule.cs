@@ -87,7 +87,12 @@ namespace Rupban.LoginModule
             //_container.RegisterType(typeof(IPeerBoxController), typeof(PeerBoxController), false);
             //_container.RegisterType(typeof(IPeerBoxService), typeof(PeerBoxService), false);
 
-             
+
+            _container.RegisterType(typeof(IInDevColumnController), typeof(InDevColumnController), true);
+            _container.RegisterType(typeof(IInDevColumnView), typeof(InDevColumnView), false);
+            _container.RegisterType(typeof(IInDevColumnPresenter), typeof(InDevColumnPresenter), false);
+            _container.RegisterType(typeof(IInDevColumnService), typeof(InDevColumnService), false);
+
             
 
             

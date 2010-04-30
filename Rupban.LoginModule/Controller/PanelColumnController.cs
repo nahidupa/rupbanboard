@@ -37,12 +37,7 @@ namespace Rupban.LoginModule.Controller
                 ticketPresenter.Ticket = ticket;
                 region.Add(ticketPresenter.View, ticket.Id);
             }
-            foreach (var peerBox in row.GetAllPeerBox())
-            {
-                var peerPresenter = _container.Resolve<IPeerBoxPresenter>();
-                peerPresenter.PeerBox = peerBox;
-                region.Add(peerPresenter.View, peerBox.Id);
-            }
+            
 
         }
 

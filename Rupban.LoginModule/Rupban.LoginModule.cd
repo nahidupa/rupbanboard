@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="rupban.loginmodule.Commands.LoginCommand" Collapsed="true">
-    <Position X="17.5" Y="0.5" Width="1.5" />
+  <Class Name="rupban.loginmodule.Commands.LoginCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAACAAQAgEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\LoginCommand.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Controller.AdminPanelController" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.25" Y="0.5" Width="1.5" />
+    <Position X="13.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAAAAAAACAAAEAACAAAAAAAAAACAAA=</HashCode>
       <FileName>Controller\AdminPanelController.cs</FileName>
@@ -16,7 +17,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Controller.LoginController" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="19.25" Y="0.5" Width="1.5" />
+    <Position X="13.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAAAAAAACAAAAAAAAAAAAAIAAABAAA=</HashCode>
       <FileName>Controller\LoginController.cs</FileName>
@@ -24,15 +25,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Controller.PanelColumnController" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="19.25" Y="1.5" Width="1.5" />
+    <Position X="13.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAAQAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAACCAAAAQEAAAAAACAAAAAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>Controller\PanelColumnController.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Controller.ProjectsController" BaseTypeListCollapsed="true">
-    <Position X="9.75" Y="0.5" Width="1.5" />
+    <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAQAAAAAAACAAAAAAAAAAAAAAAAACAAA=</HashCode>
       <FileName>Controller\ProjectsController.cs</FileName>
@@ -43,23 +44,23 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Controller.RupbanBoardController" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="15.75" Y="3.5" Width="1.5" />
+    <Position X="18.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAABAAAAAAAQAAAAABBCAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAQAABASAAAAAQAAIAABACAAAQAAAAAgAAAAAAAAAAA=</HashCode>
       <FileName>Controller\RupbanBoardController.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="rupban.loginmodule.Controller.TicketController" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.25" Y="4.5" Width="1.5" />
+    <Position X="15.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAACAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\TicketController.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.LoginModule" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.25" Y="1.5" Width="1.5" />
+    <Position X="15.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAAAQAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>LoginModule.cs</FileName>
@@ -67,7 +68,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Presenters.AdminPanelPresenter" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="14" Y="0.5" Width="1.5" />
+    <Position X="15.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAIAAAAgAAEAAAAAAAAAAAAQBAAAAAAAAAAACAAA=</HashCode>
       <FileName>Presenters\AdminPanelPresenter.cs</FileName>
@@ -75,23 +76,23 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Presenters.LoginPresenter" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="14" Y="1.5" Width="1.5" />
+    <Position X="17" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAgAAAAAAAAAABAAAAAAAQAACAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAACAAAA=</HashCode>
       <FileName>Presenters\LoginPresenter.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Presenters.PanelColumnPresenter" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.25" Y="2.5" Width="1.5" />
+    <Position X="15.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAAAAgAEAAAAAAAAEBAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAAAAAACAABAAAAgIEAAAAAAAAEBAAAAgAAAAAAAAAA=</HashCode>
       <FileName>Presenters\PanelColumnPresenter.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Presenters.ProjectsPresenter" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="12.25" Y="3.5" Width="1.5" />
+    <Position X="15.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAgAAAAAAAAAAAAAAAABAEAAAAAAAAACABA=</HashCode>
       <FileName>Presenters\ProjectsPresenter.cs</FileName>
@@ -99,9 +100,9 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Presenters.RupbanBoardPresenter" BaseTypeListCollapsed="true">
-    <Position X="3.75" Y="2.5" Width="1.75" />
+    <Position X="7.75" Y="5.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAEAAAAAAAAAAAABAAAAAEAAAAQAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAABEAAAAEAAAAQAAAA=</HashCode>
       <FileName>Presenters\RupbanBoardPresenter.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -111,15 +112,15 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="rupban.loginmodule.Presenters.TicketPresenter" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="14" Y="4.5" Width="1.5" />
+    <Position X="17" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAACIAACAAAAAAABAAAAABAAAAAAAAA=</HashCode>
       <FileName>Presenters\TicketPresenter.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Services.LoginService" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="15.75" Y="1.5" Width="1.5" />
+    <Position X="18.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Services\LoginService.cs</FileName>
@@ -127,7 +128,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Services.PanelColumnService" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="14" Y="2.5" Width="1.5" />
+    <Position X="17" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Services\PanelColumnService.cs</FileName>
@@ -135,23 +136,23 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Services.ProjectService" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="19.25" Y="2.5" Width="1.5" />
+    <Position X="13.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
       <FileName>Services\ProjectService.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Services.RupbanBoardService" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="17.5" Y="3.5" Width="1.5" />
+    <Position X="20.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAABAAAA=</HashCode>
       <FileName>Services\RupbanBoardService.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="rupban.loginmodule.Views.AdminPanelView" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="15.75" Y="0.5" Width="1.5" />
+    <Position X="17" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\AdminPanelView.xaml.cs</FileName>
@@ -159,7 +160,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="rupban.loginmodule.Views.ProjectsView" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="14" Y="3.5" Width="1.5" />
+    <Position X="17" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\ProjectsView.xaml.cs</FileName>
@@ -167,15 +168,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="rupban.loginmodule.Views.TicketView" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="15.75" Y="4.5" Width="1.5" />
+    <Position X="18.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAACAIAQAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\TicketView.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Views.LoginView" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="17.5" Y="1.5" Width="1.5" />
+    <Position X="20.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\LoginView.xaml.cs</FileName>
@@ -183,102 +184,110 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Views.PanelColumnView" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="15.75" Y="2.5" Width="1.5" />
+    <Position X="18.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAACAABAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\PanelColumnView.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Rupban.LoginModule.Views.PriorityColumnView" Collapsed="true">
-    <Position X="17.5" Y="2.5" Width="1.5" />
+    <Position X="20.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\PriorityColumnView.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Rupban.LoginModule.Views.RupbanBoardView" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="19.25" Y="3.5" Width="1.5" />
+    <Position X="13.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\RupbanBoardView.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
+  <Class Name="Rupban.LoginModule.Presenters.InDevColumnPresenter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAEAAAAAAAAEFAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Presenters\InDevColumnPresenter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
   <Interface Name="Rupban.LoginModule.Controller.IAdminPanelController" Collapsed="true">
-    <Position X="12.25" Y="5.75" Width="1.5" />
+    <Position X="13.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAACAAA=</HashCode>
       <FileName>Controller\IAdminPanelController.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Controller.ILoginController" Collapsed="true">
-    <Position X="17.5" Y="5.75" Width="1.5" />
+    <Position X="18.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>Controller\ILoginController.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Controller.IPanelColumnController" Collapsed="true">
-    <Position X="15.75" Y="6.5" Width="1.5" />
+    <Position X="17" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\IPanelColumnController.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Controller.IProjectsController" Collapsed="true">
-    <Position X="14" Y="7.25" Width="1.5" />
+    <Position X="13.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
       <FileName>Controller\IProjectsController.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Controller.IRupbanBoardController">
-    <Position X="0.5" Y="2.75" Width="2" />
+    <Position X="10.5" Y="5.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAABAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\IRupbanBoardController.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="rupban.loginmodule.Controller.ITicketController" Collapsed="true">
-    <Position X="14" Y="8" Width="1.5" />
+    <Position X="13.5" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\ITicketController.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Presenters.IAdminPanelPresenter" Collapsed="true">
-    <Position X="14" Y="5.75" Width="1.5" />
+    <Position X="15.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Presenters\IAdminPanelPresenter.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Presenters.ILoginPresenter" Collapsed="true">
-    <Position X="19.25" Y="5.75" Width="1.5" />
+    <Position X="20.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Presenters\ILoginPresenter.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Rupban.LoginModule.Presenters.IPanelColumnPresenter" Collapsed="true">
-    <Position X="17.5" Y="6.5" Width="1.5" />
+  <Interface Name="Rupban.LoginModule.Presenters.IPanelColumnPresenter">
+    <Position X="0.5" Y="6.25" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAEAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Presenters\IPanelColumnPresenter.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Presenters.IProjectsPresenter" Collapsed="true">
-    <Position X="17.5" Y="7.25" Width="1.5" />
+    <Position X="17" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Presenters\IProjectsPresenter.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Presenters.IRupbanBoardPresenter">
-    <Position X="6.75" Y="0.75" Width="1.5" />
+    <Position X="4.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAA=</HashCode>
       <FileName>Presenters\IRupbanBoardPresenter.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -286,77 +295,77 @@
     </ShowAsAssociation>
   </Interface>
   <Interface Name="rupban.loginmodule.Presenters.ITicketPresenter" Collapsed="true">
-    <Position X="15.75" Y="8" Width="1.5" />
+    <Position X="15.25" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Presenters\ITicketPresenter.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Services.ILoginService" Collapsed="true">
-    <Position X="12.25" Y="6.5" Width="1.5" />
+    <Position X="13.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Services\ILoginService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Services.IPanelColumnService" Collapsed="true">
-    <Position X="19.25" Y="6.5" Width="1.5" />
+    <Position X="18.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Services\IPanelColumnService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Services.IProjectService" Collapsed="true">
-    <Position X="15.75" Y="7.25" Width="1.5" />
+    <Position X="15.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Services\IProjectService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Services.IRupbanBoardService" Collapsed="true">
-    <Position X="12.25" Y="8" Width="1.5" />
+    <Position X="20.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
       <FileName>Services\IRupbanBoardService.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="rupban.loginmodule.Views.ITicketView" Collapsed="true">
-    <Position X="17.5" Y="8" Width="1.5" />
+    <Position X="17" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAACAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\ITicketView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Views.IAdminPanelView" Collapsed="true">
-    <Position X="15.75" Y="5.75" Width="1.5" />
+    <Position X="17" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\IAdminPanelView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Views.ILoginView" Collapsed="true">
-    <Position X="14" Y="6.5" Width="1.5" />
+    <Position X="15.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\ILoginView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Views.IPanelColumnView" Collapsed="true">
-    <Position X="12.25" Y="7.25" Width="1.5" />
+    <Position X="20.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\IPanelColumnView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Views.IProjectsView" Collapsed="true">
-    <Position X="19.25" Y="7.25" Width="1.5" />
+    <Position X="18.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\IProjectsView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Rupban.LoginModule.Views.IRupbanBoardView">
-    <Position X="6.75" Y="2.75" Width="1.75" />
+    <Position X="4.75" Y="5.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Views\IRupbanBoardView.cs</FileName>

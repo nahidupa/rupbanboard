@@ -28,7 +28,7 @@ namespace Rupban.Core.Test
         public void  AddTicketTest()
        {
            var templateTable = new TemplateTable();
-           templateTable.AddCollum("Hotbox");
+           templateTable.AddCollum("Hotbox",ColumnType.TicketHolderColumn);
            var templateCollum = templateTable.GetCollumById(0);
            templateCollum.AddRow();
            templateTable.AddTicket(new Ticket(), 0, 0);

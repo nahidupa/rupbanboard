@@ -1,4 +1,5 @@
-﻿using Microsoft.Practices.Composite.Events;
+﻿using System;
+using Microsoft.Practices.Composite.Events;
 using Microsoft.Practices.Composite.Regions;
 using Rupban.Core;
 using Rupban.LoginModule.Controller;
@@ -9,18 +10,21 @@ namespace Rupban.LoginModule.Presenters
 {
     public class InDevColumnPresenter : IInDevColumnPresenter
     {
-        private readonly InDevColumnController _panelColumnController;
+     
+        private readonly IInDevColumnController _inDevColumnController;
         private readonly IInDevColumnService _panelColumnService;
         private readonly IEventAggregator _eventAggregator;
+        public TemplateColumn TemplateColumn{ set; get;}
+       
 
         public IInDevColumnView View
         {
             get;
             set;
         }
-        public InDevColumnPresenter(IInDevColumnView view, InDevColumnController panelColumnController, IInDevColumnService panelColumnService, IEventAggregator eventAggregator)
+        public InDevColumnPresenter(IInDevColumnView view, IInDevColumnController inDevColumnController, IInDevColumnService panelColumnService, IEventAggregator eventAggregator)
         {
-            _panelColumnController = panelColumnController;
+            _inDevColumnController = inDevColumnController;
             _panelColumnService = panelColumnService;
             _eventAggregator = eventAggregator;
 
@@ -28,6 +32,18 @@ namespace Rupban.LoginModule.Presenters
             View.SetModel(this);
            
         }
+        public void LoadPeerView(IRegionManager regionManager)
+        {
+            var rows = TemplateColumn.GetRows();
+            foreach (var templateRow in rows)
+            {
+                _inDevColumnController.LoadBoardPeerBoxView(templateRow, regionManager);
+            }
+        }
 
+        public TemplateCell TemplateCell
+        {
+            set; get;
+        }
     }
 }
