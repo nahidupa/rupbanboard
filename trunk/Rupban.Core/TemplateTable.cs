@@ -89,10 +89,10 @@ namespace Rupban.Core
             return _templateCollums.SingleOrDefault(c => c.Value.Id.Equals(collumId)).Value;
         }
 
-        public void AddCollum(string collumName)
+        public void AddCollum(string collumName, ColumnType columnType)
         {
             if (!_templateCollums.ContainsKey(collumName))
-            _templateCollums.Add(collumName, new TemplateColumn(){ColumnHeader = collumName});
+                _templateCollums.Add(collumName, new TemplateColumn() { ColumnHeader = collumName, ColumnType = columnType });
         }
 
         public List<TemplateColumn> GetColumnList()

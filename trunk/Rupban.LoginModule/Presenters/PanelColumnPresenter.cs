@@ -1,11 +1,9 @@
 using System;
-using System.Collections.ObjectModel;
 using System.Windows;
 using Microsoft.Practices.Composite.Events;
 using Microsoft.Practices.Composite.Regions;
 using Rupban.Core;
 using Rupban.LoginModule.Controller;
-using Rupban.LoginModule.Data;
 using Rupban.LoginModule.Services;
 using Rupban.LoginModule.Views;
 using Rupban.UI.Infrastructure.Event;
@@ -14,6 +12,7 @@ namespace Rupban.LoginModule.Presenters
 {
     public class PanelColumnPresenter : DependencyObject,IPanelColumnPresenter
     {
+        private readonly IRupbanBoardController _boardController;
         private readonly IPanelColumnController _panelColumnController;
         private readonly IPanelColumnService _panelColumnService;
         private readonly IEventAggregator _eventAggregator;
@@ -55,8 +54,9 @@ namespace Rupban.LoginModule.Presenters
         }
 
 
-        public PanelColumnPresenter(IPanelColumnView view, IPanelColumnController panelColumnController, IPanelColumnService panelColumnService, IEventAggregator eventAggregator)
+        public PanelColumnPresenter(IPanelColumnView view,IRupbanBoardController boardController, IPanelColumnController panelColumnController, IPanelColumnService panelColumnService, IEventAggregator eventAggregator)
         {
+            _boardController = boardController;
             _panelColumnController = panelColumnController;
             _panelColumnService = panelColumnService;
             _eventAggregator = eventAggregator;
@@ -69,9 +69,15 @@ namespace Rupban.LoginModule.Presenters
         public void TicketDroped(Ticket ticket)
         {
             var tergetId= this.TemplateColumn.Id;
-            var templateColumn = BoardData.GetTemplateColumnByTicketId(ticket.Id);
-            if (templateColumn!=null)
-                _eventAggregator.GetEvent<TicketDropedEvent>().Publish(new TickedMoveEventArgs() { Ticket = ticket, SourceColumnId = templateColumn.Id, TargetColumnId = tergetId });
+            
+            var templateColumnId = _boardController.GetTemplateColumnByTicketId(ticket.Id);
+            if (templateColumnId != null)
+                _eventAggregator.GetEvent<TicketDropedEvent>().Publish(new TickedMoveEventArgs() { Ticket = ticket, SourceId = templateColumnId, TargetId = tergetId });
+        }
+
+        public TemplateCell TemplateCell
+        {
+            get; set;
         }
     }
 }

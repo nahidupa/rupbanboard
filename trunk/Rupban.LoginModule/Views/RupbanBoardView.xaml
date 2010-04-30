@@ -34,8 +34,7 @@
                 </ItemsControl>
                 </Border>
             <Label Grid.Column="0" Grid.Row="3">Rupban</Label>
-        </Grid>
-        
+        </Grid>        
     </ScrollViewer>
 
 </UserControl>

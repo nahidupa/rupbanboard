@@ -4,10 +4,10 @@ using Rupban.LoginModule.Views;
 
 namespace Rupban.LoginModule.Presenters
 {
-    public interface IPanelColumnPresenter
+    public interface IPanelColumnPresenter:IColumnPresenter
     {
         IPanelColumnView View { get; set; }
-        TemplateColumn TemplateColumn { get; set; }
+       
         void LoadTicketView(IRegionManager dictionary);
     }
 }

@@ -6,12 +6,23 @@ namespace Rupban.UI.Infrastructure.Event
     {
         
         public Ticket Ticket { set; get; }
-        public string SourceColumnId
+        public ColumnType SourceType
         {
             set;
             get;
         }
-        public string TargetColumnId
+
+        public string SourceId
+        {
+            set;
+            get;
+        }
+        public ColumnType TargetType
+        {
+            set;
+            get;
+        }
+        public string TargetId
         {
             set;
             get;

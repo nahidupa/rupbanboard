@@ -21,13 +21,24 @@ namespace Rupban.LoginModule.Views
     /// </summary>
     public partial class PeerBoxView : UserControl, IPeerBoxView
     {
+        private IPeerBoxPresenter _model;
+
         public PeerBoxView()
         {
             InitializeComponent();
+            peerBoxTicketZone.Drop += PeerBoxTicketZoneDrop;
+        }
+
+        void PeerBoxTicketZoneDrop(object sender, DragEventArgs e)
+        {
+
+            var ticketView = (TicketView)e.Data.GetData(typeof(TicketView));
+            _model.TicketDroped(ticketView.GetTicket());
         }
 
         public void SetModel(IPeerBoxPresenter model)
         {
+            _model = model;
             this.DataContext = model;
         }
     }

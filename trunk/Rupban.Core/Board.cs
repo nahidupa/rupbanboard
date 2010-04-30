@@ -44,16 +44,16 @@ namespace Rupban.Core
             _templateTable = new TemplateTable();
             //for (int i = 0; i < 8;i++ )
             {
-                CreateColumn(string.Format("Todo",1));
+                CreateColumn(string.Format("Todo", 1), ColumnType.TicketHolderColumn);
             }
 
-            CreateColumn(string.Format("In devolop", 1));
+            CreateColumn(string.Format("In devolop", 1),ColumnType.PeerBoxHolderColumn);
 
         }
 
-        private void CreateColumn(string collumName)
+        private void CreateColumn(string collumName, ColumnType columnType)
         {
-            _templateTable.AddCollum(collumName);
+            _templateTable.AddCollum(collumName,columnType);
             AddRow(collumName);
         }
 

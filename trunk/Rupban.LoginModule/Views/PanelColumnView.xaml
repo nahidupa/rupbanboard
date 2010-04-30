@@ -14,8 +14,7 @@
                     <ItemsControl cal:RegionManager.RegionName="{x:Static Infrastructure:RegionNames.TicketRegion}" Width="Auto" Height="Auto" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
-                                <StackPanel  Orientation="Vertical"  />
-                                
+                                <StackPanel  Orientation="Vertical"  />                             
 
                             </ItemsPanelTemplate>
 
