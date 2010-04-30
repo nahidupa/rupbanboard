@@ -9,7 +9,7 @@ namespace Rupban.LoginModule.Controller
         void LoadBoardColumnView(List<TemplateColumn> templateCollums);
         
         void LoadRowView(TemplateColumn templateColumn);
-        string GetTemplateColumnByTicketId(string ticketId);
-        void AddTemplateCelHolderPresenter(string id, ITemplateCelHolderPresenter templateCelHolderPresenter);
+        string GetSourceTemplateTicketId(string ticketId);
+        void AddTemplateCelHolderPresenter(string id, IPeerBoxPresenter templateCelHolderPresenter);
     }
 }

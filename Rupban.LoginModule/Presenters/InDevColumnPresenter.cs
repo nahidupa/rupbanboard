@@ -41,9 +41,6 @@ namespace Rupban.LoginModule.Presenters
             }
         }
 
-        public TemplateCell TemplateCell
-        {
-            set; get;
-        }
+        
     }
 }

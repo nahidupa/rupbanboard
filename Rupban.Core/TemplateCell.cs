@@ -29,5 +29,7 @@ namespace Rupban.Core
             _id = Guid.NewGuid().ToString();
         }
 
+
+        
     }
 }

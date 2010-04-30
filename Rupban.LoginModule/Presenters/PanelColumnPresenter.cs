@@ -70,7 +70,7 @@ namespace Rupban.LoginModule.Presenters
         {
             var tergetId= this.TemplateColumn.Id;
             
-            var templateColumnId = _boardController.GetTemplateColumnByTicketId(ticket.Id);
+            var templateColumnId = _boardController.GetSourceTemplateTicketId(ticket.Id);
             if (templateColumnId != null)
                 _eventAggregator.GetEvent<TicketDropedEvent>().Publish(new TickedMoveEventArgs() { Ticket = ticket, SourceId = templateColumnId, TargetId = tergetId });
         }

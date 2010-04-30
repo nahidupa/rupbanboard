@@ -97,7 +97,6 @@
     <Compile Include="Presenters\IInDevColumnPresenter.cs" />
     <Compile Include="Controller\InDevColumnController.cs" />
     <Compile Include="Presenters\IPeerBoxPresenter.cs" />
-    <Compile Include="Presenters\ITemplateCelHolderPresenter.cs" />
     <Compile Include="Presenters\PeerboxPresenter.cs" />
     <Compile Include="Services\IInDevColumnService.cs" />
     <Compile Include="Services\InDevColumnService.cs" />
