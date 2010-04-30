@@ -54,15 +54,20 @@ namespace rupban.loginmodule.Presenters
         public void TicketDroped(Ticket ticket)
         {
             var tergetId = this.PeerBox.Id;
-            var templateColumnId = _rupbanBoardController.GetTemplateColumnByTicketId(ticket.Id);
+            var templateColumnId = _rupbanBoardController.GetSourceTemplateTicketId(ticket.Id);
             if (templateColumnId != null)
-                _eventAggregator.GetEvent<TicketDropedEvent>().Publish(new TickedMoveEventArgs() { Ticket = ticket, SourceId = templateColumnId, TargetId = tergetId, SourceType = ColumnType.TicketHolderColumn, TargetType = ColumnType.PeerBoxHolderColumn });
+                _eventAggregator.GetEvent<TicketDropedEvent>().Publish(new TickedMoveEventArgs() { Ticket = ticket, SourceId = templateColumnId, TargetId = tergetId });
   
         }
 
         public TemplateCell TemplateCell
         {
             get; set;
+        }
+
+        public void RemoveTicket(string ticketId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

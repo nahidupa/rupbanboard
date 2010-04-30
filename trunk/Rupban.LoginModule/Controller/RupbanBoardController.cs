@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.Practices.Composite.Events;
 using Microsoft.Practices.Composite.Regions;
@@ -20,8 +21,8 @@ namespace Rupban.LoginModule.Controller
         private Dictionary<string, IRegionManager> _regionManagers;
         private Dictionary<string, IColumnPresenter> _columnPresenters;
 
-        private Dictionary<string, IColumnPresenter> _boardColumnPresenters;
-        private Dictionary<string, ITemplateCelHolderPresenter> _templateCelHolderPresenters;
+
+        private Dictionary<string, IPeerBoxPresenter> _templateCelHolderPresenters;
         public RupbanBoardController(IRegionManager regionManager, IUnityContainer container, IEventAggregator eventAggregator)
         {
             _regionManager = regionManager;
@@ -29,8 +30,7 @@ namespace Rupban.LoginModule.Controller
             _eventAggregator = eventAggregator;
             _regionManagers = new Dictionary<string, IRegionManager>();
             _columnPresenters = new Dictionary<string, IColumnPresenter>();
-            _boardColumnPresenters=new Dictionary<string, IColumnPresenter>();
-            _templateCelHolderPresenters=new Dictionary<string, ITemplateCelHolderPresenter>();
+            _templateCelHolderPresenters = new Dictionary<string, IPeerBoxPresenter>();
             _serviceListenerAgent = container.Resolve<IServiceLisnerAgent>();
             _serviceListenerAgent.TicketMovedCalBack += ServiceListenerAgentTicketMovedCalBack;
 
@@ -44,60 +44,95 @@ namespace Rupban.LoginModule.Controller
             {
                 Ticket ticket = tickedMoveEventArgs.Ticket;
 
-                var targetRegion=GetTatgetRegion(tickedMoveEventArgs);
+                var targetRegion = GetTatgetRegion(tickedMoveEventArgs);
 
                 var sourceRegion = GetSourceRegion(tickedMoveEventArgs);
 
                 var ticketView = sourceRegion.GetView(ticket.Id);
 
+                RemovefromData(ticket.Id);
+                
                 sourceRegion.Remove(ticketView);
 
+                AddToData(ticket);
 
                 targetRegion.Add(ticketView, ticket.Id);
 
                 //BoardData.SyncData(tickedMoveEventArgs);
 
-
+               
 
 
             }
 
         }
 
+        private void AddToData(Ticket ticket)
+        {
+            if (_columnPresenters.ContainsKey(ticket.Id))
+            {
+                _columnPresenters[ticket.Id].TemplateColumn.GetRows()[0].AddItem(ticket);
+            }
+            else if (_templateCelHolderPresenters.ContainsKey(ticket.Id))
+            {
+                _templateCelHolderPresenters[ticket.Id].PeerBox.AddItem(ticket);
+            }
+        }
+
+        private void RemovefromData(string ticketId)
+        {
+            if (_columnPresenters.ContainsKey(ticketId))
+            {
+                _columnPresenters[ticketId].TemplateColumn.RemoveTicket(ticketId);
+            }
+            else if (_templateCelHolderPresenters.ContainsKey(ticketId))
+            {
+                _templateCelHolderPresenters[ticketId].PeerBox.RemoveTicket(ticketId);
+            }
+        }
+
+
         private IRegion GetSourceRegion(TickedMoveEventArgs tickedMoveEventArgs)
         {
-            if (tickedMoveEventArgs.SourceType == ColumnType.TicketHolderColumn)
+            if (_regionManagers.ContainsKey(tickedMoveEventArgs.SourceId))
             {
                 var sourceRegionManager = _regionManagers[tickedMoveEventArgs.SourceId];
                 return sourceRegionManager.Regions[RegionNames.TicketRegion];
             }
-            else if (tickedMoveEventArgs.SourceType == ColumnType.PeerBoxHolderColumn)
+            else
             {
 
-               var inDevColumnController= _container.Resolve<IInDevColumnController>();
-               var regionManagers= inDevColumnController.GetPeerboxRegionManagers();
-               var sourceRegionManager = regionManagers[tickedMoveEventArgs.SourceId];
-               return sourceRegionManager.Regions[RegionNames.TicketRegion];
-     
-                
+                var inDevColumnController = _container.Resolve<IInDevColumnController>();
+                var regionManagers = inDevColumnController.GetPeerboxRegionManagers();
+                if (regionManagers.ContainsKey(tickedMoveEventArgs.SourceId))
+                {
+                    var sourceRegionManager = regionManagers[tickedMoveEventArgs.SourceId];
+                    return sourceRegionManager.Regions[RegionNames.TicketRegion];
+                }
+
+
             }
             return null;
         }
 
         private IRegion GetTatgetRegion(TickedMoveEventArgs tickedMoveEventArgs)
         {
-            if (tickedMoveEventArgs.TargetType == ColumnType.TicketHolderColumn)
+            if (_regionManagers.ContainsKey(tickedMoveEventArgs.TargetId))
             {
                 var targetRegionManager = _regionManagers[tickedMoveEventArgs.TargetId];
                 return targetRegionManager.Regions[RegionNames.TicketRegion];
             }
-            else if (tickedMoveEventArgs.TargetType == ColumnType.PeerBoxHolderColumn)
+            else
             {
                 var inDevColumnController = _container.Resolve<IInDevColumnController>();
                 var regionManagers = inDevColumnController.GetPeerboxRegionManagers();
-                var targetRegionManager = regionManagers[tickedMoveEventArgs.TargetId];
-                return targetRegionManager.Regions[RegionNames.TicketRegion];
-         
+
+                if (regionManagers.ContainsKey(tickedMoveEventArgs.TargetId))
+                {
+                    var targetRegionManager = regionManagers[tickedMoveEventArgs.TargetId];
+                    return targetRegionManager.Regions[RegionNames.TicketRegion];
+                }
+
 
             }
             return null;
@@ -126,7 +161,7 @@ namespace Rupban.LoginModule.Controller
                 {
                     var panelColumnPresenter = _container.Resolve<IPanelColumnPresenter>();
                     panelColumnPresenter.TemplateColumn = templateCollum;
-                    _boardColumnPresenters.Add(templateCollum.Id, panelColumnPresenter);
+                    //_columnPresenters.Add(templateCollum.Id, panelColumnPresenter);
                     var regionManager = region.Add(panelColumnPresenter.View, templateCollum.Id, true);
                     _regionManagers.Add(templateCollum.Id, regionManager);
                     _columnPresenters.Add(templateCollum.Id, panelColumnPresenter);
@@ -136,7 +171,7 @@ namespace Rupban.LoginModule.Controller
                 {
                     var inDevColumnPresenter = _container.Resolve<InDevColumnPresenter>();
                     inDevColumnPresenter.TemplateColumn = templateCollum;
-                    _boardColumnPresenters.Add(templateCollum.Id, inDevColumnPresenter);
+                    //_templateCelHolderPresenters.Add(templateCollum.Id, inDevColumnPresenter);
                     var regionManager = region.Add(inDevColumnPresenter.View, templateCollum.Id, true);
                     _regionManagers.Add(templateCollum.Id, regionManager);
                     _columnPresenters.Add(templateCollum.Id, inDevColumnPresenter);
@@ -160,19 +195,30 @@ namespace Rupban.LoginModule.Controller
             }
         }
 
-        public string GetTemplateColumnByTicketId(string ticketId)
+        public string GetSourceTemplateTicketId(string ticketId)
         {
-            foreach (var panelColumnPresenter in _boardColumnPresenters.Values)
+            foreach (var panelColumnPresenter in _columnPresenters.Values)
             {
                 if (panelColumnPresenter.TemplateColumn.HasTicket(ticketId))
                     return panelColumnPresenter.TemplateColumn.Id;
             }
+            foreach (var templateCelPresenter in _templateCelHolderPresenters.Values)
+            {
+                if (templateCelPresenter is IPeerBoxPresenter)
+                {
+
+                    var peerBoxPresenter = (IPeerBoxPresenter)templateCelPresenter;
+                    var peerBox = ((PeerBox)peerBoxPresenter.PeerBox);
+                    if (peerBox.HasTicket(ticketId))
+                        return peerBox.Id;
+                }
+            }
             return null;
         }
 
-        public void AddTemplateCelHolderPresenter(string id, ITemplateCelHolderPresenter templateCelHolderPresenter)
+        public void AddTemplateCelHolderPresenter(string id, IPeerBoxPresenter peerBoxPresenter)
         {
-           _templateCelHolderPresenters.Add(id,templateCelHolderPresenter);
+            _templateCelHolderPresenters.Add(id, peerBoxPresenter);
         }
     }
 }

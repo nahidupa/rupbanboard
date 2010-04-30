@@ -47,13 +47,13 @@ namespace Rupban.Core
                 CreateColumn(string.Format("Todo", 1), ColumnType.TicketHolderColumn);
             }
 
-            CreateColumn(string.Format("In devolop", 1),ColumnType.PeerBoxHolderColumn);
+            CreateColumn(string.Format("In devolop", 1), ColumnType.PeerBoxHolderColumn);
 
         }
 
         private void CreateColumn(string collumName, ColumnType columnType)
         {
-            _templateTable.AddCollum(collumName,columnType);
+            _templateTable.AddCollum(collumName, columnType);
             AddRow(collumName);
         }
 
@@ -65,7 +65,7 @@ namespace Rupban.Core
             {
                 for (int i = 0; i < 4; i++)
                 {
-                    AddTicket(collumName, string.Format("title{0}", i),i);
+                    AddTicket(collumName, string.Format("title{0}", i), i);
                 }
             }
 
@@ -82,12 +82,13 @@ namespace Rupban.Core
         private void AddPeerBox(string collumName)
         {
             _templateTable.GetCollumByName(collumName).GetRowByIndex(0).AddItem(new PeerBox() {  });
-   
+
+
         }
 
-        private void AddTicket(string collumName, string title,int number)
+        private void AddTicket(string collumName, string title, int number)
         {
-            _templateTable.GetCollumByName(collumName).GetRowByIndex(0).AddItem(new Ticket() { Title = title, Number = number});
+            _templateTable.GetCollumByName(collumName).GetRowByIndex(0).AddItem(new Ticket() { Title = title, Number = number });
         }
     }
 }

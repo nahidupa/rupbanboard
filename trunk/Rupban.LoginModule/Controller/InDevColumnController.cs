@@ -3,6 +3,7 @@ using Microsoft.Practices.Composite.Events;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
 using Rupban.Core;
+using rupban.loginmodule.Presenters;
 using Rupban.LoginModule.Presenters;
 using Rupban.UI.Infrastructure;
 
@@ -10,7 +11,7 @@ namespace Rupban.LoginModule.Controller
 {
     public class InDevColumnController : IInDevColumnController
     {
-         private readonly IRegionManager _regionManager;
+        private readonly IRegionManager _regionManager;
         private readonly IUnityContainer _container;
         private IRegionManager _localRegionManager;
         private IRupbanBoardController _rupbanBoardController;
@@ -28,22 +29,33 @@ namespace Rupban.LoginModule.Controller
 
         public void LoadBoardPeerBoxView(TemplateRow row, IRegionManager localRegionManager)
         {
-       
+
             _localRegionManager = localRegionManager;
 
             var region = localRegionManager.Regions[RegionNames.PeerBoxRegion];
-            
+
             foreach (var peerBox in row.GetAllPeerBox())
             {
                 var peerPresenter = _container.Resolve<IPeerBoxPresenter>();
                 peerPresenter.PeerBox = peerBox;
-                _rupbanBoardController.AddTemplateCelHolderPresenter(peerBox.Id,peerPresenter);
-                var peerboxRegion= region.Add(peerPresenter.View, peerBox.Id,true);
-                _peerboxRegionManagers.Add(peerBox.Id,peerboxRegion);
+              
+                _rupbanBoardController.AddTemplateCelHolderPresenter(peerBox.Id, peerPresenter);
+                var peerboxRegion = region.Add(peerPresenter.View, peerBox.Id, true);
+                _peerboxRegionManagers.Add(peerBox.Id, peerboxRegion);
+
+                foreach (var ticket in peerBox.GetAllTicket())
+                {
+                    var ticketRegion = peerboxRegion.Regions[RegionNames.TicketRegion];
+                    var ticketPresenter = _container.Resolve<ITicketPresenter>();
+                    ticketPresenter.Ticket = ticket;
+                    ticketRegion.Add(ticketPresenter.View, ticket.Id);
+                }
+
+
 
             }
 
-        
+
 
         }
 

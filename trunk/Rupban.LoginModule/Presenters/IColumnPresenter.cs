@@ -2,7 +2,7 @@
 
 namespace Rupban.LoginModule.Presenters
 {
-    public interface IColumnPresenter:ITemplateCelHolderPresenter
+    public interface IColumnPresenter
     {
         TemplateColumn TemplateColumn { get; set; }
     }
