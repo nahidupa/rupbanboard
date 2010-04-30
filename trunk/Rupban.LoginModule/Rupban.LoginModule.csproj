@@ -93,6 +93,11 @@
     <Compile Include="Commands\SetTicketPriorityCommand.cs" />
     <Compile Include="Commands\ViewTicketHistoryCommand.cs" />
     <Compile Include="Data\BoardData.cs" />
+    <Compile Include="Presenters\IInDevColumnPresenter.cs" />
+    <Compile Include="Controller\InDevColumnController.cs" />
+    <Compile Include="Presenters\IPeerBoxPresenter.cs" />
+    <Compile Include="Presenters\PeerboxPresenter.cs" />
+    <Compile Include="Services\IInDevColumnService.cs" />
     <Compile Include="Services\ITicketService.cs" />
     <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Controller\AdminPanelController.cs" />
@@ -133,9 +138,15 @@
       <DependentUpon>DialogView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\IAdminPanelView.cs" />
+    <Compile Include="Views\IInDevColumnView.cs" />
     <Compile Include="Views\ILoginView.cs" />
     <Compile Include="Presenters\IPanelColumnPresenter.cs" />
+    <Compile Include="Presenters\InDevColumnPresenter.cs" />
+    <Compile Include="Views\InDevColumnView.xaml.cs">
+      <DependentUpon>InDevColumnView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\IPanelColumnView.cs" />
+    <Compile Include="Views\IPeerBoxView.cs" />
     <Compile Include="Views\IProjectsView.cs" />
     <Compile Include="Presenters\IRupbanBoardPresenter.cs" />
     <Compile Include="Views\IRupbanBoardView.cs" />
@@ -146,6 +157,9 @@
     <Compile Include="Presenters\PanelColumnPresenter.cs" />
     <Compile Include="Views\PanelColumnView.xaml.cs">
       <DependentUpon>PanelColumnView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PeerBoxView.xaml.cs">
+      <DependentUpon>PeerBoxView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PriorityColumnView.xaml.cs">
       <DependentUpon>PriorityColumnView.xaml</DependentUpon>
@@ -173,11 +187,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\InDevColumnView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PanelColumnView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PeerBoxView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

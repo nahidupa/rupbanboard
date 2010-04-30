@@ -81,7 +81,14 @@ namespace Rupban.LoginModule
             _container.RegisterType(typeof(ILoginCommand), typeof(LoginCommand), true);
             _container.RegisterType(typeof(IMoveTicketCommand), typeof(MoveTicketCommand), false);
 
+
+            _container.RegisterType(typeof(IPeerBoxPresenter), typeof(PeerBoxPresenter), false);
+            _container.RegisterType(typeof(IPeerBoxView), typeof(PeerBoxView), false);
+            //_container.RegisterType(typeof(IPeerBoxController), typeof(PeerBoxController), false);
+            //_container.RegisterType(typeof(IPeerBoxService), typeof(PeerBoxService), false);
+
              
+            
 
             
 

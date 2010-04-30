@@ -25,9 +25,9 @@ namespace Rupban.Core
             return _templateCells.Where(t => t is Ticket).Cast<Ticket>().ToList();
         }
 
-        public List<Peerbox> GetAllPeerBox()
+        public List<PeerBox> GetAllPeerBox()
         {
-            return _templateCells.Where(t => t is Peerbox).Cast<Peerbox>().ToList();
+            return _templateCells.Where(t => t is PeerBox).Cast<PeerBox>().ToList();
         }
 
         public void AddItem(TemplateCell cell)

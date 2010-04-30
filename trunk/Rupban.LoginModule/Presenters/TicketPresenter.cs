@@ -8,7 +8,6 @@ using Microsoft.Practices.Composite.Presentation.Commands;
 using Rupban.Core;
 using rupban.loginmodule.Commands;
 using rupban.loginmodule.Controller;
-using Rupban.LoginModule.Presenters;
 using rupban.loginmodule.Views;
 
 namespace rupban.loginmodule.Presenters

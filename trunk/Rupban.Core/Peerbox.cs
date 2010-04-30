@@ -4,18 +4,14 @@ using System.Text;
 using System.Runtime.Serialization;
 namespace Rupban.Core
 {
-     [DataContract]
-    public class Peerbox : TemplateCell
+    [DataContract]
+    public class PeerBox : TemplateCell
     {
+        [DataMember]
         public Resource Resources
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
     }
 }

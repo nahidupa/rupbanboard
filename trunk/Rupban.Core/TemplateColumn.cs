@@ -9,6 +9,8 @@ namespace Rupban.Core
     [KnownType(typeof(TemplateRow))]
     [KnownType(typeof(TemplateCell))]
     [KnownType(typeof(Ticket))]
+    [KnownType(typeof(PeerBox))]
+    [KnownType(typeof(Resource))]
     public class TemplateColumn
     {
         [DataMember]
