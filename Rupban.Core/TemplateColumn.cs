@@ -67,13 +67,13 @@ namespace Rupban.Core
             return false;
         }
 
-        public void RemoveRow(string ticketId)
+        public void RemoveTicket(string ticketId)
         {
-
-            //error
-           //var objectToRemove= _templateRows.SingleOrDefault(u => u.Id.Equals(ticketId));
-           // _templateRows.Remove(objectToRemove);
-            throw new NotImplementedException();
-        }
+            foreach (var templateRow in _templateRows)
+            {
+                var ticket = templateRow.GetAllTickets().SingleOrDefault(t => t.Id.Equals(ticketId));
+                templateRow.RemoveItem(ticket);
+            }
+       }
     }
 }

@@ -41,7 +41,7 @@ namespace Rupban.LoginModule.Data
 
         public static void SyncData(TickedMoveEventArgs tickedMoveEventArgs)
         {
-             _boardData[tickedMoveEventArgs.SourceColumnId].TemplateColumn.RemoveRow(tickedMoveEventArgs.Ticket.Id);
+             _boardData[tickedMoveEventArgs.SourceColumnId].TemplateColumn.RemoveTicket(tickedMoveEventArgs.Ticket.Id);
 
             var newRow= _boardData[tickedMoveEventArgs.TargetColumnId].TemplateColumn.AddRow();
             newRow.AddItem(tickedMoveEventArgs.Ticket);
