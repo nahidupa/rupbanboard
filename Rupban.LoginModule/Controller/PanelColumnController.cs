@@ -4,6 +4,7 @@ using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
 using Rupban.Core;
 using rupban.loginmodule.Presenters;
+using Rupban.LoginModule.Presenters;
 using Rupban.UI.Infrastructure;
 using Rupban.UI.Infrastructure.Event;
 
@@ -35,6 +36,12 @@ namespace Rupban.LoginModule.Controller
                 var ticketPresenter = _container.Resolve<ITicketPresenter>();
                 ticketPresenter.Ticket = ticket;
                 region.Add(ticketPresenter.View, ticket.Id);
+            }
+            foreach (var peerBox in row.GetAllPeerBox())
+            {
+                var peerPresenter = _container.Resolve<IPeerBoxPresenter>();
+                peerPresenter.PeerBox = peerBox;
+                region.Add(peerPresenter.View, peerBox.Id);
             }
 
         }

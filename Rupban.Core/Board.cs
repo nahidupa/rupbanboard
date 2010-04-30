@@ -42,10 +42,12 @@ namespace Rupban.Core
         public void LoadTestTemplateTable()
         {
             _templateTable = new TemplateTable();
-            for (int i = 0; i < 8;i++ )
+            //for (int i = 0; i < 8;i++ )
             {
-                CreateColumn(string.Format("DemoColumn{0}",i));
+                CreateColumn(string.Format("Todo",1));
             }
+
+            CreateColumn(string.Format("In devolop", 1));
 
         }
 
@@ -59,7 +61,7 @@ namespace Rupban.Core
         {
             _templateTable.GetCollumByName(collumName).AddRow();
             var title = "tiket1";
-            if (collumName.Equals("DemoColumn1"))
+            if (collumName.Equals("Todo"))
             {
                 for (int i = 0; i < 4; i++)
                 {
@@ -67,6 +69,20 @@ namespace Rupban.Core
                 }
             }
 
+            if (collumName.Equals("In devolop"))
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    AddPeerBox(collumName);
+                }
+            }
+
+        }
+
+        private void AddPeerBox(string collumName)
+        {
+            _templateTable.GetCollumByName(collumName).GetRowByIndex(0).AddItem(new PeerBox() {  });
+   
         }
 
         private void AddTicket(string collumName, string title,int number)

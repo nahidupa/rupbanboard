@@ -57,6 +57,20 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="TemplateCell" nillable="true" type="tns:TemplateCell" />
+  <xs:complexType name="PeerBox">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TemplateCell">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Resources" nillable="true" type="tns:Resource" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PeerBox" nillable="true" type="tns:PeerBox" />
+  <xs:complexType name="Resource">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Resource" nillable="true" type="tns:Resource" />
   <xs:complexType name="Ticket">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:TemplateCell">
