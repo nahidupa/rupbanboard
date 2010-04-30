@@ -50,11 +50,11 @@ namespace Rupban.LoginModule.Controller
 
                 var ticketView = sourceRegion.GetView(ticket.Id);
 
-                RemovefromData(ticket.Id);
+                RemovefromData(tickedMoveEventArgs.SourceId,ticket.Id);
                 
                 sourceRegion.Remove(ticketView);
 
-                AddToData(ticket);
+                AddToData(tickedMoveEventArgs.TargetId,ticket);
 
                 targetRegion.Add(ticketView, ticket.Id);
 
@@ -67,27 +67,27 @@ namespace Rupban.LoginModule.Controller
 
         }
 
-        private void AddToData(Ticket ticket)
+        private void AddToData(string targetId,Ticket ticket)
         {
-            if (_columnPresenters.ContainsKey(ticket.Id))
+            if (_columnPresenters.ContainsKey(targetId))
             {
-                _columnPresenters[ticket.Id].TemplateColumn.GetRows()[0].AddItem(ticket);
+                _columnPresenters[targetId].TemplateColumn.GetRows()[0].AddItem(ticket);
             }
-            else if (_templateCelHolderPresenters.ContainsKey(ticket.Id))
+            else if (_templateCelHolderPresenters.ContainsKey(targetId))
             {
-                _templateCelHolderPresenters[ticket.Id].PeerBox.AddItem(ticket);
+                _templateCelHolderPresenters[targetId].PeerBox.AddItem(ticket);
             }
         }
 
-        private void RemovefromData(string ticketId)
+        private void RemovefromData(string sourceId, string ticketId)
         {
-            if (_columnPresenters.ContainsKey(ticketId))
+            if (_columnPresenters.ContainsKey(sourceId))
             {
-                _columnPresenters[ticketId].TemplateColumn.RemoveTicket(ticketId);
+                _columnPresenters[sourceId].TemplateColumn.RemoveTicket(ticketId);
             }
-            else if (_templateCelHolderPresenters.ContainsKey(ticketId))
+            else if (_templateCelHolderPresenters.ContainsKey(sourceId))
             {
-                _templateCelHolderPresenters[ticketId].PeerBox.RemoveTicket(ticketId);
+                _templateCelHolderPresenters[sourceId].PeerBox.RemoveTicket(ticketId);
             }
         }
 
