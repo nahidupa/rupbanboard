@@ -14,8 +14,12 @@ namespace Rupban.ServiceAgent
         {
             var instanceContext = new InstanceContext(this);
             _boardServiceClient = new RupbanBoardServiceClient(instanceContext);
-            _boardServiceClient.Subscribe();
-
+            try
+            {
+                _boardServiceClient.Subscribe();
+            }catch
+            {
+            }
         }
 
         public void TicketMoved()
