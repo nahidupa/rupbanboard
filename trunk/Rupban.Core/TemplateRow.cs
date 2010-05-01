@@ -37,7 +37,8 @@ namespace Rupban.Core
 
         public void RemoveItem(Ticket ticket)
         {
-            _templateCells.Remove(ticket);
+           var templateCell= _templateCells.SingleOrDefault(o => o.Id.Equals(ticket.Id));
+           _templateCells.Remove(templateCell);
         }
     }
 }

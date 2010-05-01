@@ -52,7 +52,11 @@ namespace Rupban.Server
                     if (destinationColumn == null)
                     {
                         templateTable.GetPeerBoxById(targetId).AddItem(ticketToMove);
-                        currentColumn.GetRowByIndex(0).RemoveItem(ticketToMove);
+                        peerBox.RemoveTicket(ticketToMove.Id);
+                    }else
+                    {
+                        destinationColumn.GetRowByIndex(0).AddItem(ticketToMove);
+                        peerBox.RemoveTicket(ticketToMove.Id);
                     }
                 }
             }
