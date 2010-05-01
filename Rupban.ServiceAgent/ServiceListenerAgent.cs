@@ -1,4 +1,5 @@
 using System.ServiceModel;
+using Rupban.Core;
 using Rupban.ServiceAgent.RupbanBoardService;
 
 namespace Rupban.ServiceAgent
@@ -7,7 +8,7 @@ namespace Rupban.ServiceAgent
     public class ServiceListenerAgent : IServiceLisnerAgent, IRupbanBoardServiceCallback
     {
         readonly RupbanBoardServiceClient _boardServiceClient;
-        public delegate void CallbackTicketMoved();
+        public delegate void CallbackTicketMoved(Ticket ticket, string sourceId, string targetId);
         public event CallbackTicketMoved TicketMovedCalBack;
 
         public ServiceListenerAgent()
@@ -22,11 +23,11 @@ namespace Rupban.ServiceAgent
             }
         }
 
-        public void TicketMoved()
+        public void TicketMoved(Ticket ticket, string sourceId, string targetId)
         {
             if (TicketMovedCalBack != null)
             {
-                TicketMovedCalBack();
+                TicketMovedCalBack(ticket, sourceId, targetId);
             }
         }
     }

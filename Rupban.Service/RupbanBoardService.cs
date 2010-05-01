@@ -14,31 +14,31 @@ namespace Rupban.Service
     
     public class RupbanBoardService : IRupbanBoardService
     {
-        private static List<IRupbanBoardServiceDuplexCallback> _subscribers=new List<IRupbanBoardServiceDuplexCallback>();
-        private static ProjectKeeper _projectKeeper;
+        private static readonly List<IRupbanBoardServiceDuplexCallback> Subscribers=new List<IRupbanBoardServiceDuplexCallback>();
+        private static ProjectKeeper _projectKeeper=new ProjectKeeper();
         public RupbanBoardService()
         {
-            _projectKeeper=new ProjectKeeper();
+           
         }
 
    
-        public void MoveTicket(string ticketId, string currentColumnName, string destinationColumnName)
+        public void MoveTicket(Ticket ticket, string sourceId, string targetId)
         {
-            _projectKeeper.MoveTicket(ticketId, currentColumnName, destinationColumnName);
-            NotifyAllClient();
+            _projectKeeper.MoveTicket(ticket, sourceId, targetId);
+            NotifyAllClient(ticket, sourceId, targetId);
         }
 
-        private static void NotifyAllClient()
+        private static void NotifyAllClient(Ticket ticket, string sourceId, string targetId)
         {
-            _subscribers.ForEach(delegate(IRupbanBoardServiceDuplexCallback callback)
+            Subscribers.ForEach(delegate(IRupbanBoardServiceDuplexCallback callback)
                                      {
                                          if (((ICommunicationObject)callback).State == CommunicationState.Opened)
                                          {
-                                             callback.TicketMoved();
+                                             callback.TicketMoved(ticket, sourceId, targetId);
                                          }
                                          else
                                          {
-                                             _subscribers.Remove(callback);
+                                             Subscribers.Remove(callback);
                                          }
                                      });
         }
@@ -48,8 +48,8 @@ namespace Rupban.Service
             try
             {
                 var callback = OperationContext.Current.GetCallbackChannel<IRupbanBoardServiceDuplexCallback>();
-                if (!_subscribers.Contains(callback))
-                    _subscribers.Add(callback);
+                if (!Subscribers.Contains(callback))
+                    Subscribers.Add(callback);
                 return true;
             }
             catch
@@ -63,8 +63,8 @@ namespace Rupban.Service
             try
             {
                 var callback = OperationContext.Current.GetCallbackChannel<IRupbanBoardServiceDuplexCallback>();
-                if (!_subscribers.Contains(callback))
-                    _subscribers.Remove(callback);
+                if (!Subscribers.Contains(callback))
+                    Subscribers.Remove(callback);
                 return true;
             }
             catch

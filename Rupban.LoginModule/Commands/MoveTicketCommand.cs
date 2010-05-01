@@ -1,6 +1,7 @@
 ﻿using System;
 using rupban.loginmodule.Controller;
 using Rupban.LoginModule.Services;
+using Rupban.UI.Infrastructure.Event;
 
 namespace rupban.loginmodule.Commands
 {
@@ -18,7 +19,8 @@ namespace rupban.loginmodule.Commands
 
         public void Execute(object parameter)
         {
-            _ticketService.MoveTicket(parameter.ToString(), "", "");
+           var tickedMoveEventArgs= (TickedMoveEventArgs) parameter;
+           _ticketService.MoveTicket(tickedMoveEventArgs.Ticket,tickedMoveEventArgs.SourceId,tickedMoveEventArgs.TargetId);
             
         }
 

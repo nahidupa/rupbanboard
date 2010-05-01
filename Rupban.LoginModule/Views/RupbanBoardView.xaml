@@ -5,7 +5,7 @@
     xmlns:infrastructure="clr-namespace:Rupban.UI.Infrastructure;assembly=Rupban.UI.Infrastructure"
     Height="Auto" Width="Auto">
 
-    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition ></ColumnDefinition>

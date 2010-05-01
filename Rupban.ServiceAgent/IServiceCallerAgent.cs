@@ -5,7 +5,7 @@ namespace Rupban.ServiceAgent
 {
     public interface IServiceCallerAgent
     {
-        void MoveTicket(string ticketId, string currentColumnName, string destinationColumnName);
+        void MoveTicket(Ticket ticket, string sourceId, string targetId);
         void ViewTicketHistory();
         List<Project> GetCurrentProjectList();
         List<TemplateColumn> GetTemplateCollumList();

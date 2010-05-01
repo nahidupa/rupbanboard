@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Rupban.Core" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Rupban.Core" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost/Rupban.Service.Host/RupbanBoardService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Ticket">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TemplateCell">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Priority" type="tns:TicketPriority" />
+          <xs:element minOccurs="0" name="Status" type="tns:TicketStatus" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Ticket" nillable="true" type="tns:Ticket" />
+  <xs:complexType name="TemplateCell">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TemplateCell" nillable="true" type="tns:TemplateCell" />
+  <xs:simpleType name="TicketPriority">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Low" />
+      <xs:enumeration value="Hight">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TicketPriority" nillable="true" type="tns:TicketPriority" />
+  <xs:simpleType name="TicketStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="InBackBlog" />
+      <xs:enumeration value="InProgress" />
+      <xs:enumeration value="Done" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TicketStatus" nillable="true" type="tns:TicketStatus" />
   <xs:complexType name="ArrayOfProject">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Project" nillable="true" type="tns:Project" />
@@ -59,57 +98,25 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfTemplateCell" nillable="true" type="tns:ArrayOfTemplateCell" />
-  <xs:complexType name="TemplateCell">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
-    </xs:sequence>
+  <xs:complexType name="Resource">
+    <xs:sequence />
   </xs:complexType>
-  <xs:element name="TemplateCell" nillable="true" type="tns:TemplateCell" />
+  <xs:element name="Resource" nillable="true" type="tns:Resource" />
   <xs:complexType name="PeerBox">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:TemplateCell">
         <xs:sequence>
           <xs:element minOccurs="0" name="Resources" nillable="true" type="tns:Resource" />
+          <xs:element minOccurs="0" name="Tickets" nillable="true" type="tns:ArrayOfTicket" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="PeerBox" nillable="true" type="tns:PeerBox" />
-  <xs:complexType name="Resource">
-    <xs:sequence />
+  <xs:complexType name="ArrayOfTicket">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ticket" nillable="true" type="tns:Ticket" />
+    </xs:sequence>
   </xs:complexType>
-  <xs:element name="Resource" nillable="true" type="tns:Resource" />
-  <xs:complexType name="Ticket">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:TemplateCell">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Priority" type="tns:TicketPriority" />
-          <xs:element minOccurs="0" name="Status" type="tns:TicketStatus" />
-          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="Ticket" nillable="true" type="tns:Ticket" />
-  <xs:simpleType name="TicketPriority">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Low" />
-      <xs:enumeration value="Hight">
-        <xs:annotation>
-          <xs:appinfo>
-            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:element name="TicketPriority" nillable="true" type="tns:TicketPriority" />
-  <xs:simpleType name="TicketStatus">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="InBackBlog" />
-      <xs:enumeration value="InProgress" />
-      <xs:enumeration value="Done" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:element name="TicketStatus" nillable="true" type="tns:TicketStatus" />
+  <xs:element name="ArrayOfTicket" nillable="true" type="tns:ArrayOfTicket" />
 </xs:schema>
