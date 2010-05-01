@@ -92,16 +92,16 @@
     <Compile Include="Commands\PickTicketCommand.cs" />
     <Compile Include="Commands\SetTicketPriorityCommand.cs" />
     <Compile Include="Commands\ViewTicketHistoryCommand.cs" />
-    <Compile Include="Services\IdleResourceService.cs" />
     <Compile Include="Controller\IInDevColumnController.cs" />
     <Compile Include="Presenters\IColumnPresenter.cs" />
     <Compile Include="Presenters\IdleResourcePresenter.cs" />
     <Compile Include="Presenters\IIdleResourcePresenter.cs" />
-    <Compile Include="Services\IIdleResourceService.cs" />
     <Compile Include="Presenters\IInDevColumnPresenter.cs" />
     <Compile Include="Controller\InDevColumnController.cs" />
     <Compile Include="Presenters\IPeerBoxPresenter.cs" />
     <Compile Include="Presenters\PeerboxPresenter.cs" />
+    <Compile Include="Services\IdleResourceService.cs" />
+    <Compile Include="Services\IIdleResourceService.cs" />
     <Compile Include="Services\IInDevColumnService.cs" />
     <Compile Include="Services\InDevColumnService.cs" />
     <Compile Include="Services\ITicketService.cs" />
@@ -198,8 +198,8 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\IdleResourceView.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\InDevColumnView.xaml">
       <SubType>Designer</SubType>
