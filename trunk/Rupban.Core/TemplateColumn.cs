@@ -31,25 +31,27 @@ namespace Rupban.Core
             _templateRows = new List<TemplateRow>();
             Id = Guid.NewGuid().ToString();
 
-
+            AddRow();
         }
+
         public List<TemplateRow> SetRows(List<TemplateRow> templateRows)
         {
             _templateRows = templateRows;
             return _templateRows;
         }
+        public List<TemplateRow> GetRows()
+        {
+            return _templateRows;
+        }
 
-        public TemplateRow AddRow()
+        private TemplateRow AddRow()
         {
             var templateRow = new TemplateRow();
             _templateRows.Add(templateRow);
             return templateRow;
         }
 
-        public List<TemplateRow> GetRows()
-        {
-           return _templateRows;
-        }
+       
         public TemplateRow GetRowByIndex(int index)
         {
             return _templateRows[index];

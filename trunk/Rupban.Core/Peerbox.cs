@@ -52,5 +52,10 @@ namespace Rupban.Core
         {
            _tickets.Add(ticket);
         }
+
+        public Ticket GetTicketById(string ticketId)
+        {
+            return _tickets.SingleOrDefault(t => t.Id.Equals(ticketId));
+        }
     }
 }

@@ -12,22 +12,23 @@ namespace Rupban.Core
     [DataContract]
     public class TemplateTable
     {
-        private Dictionary<string,TemplateColumn> _templateCollums;
+        private Dictionary<string, TemplateColumn> _templateCollums;
+        private Dictionary<string, PeerBox> _peerBoxs;
 
-        public TemplateTable(Dictionary<string, TemplateColumn> templateCollums)
-        {
-            _templateCollums = templateCollums;
-        }
+
+
+
         public TemplateTable()
         {
             _templateCollums = new Dictionary<string, TemplateColumn>();
-            
+            _peerBoxs = new Dictionary<string, PeerBox>();
+
         }
 
-        public TemplateColumn GetCollumByName(string collumName)
+        public TemplateColumn GetColumById(string columnId)
         {
-            if (_templateCollums.ContainsKey(collumName))
-            return _templateCollums[collumName];
+            if (_templateCollums.ContainsKey(columnId))
+                return _templateCollums[columnId];
             return null;
         }
 
@@ -71,7 +72,7 @@ namespace Rupban.Core
                                                                                               Select(
                                                                                               row => new TemplateRow()
                                                                                                          {
-                                                                                                             Id =row.Element("Id").Value.ToString()
+                                                                                                             Id = row.Element("Id").Value.ToString()
                                                                                                          }).ToList())
                                                                                       ));
 
@@ -81,25 +82,42 @@ namespace Rupban.Core
 
         public void AddTicket(Ticket ticket, int collumId, int rowId)
         {
-            GetCollumById(collumId).GetRowByIndex(rowId).AddItem(ticket);
+            GetColumnById(collumId).GetRowByIndex(rowId).AddItem(ticket);
         }
 
-        public TemplateColumn GetCollumById(int collumId)
+        public TemplateColumn GetColumnById(int collumId)
         {
             return _templateCollums.SingleOrDefault(c => c.Value.Id.Equals(collumId)).Value;
         }
 
-        public void AddCollum(string collumName, ColumnType columnType)
+        public TemplateColumn AddCollum(ColumnType columnType, string columnHeader)
         {
-            if (!_templateCollums.ContainsKey(collumName))
-                _templateCollums.Add(collumName, new TemplateColumn() { ColumnHeader = collumName, ColumnType = columnType });
+            var templateColumn = new TemplateColumn() { ColumnHeader = columnHeader, ColumnType = columnType };
+            _templateCollums.Add(templateColumn.Id, templateColumn);
+            return templateColumn;
+
         }
 
         public List<TemplateColumn> GetColumnList()
         {
-            return _templateCollums.Select(p=>p.Value).ToList();
+            return _templateCollums.Select(p => p.Value).ToList();
         }
 
-     
+
+        public PeerBox GetPeerBoxById(string Id)
+        {
+            if (_peerBoxs.ContainsKey(Id))
+            {
+                return _peerBoxs[Id];
+            }
+            return null;
+        }
+
+        public TemplateCell CreatePeerBox()
+        {
+            var peerBox=new PeerBox();
+            _peerBoxs.Add(peerBox.Id,peerBox);
+            return peerBox;
+        }
     }
 }

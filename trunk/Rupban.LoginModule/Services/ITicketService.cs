@@ -5,7 +5,7 @@ namespace Rupban.LoginModule.Services
     public interface ITicketService
 
     {
-        void MoveTicket(string ticketId, string currentColumnName, string destinationColumnName);
+        void MoveTicket(Ticket ticket, string sourceId, string targetId);
         void ViewTicketHistory();
         void PickTicket();
     }

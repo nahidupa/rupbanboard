@@ -13,7 +13,7 @@ namespace Rupban.Service
     {
 
         [OperationContract]
-        void MoveTicket(string ticketId, string currentColumnName, string destinationColumnName);
+        void MoveTicket(Ticket ticket, string sourceId, string targetId);
 
         [OperationContract]
         bool Subscribe();

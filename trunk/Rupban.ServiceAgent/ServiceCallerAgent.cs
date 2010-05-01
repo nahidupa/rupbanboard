@@ -22,9 +22,9 @@ namespace Rupban.ServiceAgent
            
         }
 
-        public void MoveTicket(string ticketId, string currentColumnName, string destinationColumnName)
+        public void MoveTicket(Ticket ticket, string sourceId, string targetId)
         {
-            _boardServiceClient.MoveTicket(ticketId, currentColumnName, destinationColumnName);
+            _boardServiceClient.MoveTicket(ticket, sourceId, targetId);
         }
 
         public void ViewTicketHistory()
@@ -43,14 +43,9 @@ namespace Rupban.ServiceAgent
         }
 
 
-
-        #region IRupbanBoardServiceCallback Members
-
-        public void TicketMoved()
+        public void TicketMoved(Ticket ticket, string sourceId, string targetId)
         {
-            //throw new NotImplementedException();
+            throw new NotImplementedException();
         }
-
-        #endregion
     }
 }

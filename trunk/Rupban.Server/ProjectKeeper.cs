@@ -5,53 +5,69 @@ using Rupban.Core;
 
 namespace Rupban.Server
 {
-    public class ProjectKeeper
+    public  class ProjectKeeper
     {
-        private List<Project> _projects;
+        private static List<Project> _projects=new List<Project>();
+
+        public ProjectKeeper()
+        {
+            
+            _projects.AddRange(new List<Project>()
+                              {
+                                  new Project()
+                                      {
+                                          Name = "demoProject",
+                                          Board = new Board()
+                                                      {
+
+                                                      }
+                                      }
+                              });
+
+
+            _projects[0].Board.LoadTestTemplateTable();
+
+        }
         public List<Project> GetCurrentProjectList()
         {
-            return  new List<Project>()
-                       {
-                           new Project()
-                               {
-                                   Name = "demoProject",
-                                   Board = new Board()
-                                               {
-                                                   
-                                               }
-                               }
-                       };
+            return _projects;
         }
 
         public List<TemplateColumn> GetTemplateCollumList()
         {
-           _projects= new List<Project>()
-                       {
-                           new Project()
-                               {
-                                   Name = "demoProject",
-                                   Board = new Board()
-                                               {
-                                                   
-                                               }
-                               }
-                       };
-            
-            _projects[0].Board.LoadTestTemplateTable();
-
            return _projects[0].Board.GetTemplateTable().GetColumnList();
         }
 
-        public void MoveTicket(string ticketId, string currentColumnName, string destinationColumnName)
+        public void MoveTicket(Ticket ticket, string sourceId, string targetId)
         {
-            
-            var currentColumn = _projects[0].Board.GetTemplateTable().GetCollumByName(currentColumnName);
-            var ticketToMove = currentColumn.GetTicketById(ticketId);
-            if (ticketToMove != null)
+            var templateTable = _projects[0].Board.GetTemplateTable();
+            var currentColumn = templateTable.GetColumById(sourceId);
+            if (currentColumn == null)
             {
-                var destinationColumn = _projects[0].Board.GetTemplateTable().GetCollumByName(destinationColumnName);
-                destinationColumn.GetRowByIndex(0).AddItem(ticketToMove);
-                currentColumn.GetRowByIndex(0).RemoveItem(ticketToMove);
+               var peerBox= templateTable.GetPeerBoxById(sourceId);
+                var ticketToMove= peerBox.GetTicketById(ticket.Id);
+                if (ticketToMove != null)
+                {
+                    var destinationColumn = templateTable.GetColumById(targetId);
+                    if (destinationColumn == null)
+                    {
+                        templateTable.GetPeerBoxById(targetId).AddItem(ticketToMove);
+                        currentColumn.GetRowByIndex(0).RemoveItem(ticketToMove);
+                    }
+                }
+            }
+            else
+            {
+                var ticketToMove = currentColumn.GetTicketById(ticket.Id);
+                if (ticketToMove != null)
+                {
+                    var destinationColumn = templateTable.GetColumById(targetId);
+                    if (destinationColumn == null)
+                    {
+                        templateTable.GetPeerBoxById(targetId).AddItem(ticketToMove);
+                        currentColumn.GetRowByIndex(0).RemoveItem(ticketToMove);
+                    }
+                }
             }
 
         }

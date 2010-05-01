@@ -24,7 +24,7 @@ namespace Rupban.Core.Test
             var ticket=board.GetTicketById("1");
             board.MoveTicket(ticket,2, 1);
             var templateTable = board.GetTemplateTable();
-            var templateCollum = templateTable.GetCollumByName("HotBox");
+            var templateCollum = templateTable.GetColumById("HotBox");
             
         }
 

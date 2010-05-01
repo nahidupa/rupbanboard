@@ -4,6 +4,7 @@ using Microsoft.Practices.Composite.Events;
 using Microsoft.Practices.Composite.Regions;
 using Microsoft.Practices.Unity;
 using Rupban.Core;
+using rupban.loginmodule.Commands;
 using Rupban.LoginModule.Presenters;
 using Rupban.ServiceAgent;
 using Rupban.UI.Infrastructure;
@@ -18,11 +19,10 @@ namespace Rupban.LoginModule.Controller
         private readonly IUnityContainer _container;
         private readonly IEventAggregator _eventAggregator;
         private readonly IServiceLisnerAgent _serviceListenerAgent;
-        private Dictionary<string, IRegionManager> _regionManagers;
-        private Dictionary<string, IColumnPresenter> _columnPresenters;
-
-
-        private Dictionary<string, IPeerBoxPresenter> _templateCelHolderPresenters;
+        private readonly Dictionary<string, IRegionManager> _regionManagers;
+        private readonly Dictionary<string, IColumnPresenter> _columnPresenters;
+        private readonly Dictionary<string, IPeerBoxPresenter> _templateCelHolderPresenters;
+        private IMoveTicketCommand _ticketMovedCommand;
         public RupbanBoardController(IRegionManager regionManager, IUnityContainer container, IEventAggregator eventAggregator)
         {
             _regionManager = regionManager;
@@ -31,6 +31,7 @@ namespace Rupban.LoginModule.Controller
             _regionManagers = new Dictionary<string, IRegionManager>();
             _columnPresenters = new Dictionary<string, IColumnPresenter>();
             _templateCelHolderPresenters = new Dictionary<string, IPeerBoxPresenter>();
+            _ticketMovedCommand = _container.Resolve<IMoveTicketCommand>();
             _serviceListenerAgent = container.Resolve<IServiceLisnerAgent>();
             _serviceListenerAgent.TicketMovedCalBack += ServiceListenerAgentTicketMovedCalBack;
 
@@ -42,32 +43,32 @@ namespace Rupban.LoginModule.Controller
         {
             if (tickedMoveEventArgs.Ticket != null)
             {
-                Ticket ticket = tickedMoveEventArgs.Ticket;
+                 //UpdateUI(tickedMoveEventArgs);
 
-                var targetRegion = GetTatgetRegion(tickedMoveEventArgs);
-
-                var sourceRegion = GetSourceRegion(tickedMoveEventArgs);
-
-                var ticketView = sourceRegion.GetView(ticket.Id);
-
-                RemovefromData(tickedMoveEventArgs.SourceId,ticket.Id);
-                
-                sourceRegion.Remove(ticketView);
-
-                AddToData(tickedMoveEventArgs.TargetId,ticket);
-
-                targetRegion.Add(ticketView, ticket.Id);
-
-                //BoardData.SyncData(tickedMoveEventArgs);
-
-               
-
-
+                _ticketMovedCommand.Execute(tickedMoveEventArgs);
             }
-
         }
 
-        private void AddToData(string targetId,Ticket ticket)
+        private void UpdateUI(TickedMoveEventArgs tickedMoveEventArgs)
+        {
+            Ticket ticket = tickedMoveEventArgs.Ticket;
+
+            var targetRegion = GetTatgetRegion(tickedMoveEventArgs);
+
+            var sourceRegion = GetSourceRegion(tickedMoveEventArgs);
+
+            var ticketView = sourceRegion.GetView(ticket.Id);
+
+            RemovefromData(tickedMoveEventArgs.SourceId, ticket.Id);
+
+            sourceRegion.Remove(ticketView);
+
+            AddToData(tickedMoveEventArgs.TargetId, ticket);
+
+            targetRegion.Add(ticketView, ticket.Id);
+        }
+
+        private void AddToData(string targetId, Ticket ticket)
         {
             if (_columnPresenters.ContainsKey(targetId))
             {
@@ -90,7 +91,6 @@ namespace Rupban.LoginModule.Controller
                 _templateCelHolderPresenters[sourceId].PeerBox.RemoveTicket(ticketId);
             }
         }
-
 
         private IRegion GetSourceRegion(TickedMoveEventArgs tickedMoveEventArgs)
         {
@@ -138,9 +138,14 @@ namespace Rupban.LoginModule.Controller
             return null;
         }
 
-        static void ServiceListenerAgentTicketMovedCalBack()
+        private void ServiceListenerAgentTicketMovedCalBack(Ticket ticket, string sourceId, string targetId)
         {
-            MessageBox.Show("CallBack");
+            UpdateUI(new TickedMoveEventArgs()
+                         {
+                             Ticket = ticket,
+                             SourceId = sourceId,
+                             TargetId = targetId
+                         });
         }
 
 

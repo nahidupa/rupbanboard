@@ -12,11 +12,11 @@ namespace Rupban.ServiceAgent.RupbanBoardService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Code.google.com/p/rupbanboard", ConfigurationName="RupbanBoardService.IRupbanBoardService", CallbackContract=typeof(Rupban.ServiceAgent.RupbanBoardService.IRupbanBoardServiceCallback), SessionMode=System.ServiceModel.SessionMode.Required)]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Code.google.com/p/rupbanboard", ConfigurationName="RupbanBoardService.IRupbanBoardService", CallbackContract=typeof(Rupban.ServiceAgent.RupbanBoardService.IRupbanBoardServiceCallback))]
     public interface IRupbanBoardService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/MoveTicket", ReplyAction="http://Code.google.com/p/rupbanboard/IRupbanBoardService/MoveTicketResponse")]
-        void MoveTicket(string ticketId, string currentColumnName, string destinationColumnName);
+        void MoveTicket(Rupban.Core.Ticket ticket, string sourceId, string targetId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/Subscribe", ReplyAction="http://Code.google.com/p/rupbanboard/IRupbanBoardService/SubscribeResponse")]
         bool Subscribe();
@@ -41,7 +41,7 @@ namespace Rupban.ServiceAgent.RupbanBoardService {
     public interface IRupbanBoardServiceCallback {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/TicketMoved")]
-        void TicketMoved();
+        void TicketMoved(Rupban.Core.Ticket ticket, string sourceId, string targetId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -72,8 +72,8 @@ namespace Rupban.ServiceAgent.RupbanBoardService {
                 base(callbackInstance, binding, remoteAddress) {
         }
         
-        public void MoveTicket(string ticketId, string currentColumnName, string destinationColumnName) {
-            base.Channel.MoveTicket(ticketId, currentColumnName, destinationColumnName);
+        public void MoveTicket(Rupban.Core.Ticket ticket, string sourceId, string targetId) {
+            base.Channel.MoveTicket(ticket, sourceId, targetId);
         }
         
         public bool Subscribe() {
