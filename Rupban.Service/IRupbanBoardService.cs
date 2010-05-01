@@ -30,5 +30,8 @@ namespace Rupban.Service
         [OperationContract]
         List<TemplateColumn> GetTemplateCollumList();
 
+        [OperationContract]
+        List<Resource> GetIdleReourses();
+
     }
 }

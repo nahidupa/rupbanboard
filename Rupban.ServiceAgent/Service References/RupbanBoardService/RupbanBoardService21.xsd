@@ -5,6 +5,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:TemplateCell">
         <xs:sequence>
+          <xs:element minOccurs="0" name="Number" type="xs:int" />
           <xs:element minOccurs="0" name="Priority" type="tns:TicketPriority" />
           <xs:element minOccurs="0" name="Status" type="tns:TicketStatus" />
           <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
@@ -50,6 +51,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Board" nillable="true" type="tns:Board" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Resources" nillable="true" type="tns:ArrayOfResource" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Project" nillable="true" type="tns:Project" />
@@ -57,6 +59,19 @@
     <xs:sequence />
   </xs:complexType>
   <xs:element name="Board" nillable="true" type="tns:Board" />
+  <xs:complexType name="ArrayOfResource">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Resource" nillable="true" type="tns:Resource" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResource" nillable="true" type="tns:ArrayOfResource" />
+  <xs:complexType name="Resource">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Resource" nillable="true" type="tns:Resource" />
   <xs:complexType name="ArrayOfTemplateColumn">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="TemplateColumn" nillable="true" type="tns:TemplateColumn" />
@@ -98,10 +113,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfTemplateCell" nillable="true" type="tns:ArrayOfTemplateCell" />
-  <xs:complexType name="Resource">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:element name="Resource" nillable="true" type="tns:Resource" />
   <xs:complexType name="PeerBox">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:TemplateCell">

@@ -15,7 +15,7 @@ namespace Rupban.Core
             get { return _title; }
             set { _title = value; }
         }
-
+        [DataMember]
         public int Number{ get; set; }
         [DataMember]
         public TicketPriority Priority { get; set; }

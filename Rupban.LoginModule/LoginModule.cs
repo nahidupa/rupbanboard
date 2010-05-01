@@ -93,7 +93,11 @@ namespace Rupban.LoginModule
             _container.RegisterType(typeof(IInDevColumnPresenter), typeof(InDevColumnPresenter), false);
             _container.RegisterType(typeof(IInDevColumnService), typeof(InDevColumnService), false);
 
-            
+
+            _container.RegisterType(typeof(IIdleResourceView), typeof(IdleResourceView), false);
+            _container.RegisterType(typeof(IIdleResourcePresenter), typeof(IdleResourcePresenter), false);
+            _container.RegisterType(typeof(IIdleResourceService), typeof(IdleResourceService), true);
+     
 
             
 

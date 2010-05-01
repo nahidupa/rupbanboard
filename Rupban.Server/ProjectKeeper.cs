@@ -5,22 +5,42 @@ using Rupban.Core;
 
 namespace Rupban.Server
 {
-    public  class ProjectKeeper
+    public class ProjectKeeper
     {
-        private static List<Project> _projects=new List<Project>();
+        private static List<Project> _projects = new List<Project>();
 
         public ProjectKeeper()
         {
-            
-            _projects.AddRange(new List<Project>()
+            var resources=new List<Resource>();
+            resources.Add(new Resource()
                               {
-                                  new Project()
-                                      {
-                                          Name = "demoProject",
-                                          Board = new Board()
-                                                      {
+                                  Name = "Bob"
+                              });
+            resources.Add(new Resource()
+            {
+                Name = "Jhon"
+            });
+            resources.Add(new Resource()
+            {
+                Name = "Popy"
+            });
+            resources.Add(new Resource()
+            {
+                Name = "Sabana"
+            });
+            _projects.AddRange(new List<Project>()
+                                   {
+                                       new Project()
+                                           {
+                                               Name = "demoProject",
+                                               Board = new Board()
+                                                           {
 
-                                                      }
+                                                           },
+                                               Resources = resources
+                                         
+                                                      
+                                                      
                                       }
                               });
 
@@ -35,7 +55,7 @@ namespace Rupban.Server
 
         public List<TemplateColumn> GetTemplateCollumList()
         {
-           return _projects[0].Board.GetTemplateTable().GetColumnList();
+            return _projects[0].Board.GetTemplateTable().GetColumnList();
         }
 
         public void MoveTicket(Ticket ticket, string sourceId, string targetId)
@@ -44,8 +64,8 @@ namespace Rupban.Server
             var currentColumn = templateTable.GetColumById(sourceId);
             if (currentColumn == null)
             {
-               var peerBox= templateTable.GetPeerBoxById(sourceId);
-                var ticketToMove= peerBox.GetTicketById(ticket.Id);
+                var peerBox = templateTable.GetPeerBoxById(sourceId);
+                var ticketToMove = peerBox.GetTicketById(ticket.Id);
                 if (ticketToMove != null)
                 {
                     var destinationColumn = templateTable.GetColumById(targetId);
@@ -53,7 +73,8 @@ namespace Rupban.Server
                     {
                         templateTable.GetPeerBoxById(targetId).AddItem(ticketToMove);
                         peerBox.RemoveTicket(ticketToMove.Id);
-                    }else
+                    }
+                    else
                     {
                         destinationColumn.GetRowByIndex(0).AddItem(ticketToMove);
                         peerBox.RemoveTicket(ticketToMove.Id);
@@ -79,6 +100,11 @@ namespace Rupban.Server
         public void ViewTicketHistory()
         {
             throw new NotImplementedException();
+        }
+
+        public List<Resource> GetIdleReourses()
+        {
+            return _projects[0].Resources;
         }
     }
 }

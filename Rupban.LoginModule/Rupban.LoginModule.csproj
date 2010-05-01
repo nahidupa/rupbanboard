@@ -92,8 +92,12 @@
     <Compile Include="Commands\PickTicketCommand.cs" />
     <Compile Include="Commands\SetTicketPriorityCommand.cs" />
     <Compile Include="Commands\ViewTicketHistoryCommand.cs" />
+    <Compile Include="Services\IdleResourceService.cs" />
     <Compile Include="Controller\IInDevColumnController.cs" />
     <Compile Include="Presenters\IColumnPresenter.cs" />
+    <Compile Include="Presenters\IdleResourcePresenter.cs" />
+    <Compile Include="Presenters\IIdleResourcePresenter.cs" />
+    <Compile Include="Services\IIdleResourceService.cs" />
     <Compile Include="Presenters\IInDevColumnPresenter.cs" />
     <Compile Include="Controller\InDevColumnController.cs" />
     <Compile Include="Presenters\IPeerBoxPresenter.cs" />
@@ -140,6 +144,10 @@
       <DependentUpon>DialogView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\IAdminPanelView.cs" />
+    <Compile Include="Views\IdleResourceView.xaml.cs">
+      <DependentUpon>IdleResourceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IIdleResourceView.cs" />
     <Compile Include="Views\IInDevColumnView.cs" />
     <Compile Include="Views\ILoginView.cs" />
     <Compile Include="Presenters\IPanelColumnPresenter.cs" />
@@ -186,6 +194,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Dialog\DialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IdleResourceView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

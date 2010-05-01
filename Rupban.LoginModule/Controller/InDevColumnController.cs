@@ -38,10 +38,15 @@ namespace Rupban.LoginModule.Controller
             {
                 var peerPresenter = _container.Resolve<IPeerBoxPresenter>();
                 peerPresenter.PeerBox = peerBox;
-              
+
                 _rupbanBoardController.AddTemplateCelHolderPresenter(peerBox.Id, peerPresenter);
                 var peerboxRegion = region.Add(peerPresenter.View, peerBox.Id, true);
                 _peerboxRegionManagers.Add(peerBox.Id, peerboxRegion);
+                
+                var idleReourceRegion = peerboxRegion.Regions[RegionNames.IdleReourceRegion];
+                var idleResourcePresenter = _container.Resolve<IIdleResourcePresenter>();
+
+                idleReourceRegion.Add(idleResourcePresenter.View, peerBox.Id);
 
                 foreach (var ticket in peerBox.GetAllTicket())
                 {
@@ -49,10 +54,12 @@ namespace Rupban.LoginModule.Controller
                     var ticketPresenter = _container.Resolve<ITicketPresenter>();
                     ticketPresenter.Ticket = ticket;
                     ticketRegion.Add(ticketPresenter.View, ticket.Id);
+                    
+             
+
                 }
-
-
-
+        
+        
             }
 
 

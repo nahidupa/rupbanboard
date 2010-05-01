@@ -18,11 +18,16 @@
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
                 </Border>
-                    <Border MinHeight="180" MinWidth="140"  BorderThickness="1" Height="Auto" BorderBrush="CornflowerBlue" >
-                    <StackPanel VerticalAlignment="Bottom">
-                        <Button   Name="btnAssign" VerticalAlignment="Top" Command="{Binding Path=AssignResourceCommand}" CommandParameter="Test">Assign more resource</Button>
-                       
-                    </StackPanel>
+                <Border MinHeight="180" MinWidth="140" MaxHeight="180" MaxWidth="140" BorderThickness="1" Height="Auto" BorderBrush="CornflowerBlue" >
+                    <ItemsControl cal:RegionManager.RegionName="{x:Static Infrastructure:RegionNames.IdleReourceRegion}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel  Orientation="Vertical"  />
+
+                            </ItemsPanelTemplate>
+
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
                 </Border>
                 
             </StackPanel>

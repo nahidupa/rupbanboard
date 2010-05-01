@@ -42,6 +42,11 @@ namespace Rupban.ServiceAgent
             return _boardServiceClient.GetTemplateCollumList().ToList<TemplateColumn>();
         }
 
+        public List<Resource> GetIdleReourses()
+        {
+            return _boardServiceClient.GetIdleReourses().ToList<Resource>();
+        }
+
 
         public void TicketMoved(Ticket ticket, string sourceId, string targetId)
         {

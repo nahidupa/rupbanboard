@@ -12,7 +12,7 @@ namespace Rupban.ServiceAgent.RupbanBoardService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Code.google.com/p/rupbanboard", ConfigurationName="RupbanBoardService.IRupbanBoardService", CallbackContract=typeof(Rupban.ServiceAgent.RupbanBoardService.IRupbanBoardServiceCallback))]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Code.google.com/p/rupbanboard", ConfigurationName="RupbanBoardService.IRupbanBoardService", CallbackContract=typeof(Rupban.ServiceAgent.RupbanBoardService.IRupbanBoardServiceCallback), SessionMode=System.ServiceModel.SessionMode.Required)]
     public interface IRupbanBoardService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/MoveTicket", ReplyAction="http://Code.google.com/p/rupbanboard/IRupbanBoardService/MoveTicketResponse")]
@@ -35,6 +35,9 @@ namespace Rupban.ServiceAgent.RupbanBoardService {
         [System.ServiceModel.OperationContractAttribute(Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetTemplateCollumList", ReplyAction="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetTemplateCollumListRes" +
             "ponse")]
         Rupban.Core.TemplateColumn[] GetTemplateCollumList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetIdleReourses", ReplyAction="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetIdleReoursesResponse")]
+        Rupban.Core.Resource[] GetIdleReourses();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -94,6 +97,10 @@ namespace Rupban.ServiceAgent.RupbanBoardService {
         
         public Rupban.Core.TemplateColumn[] GetTemplateCollumList() {
             return base.Channel.GetTemplateCollumList();
+        }
+        
+        public Rupban.Core.Resource[] GetIdleReourses() {
+            return base.Channel.GetIdleReourses();
         }
     }
 }

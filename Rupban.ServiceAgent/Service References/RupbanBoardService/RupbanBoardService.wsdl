@@ -43,35 +43,45 @@
   <wsdl:message name="IRupbanBoardService_GetTemplateCollumList_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetTemplateCollumListResponse" />
   </wsdl:message>
+  <wsdl:message name="IRupbanBoardService_GetIdleReourses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdleReourses" />
+  </wsdl:message>
+  <wsdl:message name="IRupbanBoardService_GetIdleReourses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdleReoursesResponse" />
+  </wsdl:message>
   <wsdl:message name="IRupbanBoardService_TicketMoved_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:TicketMoved" />
   </wsdl:message>
-  <wsdl:portType name="IRupbanBoardService">
-    <wsdl:operation name="MoveTicket">
+  <wsdl:portType msc:usingSession="true" name="IRupbanBoardService">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="MoveTicket">
       <wsdl:input wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/MoveTicket" message="tns:IRupbanBoardService_MoveTicket_InputMessage" />
       <wsdl:output wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/MoveTicketResponse" message="tns:IRupbanBoardService_MoveTicket_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Subscribe">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Subscribe">
       <wsdl:input wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/Subscribe" message="tns:IRupbanBoardService_Subscribe_InputMessage" />
       <wsdl:output wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/SubscribeResponse" message="tns:IRupbanBoardService_Subscribe_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Unsubscribe">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Unsubscribe">
       <wsdl:input wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/Unsubscribe" message="tns:IRupbanBoardService_Unsubscribe_InputMessage" />
       <wsdl:output wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/UnsubscribeResponse" message="tns:IRupbanBoardService_Unsubscribe_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="ViewTicketHistory">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ViewTicketHistory">
       <wsdl:input wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/ViewTicketHistory" message="tns:IRupbanBoardService_ViewTicketHistory_InputMessage" />
       <wsdl:output wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/ViewTicketHistoryResponse" message="tns:IRupbanBoardService_ViewTicketHistory_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetCurrentProjectList">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetCurrentProjectList">
       <wsdl:input wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetCurrentProjectList" message="tns:IRupbanBoardService_GetCurrentProjectList_InputMessage" />
       <wsdl:output wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetCurrentProjectListResponse" message="tns:IRupbanBoardService_GetCurrentProjectList_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetTemplateCollumList">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetTemplateCollumList">
       <wsdl:input wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetTemplateCollumList" message="tns:IRupbanBoardService_GetTemplateCollumList_InputMessage" />
       <wsdl:output wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetTemplateCollumListResponse" message="tns:IRupbanBoardService_GetTemplateCollumList_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="TicketMoved">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetIdleReourses">
+      <wsdl:input wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetIdleReourses" message="tns:IRupbanBoardService_GetIdleReourses_InputMessage" />
+      <wsdl:output wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/GetIdleReoursesResponse" message="tns:IRupbanBoardService_GetIdleReourses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="TicketMoved">
       <wsdl:output wsaw:Action="http://Code.google.com/p/rupbanboard/IRupbanBoardService/TicketMoved" message="tns:IRupbanBoardService_TicketMoved_OutputCallbackMessage" />
     </wsdl:operation>
   </wsdl:portType>
