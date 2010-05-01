@@ -59,6 +59,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Properties\DataSources\Rupban.Core.Project.datasource" />
+    <None Include="Properties\DataSources\Rupban.Core.Resource.datasource" />
     <None Include="Properties\DataSources\Rupban.Core.TemplateColumn.datasource" />
     <None Include="Service References\RupbanBoardService\RupbanBoardService.wsdl" />
     <None Include="Service References\RupbanBoardService\RupbanBoardService.xsd">

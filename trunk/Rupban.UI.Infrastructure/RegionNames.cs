@@ -11,6 +11,8 @@ namespace Rupban.UI.Infrastructure
         public const string ColumnRegion = "ColumnRegion";
         public const string TicketRegion = "TicketRegion";
         public static string PeerBoxRegion = "PeerBoxRegion";
+        public static string IdleReourceRegion = "IdleReourceRegion";
+        
         
     }
 }

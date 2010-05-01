@@ -87,5 +87,10 @@ namespace Rupban.Service
         {
             return _projectKeeper.GetTemplateCollumList();
         }
+
+        public List<Resource> GetIdleReourses()
+        {
+            return _projectKeeper.GetIdleReourses();
+        }
     }
 }

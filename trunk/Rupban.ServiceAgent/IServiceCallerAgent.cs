@@ -9,5 +9,6 @@ namespace Rupban.ServiceAgent
         void ViewTicketHistory();
         List<Project> GetCurrentProjectList();
         List<TemplateColumn> GetTemplateCollumList();
+        List<Resource> GetIdleReourses();
     }
 }
