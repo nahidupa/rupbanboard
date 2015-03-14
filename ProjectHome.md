@@ -1,0 +1,1 @@
+this is a graphical view of the SCRUM Board.Basic idea is  its take all uncompleted ticket from track as backlog then project manager can drag it to hotbox and then the ticket rolling on several column at the end it will be on done column.
